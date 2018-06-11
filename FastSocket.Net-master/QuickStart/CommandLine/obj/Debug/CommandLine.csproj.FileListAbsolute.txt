@@ -1,0 +1,14 @@
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\CommandLine.exe.config
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\CommandLine.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\CommandLine.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.Server.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.SocketBase.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.Server.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.Server.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.Server.dll.config
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.SocketBase.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\bin\Debug\FastSocket.SocketBase.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\obj\Debug\CommandLine.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\obj\Debug\CommandLine.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\obj\Debug\CommandLine.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\CommandLine\obj\Debug\CommandLine.pdb

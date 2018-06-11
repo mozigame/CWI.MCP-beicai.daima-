@@ -1,0 +1,76 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2016，COOLWI.COM
+// 变更历史：
+//      姓名          日期              说明
+// --------------------------------------------
+//      王军锋        2016/07/04        创建
+//---------------------------------------------
+
+using System;
+using Evt.Framework.Common;
+using Evt.Framework.DataAccess;
+
+namespace CWI.MCP.Models
+{
+    /// <summary>
+    /// McpOrderInfo
+    /// </summary>
+ 	[Serializable]
+    [TableMapping(TableName = "mcp_cmd_order")]
+	public class McpCmdOrderInfo : Model
+    {
+		/// <summary>
+		/// 订单ID
+		/// </summary>
+		[TableMapping(FieldName = "order_id", PrimaryKey = true)]
+		public string OrderId { set; get; }
+
+		/// <summary>
+		/// 应用ID
+		/// </summary>
+		[TableMapping(FieldName = "app_id")]
+		public string AppId { set; get; }
+
+		/// <summary>
+		/// 票据APP内唯一标识
+		/// </summary>
+		[TableMapping(FieldName = "bill_no")]
+		public string BillNo { set; get; }
+
+		/// <summary>
+		/// 票据类型:1-小票;2-快递面单
+		/// </summary>
+		[TableMapping(FieldName = "bill_type")]
+		public  int BillType { set; get; }
+
+		/// <summary>
+		/// 订单内容(票据类型:1-url,2-处理后的参数)
+		/// </summary>
+		[TableMapping(FieldName = "order_content")]
+		public string OrderContent { set; get; }
+
+		/// <summary>
+		/// 订单时间
+		/// </summary>
+		[TableMapping(FieldName = "order_date")]
+		public DateTime OrderDate { set; get; }
+
+		/// <summary>
+		/// 订单Key
+		/// </summary>
+		[TableMapping(FieldName = "order_key")]
+		public string OrderKey { set; get; }
+        
+		/// <summary>
+        /// 回调状态:0-未回调,1-回调成功,2-回调失败
+		/// </summary>
+        [TableMapping(FieldName = "callback_status")]
+        public int CallbackStatus { set; get; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [TableMapping(FieldName = "modified_on")]
+        public DateTime ModifiedOn { set; get; }
+	}
+}

@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "快递面单";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="col-sm-2 row">
+    <div class="form-group" id="dvExpress">
+        
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <div id="template_list">
+            <select name="templateId" id="templateId" class="form-control" onchange="ChangeTemplate();">
+            </select>
+        </div>
+    </div>
+</div>
+<div class="col-sm-2" style="line-height: 34px;">
+    <div class="form-group">
+        <strong id="tempId"></strong>
+    </div>
+</div>
+<div class="express">
+    <div class="express-media" id="templateImg">
+        <img src="@CWI.MCP.Common.RoutingUtil.ImgUrl("/Images/express.jpg") " alt="">
+    </div>
+    <div class="express-info" id="dvParams">
+       
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        GetExpressList();
+    });
+
+    function ChangeExpress() {
+        GetTemplateList();
+    }
+
+    function ChangeTemplate() {
+        GetTemplateInfo();
+        GetTemplateParams();
+    }
+
+    function GetExpressList() {
+        $.ajax({
+            url: "/express/getexpressList",
+            type: "post",
+            dataType: "json",
+            data: "",
+            success: function (result) {
+                if (result.rows.length > 0) {
+                    var expressInfo = '<select name="expressId" id="expressId" class="form-control" onchange="ChangeExpress();">';
+                    for (var i = 0; i < result.rows.length; i++) {
+                        var data = result.rows[i];
+                        expressInfo += '<option value="' + data.TemplateTypeId + '">' + data.TemplateTypeName + '</option>';
+                    }
+                    expressInfo += '</select>';
+
+                    $("#dvExpress").html(expressInfo);
+                    GetTemplateList();
+                }
+            }
+        });
+    }
+
+    function GetTemplateList()
+    {
+        var expressName = $("#expressId option:selected").text();
+        $("#expressName").text(expressName);
+        var expressId = $("#expressId option:selected").val();
+        $.ajax({
+            url: "/express/getexpresstemplatelist",
+            type: "post",
+            dataType: "json",
+            data: "expressId=" + expressId,
+            success: function (result) {
+                var templateList;
+                if (result.rows.length > 0) {
+                    templateList = '<select name="templateId" id="templateId" class="form-control" onchange="ChangeTemplate();">';
+                    for (var i = 0; i < result.rows.length; i++) {
+                        var data = result.rows[i];
+                        templateList += '<option value="' + data.TemplateId + '">' + data.TemplateName + '</option>';
+                    }
+                    templateList += '</select>';
+                    $("#template_list").html(templateList);
+                    GetTemplateInfo();
+                    GetTemplateParams();
+                } else {
+                    templateList = '<select name="templateId" id="templateId" class="form-control">';
+                    templateList += '<option value=""></option>';
+                    templateList += '</select>';
+                    $("#tempId").html("模板编号：暂无数据");
+                    $("#templateImg").html("<strong>暂无数据</strong>");
+                    $("#dvParams").html('<table class="table table-bordered"><thead><tr><th>编码</th><th>描述</th></tr></thead><tbody></tbody></table>');
+                    $("#template_list").html(templateList);
+                }
+            }
+        });
+    }
+
+    function GetTemplateInfo() {
+        var templateId = $("#templateId option:selected").val();
+        var tempInfo = "模板编号：" + templateId;
+        $("#tempId").html(tempInfo);
+        $.ajax({
+            url: "/express/getexpresstemplate",
+            type: "post",
+            dataType: "json",
+            data: "templateId=" + templateId,
+            success: function (result) {
+                if (result.TemplateExamplePath !== null && result.TemplateExamplePath !== 'undefined' && result.TemplateExamplePath !== '') {
+                    var templateImage = '<img src="' + result.TemplateExamplePath + '" alt="" />';
+                    $("#templateImg").html(templateImage);
+                    $(".express-media img")
+                        .on("load",
+                            function() {
+                                $(".express-info").height($(".express-media").outerHeight());
+                            });
+
+                } else {
+                    var info = '<strong>暂无数据</strong>';
+                    $("#templateImg").html(info);
+                }
+            }
+        });
+    }
+
+    function GetTemplateParams() {
+        var templateId = $("#templateId option:selected").val();
+        $.ajax({
+            url: "/express/gettemplateparams",
+            type: "post",
+            dataType: "json",
+            data: "templateId=" + templateId,
+            success: function (result) {
+                var templateParams = '<table class="table table-bordered"><thead><tr><th>编码</th><th>描述</th></tr></thead><tbody>';
+                if (result.rows.length > 0) {
+                    for (var i = 0; i < result.rows.length; i++) {
+                        var data = result.rows[i];
+                        templateParams += '<tr><td>' + data.ParamCode + '</td><td>' + data.ParamDesc + '</td></tr>';
+                    }
+                    templateParams += '</tbody></table>';
+                    $("#dvParams").html(templateParams);
+                } else {
+                   templateParams += '</tbody></table>';
+                   $("#dvParams").html(templateParams);
+                }
+            }
+        });
+    }
+
+</script>

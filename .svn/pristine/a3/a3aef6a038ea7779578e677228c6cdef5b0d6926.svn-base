@@ -1,0 +1,406 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2014，COOLWI.COM
+// 变更历史：
+//      姓名          日期              说明
+// --------------------------------------------
+//      王军锋       2014/08/01         创建
+//---------------------------------------------
+
+using CWI.MCP.Common;
+using CWI.MCP.Models;
+using CWI.MCP.Models.Common;
+using CWI.MCP.Services;
+using Evt.Framework.Common;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Web;
+using System.Web.Http;
+
+namespace CWI.MCP.API.Controllers.MCP
+{
+    /// <summary>
+    /// 系统控制器
+    /// </summary>
+    public class SysController : BaseController
+    {
+        #region 基础
+
+        /// <summary>
+        /// 测试连接
+        /// </summary>
+        /// <returns>测试连接结果</returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object TestConnection()
+        {
+            return OK();
+        }
+
+        /// <summary>
+        /// 获取服务器时间
+        /// </summary>
+        /// <returns>服务器时间</returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public virtual object GetServerTime()
+        {
+            Dictionary<string, object> data = new Dictionary<string, object>();
+            data.Add("current_time", SysDateTime.Now.ToString(RegexConsts.DATETIME_FORMAT));
+
+            return OK(data);
+        }
+
+        /// <summary>
+        /// 获取访问令牌
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object GetAccessToken([FromUri]AppViewModel app)
+        {
+            LogUtil.Info("执行获取访问令牌...");
+
+            var result = SingleInstance<AppService>.Instance.GetAccessToken(app);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 校验版本
+        /// </summary>
+        /// <param name="verModel">校验版本参数</param>
+        /// <returns>版本信息</returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object CheckVersion([FromUri]VerViewModel verModel)
+        {
+            LogUtil.Info(string.Format("设备：{0},类型：{1},当前版本：{2},获取新版本...", verModel.Mac, verModel.Type, verModel.Ver));
+
+            var result = SingleInstance<SysService>.Instance.CheckVersion(verModel);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 查询打印机状态
+        /// </summary>
+        /// <param name="did"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object GetPrinterStatus(string did)
+        {
+            var result = SingleInstance<PrinterService>.Instance.GetDeviceStatCache(did);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// Redis缓存测试
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object TestGetRedis(string did)
+        {
+            var result = SingleInstance<PrinterService>.Instance.GetDeviceStatCache(did);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// Redis缓存测试
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object TestSetRedis(string did, int code)
+        {
+            SingleInstance<PrinterService>.Instance.SetDeviceStatCache(did, code);
+            return OK();
+        }
+
+        #endregion
+
+        #region 业务
+
+        /// <summary>
+        /// 校验访问令牌是否有效
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        [HttpGet]
+        public object CheckAccessToken()
+        {
+            var requestForms = base.GetRequestParams("校验访问令牌是否有效,");
+            var app_id = requestForms["app_id"] != null ? requestForms["app_id"].ToString().Trim() : string.Empty;
+            if (string.IsNullOrEmpty(app_id))
+            {
+                return Failed("应用ID不可为空！");
+            }
+            else
+            {
+                var appName = SingleInstance<AppService>.Instance.GetAppNameById(app_id);
+                if (string.IsNullOrEmpty(appName))
+                {
+                    return Failed("应用ID不存在！");
+                }
+                else
+                {
+                    var access_token = requestForms["access_token"] != null ? requestForms["access_token"].ToString().Trim() : string.Empty;
+                    var isOK = SingleInstance<AppService>.Instance.CheckAccessToken(app_id, access_token);
+                    return isOK ? OK() : Failed("无效访问令牌！");
+                }
+            }
+        }
+
+        /// <summary>
+        /// 校验打印设备是否可关联
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object ChkPrintersEnableBind(PrinterCheckViewModel checkModel)
+        {
+            LogUtil.Info(string.Format("校验打印设备是否可关联,输入参数：{0}", JsonUtil.Serialize(checkModel)));
+
+            SingleInstance<PrinterService>.Instance.CheckPrinterIsEnableBind(checkModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 关联打印设备
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object BindPrinters(PrintViewModel bindModel)
+        {
+            LogUtil.Info(string.Format("关联打印设备,输入参数：{0}", JsonUtil.Serialize(bindModel)));
+
+            SingleInstance<PrinterService>.Instance.BindPrinters(bindModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 解绑打印设备
+        /// </summary>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object UnBindPrinters(PrinterBaseViewModel unBindModel)
+        {
+            LogUtil.Info(string.Format("解绑打印设备,输入参数：{0}", JsonUtil.Serialize(unBindModel)));
+
+            SingleInstance<PrinterService>.Instance.UnBindPrinters(unBindModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 打印票据
+        /// </summary>
+        /// <param name="billModel">小票信息</param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object Print(BillViewModel billModel)
+        {
+            LogUtil.Info(string.Format("接收到打印命令,交易号：{0},打印数据：{1}", billModel.bill_no,billModel.bill_content));
+            LogUtil.Info($"输入参数{JsonUtil.Serialize(billModel)}");
+            SingleInstance<PrintOrderService>.Instance.Print(billModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 打印票据,无需绑定
+        /// </summary>
+        /// <param name="billModel">小票信息</param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object PrintDemonstration(BillViewModel billModel)
+        {
+            LogUtil.Info(string.Format("接收到打印命令,交易号：{0},打印数据：{1}", billModel.bill_no, billModel.bill_content));
+            LogUtil.Info($"输入参数{JsonUtil.Serialize(billModel)}");
+            SingleInstance<PrintOrderService>.Instance.PrintDemonstration(billModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 打印票据
+        /// </summary>
+        /// <param name="billModel">小票信息</param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object Printmy(BillViewModel billModel)
+        {
+            LogUtil.Info(string.Format("接收到打印命令,交易号：{0},打印数据：{1}", billModel.bill_no, billModel.bill_content));
+            SingleInstance<PrintOrderService>.Instance.CheckPrintSign(billModel);
+
+            return OK();
+        }
+
+        /// <summary>
+        /// 打印票据
+        /// </summary>
+        /// <param name="billModel">小票信息</param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object PrintTest([FromUri]BillViewModel billModel)
+        {
+            LogUtil.Info(string.Format("接收到打印命令,交易号：{0},打印数据：{1}", billModel.bill_no, billModel.bill_content));
+
+            SingleInstance<PrintOrderService>.Instance.Print(billModel);
+            return OK();
+        }
+
+        /// <summary>
+        /// 获取打印票据
+        /// </summary>
+        /// <param name="bill">小票信息</param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object GetPrintBill([FromUri]GetBillViewModel getModel)
+        {
+            LogUtil.Info(string.Format("获取打印票据,输入参数：{0}", JsonUtil.Serialize(getModel)));
+
+            var result = SingleInstance<PrintOrderService>.Instance.GetPrintBill(getModel);
+            return OK(result);
+        }
+
+        ///// <summary>
+        ///// 获取打印机联网状态,暂时不用
+        ///// </summary>
+        ///// <param name="bindModel"></param>
+        ///// <returns></returns>
+        //[CWI.MCP.API.Handels.SkipAuthorize]
+        //[HttpGet]
+        //public object GetPrintConnectStatus(PrintViewModel bindModel)
+        //{
+        //    SingleInstance<PrinterService>.Instance.GetPrintConnectStatus(bindModel);
+        //    return "";
+        //}
+
+        /// <summary>
+        /// 获取打印机设备状态
+        /// </summary>
+        /// <param name="bindModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object GetPrintStatus([FromUri]PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"查询设备状态:设备号：{queryModel.printer_codes},输入参数：{JsonUtil.Serialize(queryModel)}");
+            int printStatue = SingleInstance<PrinterService>.Instance.GetPrintStatus(queryModel);
+            return OK(printStatue);
+        }
+
+        /// <summary>
+        /// 查询打印任务订单状态
+        /// </summary>
+        /// <param name="queryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object GetPrintOrderStatue([FromUri]PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"查询打印任务订单状态:订单号{queryModel.bill_no},输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result= SingleInstance<PrintOrderService>.Instance.GetPrintOrderStatue(queryModel);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 查询打印机版本号
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object CheckSoftwareVersion([FromUri]PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"查询设备版本号：设备编号：{queryModel.printer_codes},输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result = SingleInstance<PrinterService>.Instance.CheckSoftwareVersion(queryModel);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 修改打印机域名
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object RenameDomain(PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"修改域名{queryModel.domain}...输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result=SingleInstance<PrinterService>.Instance.RenameDomain(queryModel);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 重启打印机
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object RestartPrinter(PrtintViewQueryModel queryModel)
+        {
+
+            LogUtil.Info($"重启打印机...输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result = SingleInstance<PrinterService>.Instance.RestartPrinter(queryModel);
+            return OK(result);
+        }
+
+        /// <summary>
+        /// 上传打印机日志
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object UploadLog(PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"第三方请求设备{queryModel.printer_codes}上传日志...输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result = SingleInstance<PrinterService>.Instance.UploadLog(queryModel);
+            return OK(result);
+        }
+
+        #region 上传打印机的日志文件
+
+        /// <summary>
+        /// 上传打印机的日志文件,打印机调用
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpPost]
+        public object UploadPrinterLog(PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"设备请求上传日志...输入参数：{JsonUtil.Serialize(queryModel)}");
+            ProcessResult result = SingleInstance<PrinterService>.Instance.UploadPrinterLog(queryModel);
+            return result.Result ? OK() : Failed(result.Msg);
+        }
+
+        /// <summary>
+        /// 检查打印机域名
+        /// </summary>
+        /// <param name="QueryModel"></param>
+        /// <returns></returns>
+        [CWI.MCP.API.Handels.SkipAuthorize]
+        [HttpGet]
+        public object CheckDomain([FromUri]PrtintViewQueryModel queryModel)
+        {
+            LogUtil.Info($"第三方查看设备{queryModel.printer_codes}域名...输入参数：{JsonUtil.Serialize(queryModel)}");
+            var result = SingleInstance<PrinterService>.Instance.CheckDomain(queryModel);
+            return OK(result);
+        }
+
+        #endregion
+
+        #endregion
+    }
+}

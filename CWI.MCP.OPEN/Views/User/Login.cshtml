@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打-开放平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="@CWI.MCP.Common.RoutingUtil.CssUrl("/Styles/bootstrap.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@CWI.MCP.Common.RoutingUtil.CssUrl("/Styles/open.css")" />
+</head>
+<body>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="login-open">
+			<div class="container login-form-container">
+				<div class="login-form">
+					<div class="login-logo">
+						<img src="../../Images/logo.png" alt="">
+					</div>
+				    <form class="form-horizontal form-login" method="post">
+				        <div class="alert alert-danger hidden" role="alert"></div>
+				        <div class="input-group">
+				            <span class="input-group-addon" id="basic-addon1"><img src="@CWI.MCP.Common.RoutingUtil.ImgUrl("/Images/icon-account.png")" alt=""></span>
+                            <input type="text" class="form-control" autocomplete="off" name="username" id="username" placeholder="手机号码" autocomplete="off" onchange="GetUserInfo();" aria-describedby="basic-addon1">
+				        </div>
+				        <div class="input-group">
+				            <span class="input-group-addon" id="basic-addon2"><img src="@CWI.MCP.Common.RoutingUtil.ImgUrl("/Images/icon-pass.png")" alt=""></span>
+                            <input type="text" class="form-control" autocomplete="new-password" name="userpwd" id="userpwd" placeholder="登录密码" aria-describedby="basic-addon1" onfocus="this.type = 'password'">
+				        </div>
+				        <div class="form-group">
+				            <div class="col-sm-12">
+				                <div class="checkbox">
+				                    <label class="text-muted">
+				                        <input type="checkbox" id="chkMemory"/>记住密码
+				                    </label>
+				                    <a class="pull-right text-muted" href="/user/forgetpassword">忘记密码</a>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <div class="col-sm-12">
+				                <button type="button" class="btn btn-login" id="btnSubmit">登录</button>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <div class="col-sm-12">
+				                <a href="/user/register" class="btn btn-register pull-right">新用户注册</a>
+				            </div>
+				        </div>
+				    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 公司信息 -->
+<div class="container">
+    <div class="footer footer-open">
+         <p>版权所有：深圳映美卡莫网络有限公司 © 2015 - @DateTime.Now.Year 版权所有 粤ICP备<a href="http://www.miitbeian.gov.cn/" onclick="javascript:viod();">10059556号-7</a> 法律公告 隐私保护</p>
+    </div>
+</div>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/jquery.min.js")"></script>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/bootstrap.min.js")"></script>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/open.js")"></script>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/securityCommon.js")"></script>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/login.js")"></Script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+2018-04-21 08:57:04,508 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:04.000|数据库已成功连接,正在启动服务
+2018-04-21 08:57:08,757 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:08.000|
+
+路由选择控制器 Base 耗时：0秒99毫秒
+2018-04-21 08:57:34,382 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:33.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 08:57:37,567 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:36.000|查询设备状态:设备号：16020010TM
+2018-04-21 08:57:38,443 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:37.000|缓存中获取设备状态异常，设备号:16020010TM
+2018-04-21 08:57:38,508 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:37.000|缓存中设置设备状态异常，设备号:16020010TM
+2018-04-21 08:57:38,508 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:37.000|数据库中取设备：16020010TM的状态为1
+2018-04-21 08:57:38,508 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 08:57:37.000|校验打印设备:16020010TM,当前状态：1
+2018-04-21 10:28:25,732 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:28:25.000|数据库已成功连接,正在启动服务
+2018-04-21 10:28:26,032 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:28:25.000|
+
+路由选择控制器 Base 耗时：0秒11毫秒
+2018-04-21 10:34:39,268 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:34:39.000|
+
+路由选择控制器 sys 耗时：0秒4毫秒
+2018-04-21 10:34:39,474 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:34:39.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 10:40:19,222 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:40:19.000|数据库已成功连接,正在启动服务
+2018-04-21 10:40:20,166 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:40:19.000|
+
+路由选择控制器 Base 耗时：0秒58毫秒
+2018-04-21 10:40:20,734 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:40:20.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 10:40:20,954 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:40:20.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 10:42:13,506 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:42:13.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 10:42:13,515 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:42:13.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 10:53:49,063 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:53:49.000|数据库已成功连接,正在启动服务
+2018-04-21 10:53:49,373 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:53:49.000|
+
+路由选择控制器 Base 耗时：0秒11毫秒
+2018-04-21 10:53:58,692 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:53:58.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 10:53:59,095 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:53:58.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 10:59:20,100 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:20.000|数据库已成功连接,正在启动服务
+2018-04-21 10:59:20,428 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:20.000|
+
+路由选择控制器 Base 耗时：0秒9毫秒
+2018-04-21 10:59:26,308 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:25.000|
+
+路由选择控制器 sys 耗时：0秒3毫秒
+2018-04-21 10:59:26,981 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:26.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 10:59:32,979 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:32.000|设备：17320152WV,当前版本：1.1.98，获取新版本...
+2018-04-21 10:59:50,299 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:49.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 10:59:50,309 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 10:59:49.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 11:00:12,481 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:00:11.000|设备：17320152WV,当前版本：1.1.98，获取新版本...
+2018-04-21 11:08:51,741 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:08:51.000|数据库已成功连接,正在启动服务
+2018-04-21 11:08:52,164 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:08:51.000|
+
+路由选择控制器 Base 耗时：0秒10毫秒
+2018-04-21 11:10:51,701 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:10:51.000|数据库已成功连接,正在启动服务
+2018-04-21 11:10:52,236 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:10:51.000|
+
+路由选择控制器 Base 耗时：0秒19毫秒
+2018-04-21 11:11:23,078 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:11:22.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 11:11:23,346 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:11:22.000|设备：17320152WV,类型：3,当前版本：1.1.98,获取新版本...
+2018-04-21 11:11:26,773 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:11:26.000|修改打印机17320152WV版本号成功，型号：3,版本号：1.1.98
+2018-04-21 11:11:26,840 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:11:26.000|设备：17320152WV,当前版本：1.1.98，获取新版本...
+2018-04-21 11:12:21,276 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:12:20.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:12:21,299 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:12:20.000|设备：17320152WV,类型：3,当前版本：1.1.99,获取新版本...
+2018-04-21 11:12:22,864 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:12:22.000|修改打印机17320152WV版本号成功，型号：3,版本号：1.1.99
+2018-04-21 11:12:22,910 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:12:22.000|设备：17320152WV,当前版本：1.1.99，获取新版本...
+2018-04-21 11:14:18,552 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:14:18.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:14:18,560 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:14:18.000|设备：17320152WV1,类型：3,当前版本：1.1.99,获取新版本...
+2018-04-21 11:15:00,641 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:00.000|数据库已成功连接,正在启动服务
+2018-04-21 11:15:01,016 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:00.000|
+
+路由选择控制器 Base 耗时：0秒16毫秒
+2018-04-21 11:15:13,077 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:12.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 11:15:13,303 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:13.000|设备：17320152WV1,类型：f3,当前版本：1.1.106,获取新版本...
+2018-04-21 11:15:50,500 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:50.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:15:50,516 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:50.000|设备：17320152WV,类型：f3,当前版本：1.1.106,获取新版本...
+2018-04-21 11:15:54,841 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:54.000|修改打印机17320152WV版本号成功，型号：f3,版本号：1.1.106
+2018-04-21 11:15:54,908 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:15:54.000|设备：17320152WV,当前版本：1.1.106，获取新版本...
+2018-04-21 11:16:27,645 [12] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:16:27.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:16:27,658 [12] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:16:27.000|设备：17320152WV,类型：f3,当前版本：1.1.106,获取新版本...
+2018-04-21 11:17:15,069 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:17:15.000|数据库已成功连接,正在启动服务
+2018-04-21 11:17:15,412 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:17:15.000|
+
+路由选择控制器 Base 耗时：0秒11毫秒
+2018-04-21 11:18:08,083 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:07.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 11:18:08,698 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:08.000|设备：17320152WV,类型：f3,当前版本：1.1.107,获取新版本...
+2018-04-21 11:18:10,845 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:10.000|修改打印机17320152WV版本号成功，型号：f3,版本号：1.1.107
+2018-04-21 11:18:10,919 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:10.000|设备：17320152WV,当前版本：1.1.107，获取新版本...
+2018-04-21 11:18:32,108 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:31.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:18:32,130 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:31.000|设备：17320152WV,类型：3,当前版本：1.1.999,获取新版本...
+2018-04-21 11:18:35,122 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:34.000|修改打印机17320152WV版本号成功，型号：3,版本号：1.1.999
+2018-04-21 11:18:35,165 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:18:34.000|设备：17320152WV,当前版本：1.1.999，获取新版本...
+2018-04-21 11:19:15,551 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:19:15.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 11:19:15,555 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:19:15.000|设备：17320152WV,类型：F3,当前版本：1.1.206,获取新版本...
+2018-04-21 11:19:17,182 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:19:16.000|修改打印机17320152WV版本号成功，型号：F3,版本号：1.1.206
+2018-04-21 11:19:17,224 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 11:19:16.000|设备：17320152WV,当前版本：1.1.206，获取新版本...
+2018-04-21 12:57:31,860 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:57:31.000|数据库已成功连接,正在启动服务
+2018-04-21 12:57:32,305 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:57:31.000|
+
+路由选择控制器 Base 耗时：0秒38毫秒
+2018-04-21 12:57:38,109 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:57:37.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 12:58:03,383 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:02.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 12:58:10,815 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:10.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 12:58:12,390 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:11.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 12:58:55,256 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:55.000|数据库已成功连接,正在启动服务
+2018-04-21 12:58:55,831 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:55.000|
+
+路由选择控制器 Base 耗时：0秒12毫秒
+2018-04-21 12:58:56,112 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:56.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 12:58:58,454 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:58.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 12:58:58,580 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:58:58.000|查询设备版本号失败：没有找到打印机17320152WV,17080362WV,17080364WV
+2018-04-21 12:59:53,339 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:59:53.000|数据库已成功连接,正在启动服务
+2018-04-21 12:59:53,888 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 12:59:53.000|
+
+路由选择控制器 Base 耗时：0秒28毫秒
+2018-04-21 13:00:13,061 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:00:13.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:00:24,459 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:00:24.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:02:32,211 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:02:32.000|数据库已成功连接,正在启动服务
+2018-04-21 13:02:32,672 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:02:32.000|
+
+路由选择控制器 Base 耗时：0秒19毫秒
+2018-04-21 13:02:36,027 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:02:35.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:02:37,769 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:02:36.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:02:38,533 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:02:37.000|查询设备版本号失败：没有找到打印机17320152WV,17080362WV,17080364WV
+2018-04-21 13:04:08,373 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:08.000|数据库已成功连接,正在启动服务
+2018-04-21 13:04:08,940 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:08.000|
+
+路由选择控制器 Base 耗时：0秒22毫秒
+2018-04-21 13:04:11,247 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:11.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:04:13,078 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:12.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:04:53,352 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:53.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:04:55,789 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:04:55.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:07:39,620 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:07:39.000|数据库已成功连接,正在启动服务
+2018-04-21 13:07:40,182 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:07:39.000|
+
+路由选择控制器 Base 耗时：0秒99毫秒
+2018-04-21 13:07:44,978 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:07:44.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:07:46,406 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:07:45.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:37:39,874 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:37:39.000|数据库已成功连接,正在启动服务
+2018-04-21 13:37:40,966 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:37:40.000|
+
+路由选择控制器 Base 耗时：0秒17毫秒
+2018-04-21 13:37:57,800 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:37:57.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 13:38:00,571 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:38:00.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:40:16,583 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:40:16.000|数据库已成功连接,正在启动服务
+2018-04-21 13:40:17,184 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:40:16.000|
+
+路由选择控制器 Base 耗时：0秒86毫秒
+2018-04-21 13:40:19,565 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:40:19.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 13:40:22,172 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:40:21.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:42:46,643 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:42:46.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:42:47,769 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:42:47.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:46:50,728 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:46:50.000|数据库已成功连接,正在启动服务
+2018-04-21 13:46:51,278 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:46:50.000|
+
+路由选择控制器 Base 耗时：0秒69毫秒
+2018-04-21 13:46:52,139 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:46:51.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 13:46:54,689 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:46:54.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:47:34,615 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:47:34.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:47:36,125 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:47:35.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:48:42,430 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:48:42.000|数据库已成功连接,正在启动服务
+2018-04-21 13:48:43,054 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:48:42.000|
+
+路由选择控制器 Base 耗时：0秒25毫秒
+2018-04-21 13:48:52,547 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:48:52.000|
+
+路由选择控制器 sys 耗时：0秒2毫秒
+2018-04-21 13:48:55,409 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:48:55.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:49:36,489 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:49:36.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:49:37,966 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:49:37.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:50:37,991 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:37.000|数据库已成功连接,正在启动服务
+2018-04-21 13:50:38,580 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:37.000|
+
+路由选择控制器 Base 耗时：0秒33毫秒
+2018-04-21 13:50:41,808 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:41.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:50:44,703 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:43.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:50:54,536 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:53.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:50:56,097 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:50:55.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 13:51:17,286 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:51:16.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 13:51:18,354 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 13:51:17.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:24:33,358 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:33.000|数据库已成功连接,正在启动服务
+2018-04-21 14:24:33,926 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:33.000|
+
+路由选择控制器 Base 耗时：0秒11毫秒
+2018-04-21 14:24:37,942 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:37.000|
+
+路由选择控制器 sys 耗时：0秒3毫秒
+2018-04-21 14:24:39,857 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:39.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:24:48,626 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:48.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 14:24:50,657 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:50.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:24:59,227 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:24:59.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 14:25:00,312 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:25:00.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:25:17,448 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:25:17.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 14:25:19,043 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:25:18.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:43:50,100 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:43:50.000|数据库已成功连接,正在启动服务
+2018-04-21 14:43:51,497 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:43:51.000|
+
+路由选择控制器 Base 耗时：0秒136毫秒
+2018-04-21 14:43:52,578 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:43:51.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 14:43:54,766 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:43:53.000|查询设备版本号：设备编号：17320152WV,17080362WV,17080364WV
+2018-04-21 14:44:13,937 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:44:13.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-21 14:44:15,562 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:44:14.000|查询设备版本号：设备编号：17320152WV,17080362WV,
+2018-04-21 14:46:47,670 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:46:47.000|数据库已成功连接,正在启动服务
+2018-04-21 14:46:48,083 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:46:47.000|
+
+路由选择控制器 Base 耗时：0秒19毫秒
+2018-04-21 14:46:54,997 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:46:54.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 14:46:56,532 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:46:56.000|查询设备版本号：设备编号：17320152WV,17080362WV,
+2018-04-21 14:51:37,224 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:51:37.000|数据库已成功连接,正在启动服务
+2018-04-21 14:51:38,653 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:51:38.000|
+
+路由选择控制器 Base 耗时：0秒16毫秒
+2018-04-21 14:51:38,804 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:51:38.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 14:51:40,997 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 14:51:40.000|查询设备版本号：设备编号：17320152WV,17080362WV,
+2018-04-21 18:41:35,267 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:41:35.000|数据库已成功连接,正在启动服务
+2018-04-21 18:41:35,753 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:41:35.000|
+
+路由选择控制器 Base 耗时：0秒55毫秒
+2018-04-21 18:41:39,740 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:41:39.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 18:41:43,821 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:41:43.000|修改域名...
+2018-04-21 18:44:29,956 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:44:29.000|数据库已成功连接,正在启动服务
+2018-04-21 18:44:30,377 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:44:29.000|
+
+路由选择控制器 Base 耗时：0秒12毫秒
+2018-04-21 18:44:31,605 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:44:30.000|
+
+路由选择控制器 sys 耗时：0秒6毫秒
+2018-04-21 18:44:35,130 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:44:34.000|修改域名www.baidu.com...
+2018-04-21 18:45:28,816 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:45:28.000|数据库已成功连接,正在启动服务
+2018-04-21 18:45:29,409 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:45:28.000|
+
+路由选择控制器 Base 耗时：0秒21毫秒
+2018-04-21 18:45:39,403 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:45:38.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 18:45:50,016 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:45:49.000|修改域名www.baidu.com...
+2018-04-21 18:54:07,301 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:54:07.000|数据库已成功连接,正在启动服务
+2018-04-21 18:54:09,272 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:54:08.000|
+
+路由选择控制器 Base 耗时：0秒12毫秒
+2018-04-21 18:54:39,331 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:54:38.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-21 18:54:41,071 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-21 18:54:40.000|修改域名www.baidu.com...

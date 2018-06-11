@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>找回密码</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+	<link rel="icon" href="../../Images/logo.png" type="image/png">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">
+				<img src="../../Images/icon-head-login.png" height="20" alt="">
+			</a>
+			<a href="" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<!-- <li><a href="">登录</a></li> -->
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container">
+	<ol class="breadcrumb">
+		<li>
+			<a href=""><a href="./login.html">首页</a></a>
+		</li>
+		<li class="active">
+			找回密码
+		</li>
+	</ol>
+	<form id="forget" action="resetpass.html" class="form-horizontal">
+	<div class="forget">
+	 	<div class="form-group">
+	 		<label for="" class="col-sm-1 control-label text-right">邮箱</label>
+	 		<div class="col-sm-3">
+	 			<input type="text" class="form-control" data-verify-mail="true" />
+	 		</div>
+	 	</div>
+	 	<div class="form-group">
+	 		<div class="col-sm-offset-1 col-sm-3">
+	 			<button type="submit" class="btn btn-action" data-verify-submit>找回密码</button>
+	 		</div>
+	 	</div>
+ 	</div>
+	</form>
+</div>
+<!-- 公司信息 -->
+<div class="container footer">
+	<div class="footer-open">
+		<p>© 1998 - 2016 Tencent All Right Reserved.</p>
+	</div>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/open_extends.js"></script>
+<script type="text/javascript">
+	$("#forget").validateForm();
+</script>
+</body>
+</html>

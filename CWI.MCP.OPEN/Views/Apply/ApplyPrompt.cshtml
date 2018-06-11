@@ -1,0 +1,19 @@
+﻿@using CWI.MCP.Common
+@{
+    ViewBag.Title = "微云打开放平台";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="open_app_mgt">
+
+    <div class="open_app_mgt_cen text-center">
+        <img src="@RoutingUtil.ImgUrl("/Images/Home/nologin.png")" />
+        <p>抱歉，您还没有登录；请登录后，再使用此功能。<br /><a href="/user/login">登录>></a></p>
+    </div>
+    <style>.open_footer { display: none}
+        body {
+              background-color:#fafafa;
+                 }
+    </style>
+</div>

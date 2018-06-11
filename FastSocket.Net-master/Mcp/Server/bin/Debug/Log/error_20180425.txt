@@ -1,0 +1,122 @@
+2018-04-25 11:54:39,935 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:39.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:39,935 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:39.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:39,985 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:39.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 11:54:39,987 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:39.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 11:54:40,535 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:40,543 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 11:54:40,875 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 11:54:40,893 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 11:54:40,905 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 11:54:40,932 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:40,995 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 11:54:40,999 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:41,000 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 11:54:41,071 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Set[T](String key, T t, DateTime dateTime)
+   在 CWI.Cache.Redis.Cache.WriteCache[T](T value, String cacheKey, DateTime expireTime) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 45
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 655
+2018-04-25 11:54:41,071 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Set[T](String key, T t, DateTime dateTime)
+   在 CWI.Cache.Redis.Cache.WriteCache[T](T value, String cacheKey, DateTime expireTime) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 45
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 655
+2018-04-25 11:54:41,090 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 11:54:51,198 [6] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 11:54:50.000|【100】心跳包间隔时间判断出现异常，异常内容：值不能为 null。
+参数名: keySystem.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(TKey key, TValue value)
+   在 TcpServer.TcpDataHandelCommand.CheckedHeartbeatInterval(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query) 位置 D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\Mcp\Server\TcpDataHandelCmd.cs:行号 60
+2018-04-25 12:23:28,921 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 12:23:28.000|缓存中获取设备状态异常，设备号:18100001SQ,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 12:23:29,343 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 12:23:28.000|缓存中设置设备状态异常，设备号:18100001SQ,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 12:23:52,913 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 12:23:52.000|缓存中获取设备状态异常，设备号:18100001SQ,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635
+2018-04-25 12:23:52,954 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 12:23:52.000|缓存中设置设备状态异常，设备号:18100001SQ,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。
+2018-04-25 12:29:28,731 [5] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 12:29:27.000|缓存中获取设备状态异常，设备号:18100001SQ,异常信息：“CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。System.TypeInitializationException: “CWI.Cache.Redis.RedisCache”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“ServiceStack.Common, Version=1.0.4321.41957, Culture=neutral, PublicKeyToken=null”或它的某一个依赖项。系统找不到指定的文件。
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config, Int32 initalDb)
+   在 ServiceStack.Redis.PooledRedisClientManager..ctor(IEnumerable`1 readWriteHosts, IEnumerable`1 readOnlyHosts, RedisClientManagerConfig config)
+   在 CWI.Cache.Redis.RedisCache.CreateManager() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 41
+   在 CWI.Cache.Redis.RedisCache..cctor() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\RedisCache.cs:行号 30
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 CWI.Cache.Redis.RedisCache.Get[T](String key)
+   在 CWI.Cache.Redis.Cache.GetCache[T](String cacheKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\Cache.cs:行号 24
+   在 CWI.MCP.Services.PrinterService.GetDeviceStatCache(String did) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 635

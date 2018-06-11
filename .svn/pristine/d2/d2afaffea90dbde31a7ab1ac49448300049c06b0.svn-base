@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打开放平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="./login.html">退出</a></li>
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="content">
+			<div class="page-sidebar">
+				<ul class="nav sidebar-menu">
+					<li>
+						<a href="index.html">首页</a>
+						<ul class="submenu">
+							<li>
+								<a href="">item1</a>
+								<ul class="submenu">
+									<li>
+										<a href="">item1-1</a>
+									</li>
+									<li><a href="">item1-2</a></li>
+									<li><a href="">item1-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">item2</a></li>
+							<li><a href="">item3</a></li>
+						</ul>
+					</li>
+					<li><a href="">快递单</a></li>
+					<li><a href="">API说明</a></li>
+					<li><a href="">接入指南</a></li>
+					<li class="active"><a href="">应用管理</a></li>
+				</ul>
+			</div>
+			<div class="page-content">
+				<div class="panel panel-app">
+					<div class="panel-heading">
+						<h3>应用列表</h3>
+						<a href="" class="btn btn-action btn-sm pull-right" data-toggle="modal" data-target="#create_app">创建应用</a>
+					</div> 
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>应用名称</th>
+								<th>介绍</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="bg-grey">Hello world</td>
+								<td>.........</td>
+								<td>运行中</td>
+								<td>[<a href="./appinfo.html">设置</a>] [<a href="">删除</a>]</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="create_app" tabindex="-1" role="dialog" aria-labelledby="create_app_label">
+	<form id="create_app_form" action="post" class="form-horizontal" enctype="multipart/form-data">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      	<div class="modal-header">
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        	<h4 class="modal-title" id="create_app_label">创建应用</h4>
+	      	</div>
+	      	<div class="modal-body">
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">应用名称</label>
+      				<div class="col-sm-10">
+      					<input type="text" class="form-control" />
+      				</div>
+      			</div>
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">应用地址</label>
+      				<div class="col-sm-10">
+      					<input type="text" class="form-control" />
+      				</div>
+      			</div>
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">回调地址</label>
+      				<div class="col-sm-10">
+      					<input type="text" class="form-control" data-verify-depend="#signed_key,回调地址与签名Key必须同时存在!" />
+      				</div>
+      			</div>
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">签名Key</label>
+      				<div class="col-sm-10">
+      					<input type="text" class="form-control" id="signed_key" />
+      				</div>
+      			</div>
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">应用LOGO</label>
+      				<div class="col-sm-10">
+      					<input type="file" accept="image/jpeg,image/png " />
+      				</div>
+      			</div>
+      			<div class="form-group">
+      				<label for="" class="col-sm-2 control-label">应用描述</label>
+      				<div class="col-sm-10">
+      					<textarea name="" cols="30" rows="5" class="form-control"></textarea>
+      				</div>
+      			</div>
+	      	</div>
+	      	<div class="modal-footer">
+	        	<button type="submit" class="btn btn-action" data-verify-submit>确定</button>
+	        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      	</div>
+	    </div>
+  	</div>
+  	</form>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../Scripts/open_extends.js"></script>
+<script type="text/javascript" src="../../Scripts/open.js"></script>
+<script type="text/javascript">
+	$("#create_app_form").validateForm();
+</script>
+</body>
+</html>

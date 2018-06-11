@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var result = ViewBag.Result;
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="join-guide">
+            <div class="guide-body">
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                        <h4>获取接口凭证</h4>
+                    </div>
+                    <div class="item-body">
+                        <p>调用此api接口，可获取调用接口凭证，即身份认证。</p>
+                    </div>
+                </div>
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                    </div>
+                    <div class="item-body">
+                        <form id="register" action="/sys/GetAccessToken" class="form-horizontal">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-3 control-label">appId：</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="app_id" value="" />
+                                        f61034cf434311e6bd5302004c4f4f50
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-3 control-label">appKey：</label>
+                                    <div class="col-sm-6">
+                                        <input id="pass" name="app_key" class="form-control" value="" />
+                                        e6bd5302004c4f4f
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <button type="submit" class="btn btn-action" data-verify-submit>提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @{
+                        if (!string.IsNullOrWhiteSpace(result))
+                        {
+                        <div class="apiinfo-item">
+                            <div class="item-heading">
+                                <h4>响应结果示例</h4>
+                            </div>
+                            <div class="item-body">
+                                <pre>@result</pre>
+                            </div>
+                        </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

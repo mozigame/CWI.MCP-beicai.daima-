@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "设备列表";
+}
+@section styles{
+    <link rel="Stylesheet" type="text/css" href="@CWI.MCP.Common.RoutingUtil.CssUrl("/Styles/weui.css")" />
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f0f0f6;
+        }
+    </style>
+}
+<div class="content">
+    <div class="list"></div>
+</div>
+<script type="text/javascript" src="@CWI.MCP.Common.RoutingUtil.JsUrl("/Scripts/dropload.min.js")"></script>
+<script type="text/javascript">
+    $(function () {
+        common.scrollPage('/device/getdevices', { PageSize: 2 }, function (res) {
+            var div = "";
+            var table = "";
+            var trs = "";
+            if (table == "") {
+                table += '<thead class="tdtitle"><th width="25%">Sn</th><th width="25%">Mac</th><th width="15%">设备授权</th><th width="15%">开通WiFi</th><th>详细</th></tr></thead>';
+                table += '<tbody>{0}</tbody>';
+            }
+            var devices = res.data.Devices;
+            for (var i = 0; i < devices.length; i++) {
+                var device = devices[i];
+                var authBtn = device.IsAuth == 1 ? '已授权' : '<a href="/device/auth?macCode=' + device.EquCode + '&snCode=' + device.SnCode + '" class="weui_btn weui_btn_mini weui_btn_default">授权</a>';
+                var wifiBtn = device.IsOpenWifi == 1 ? '已开启' : '<a href="/device/openwifi?deviceId=' + device.DeviceId + '" class="weui_btn weui_btn_mini weui_btn_default">开通</a>';
+                var detailBtn = (device.IsAuth + device.IsOpenWifi >= 1) ? '<a href="/device/detail?deviceId=' + device.DeviceId + '" class="weui_btn weui_btn_mini weui_btn_default">查看</a>' : '';
+                trs += '<tr><td>' + device.EquCode + '</td><td>' + device.SnCode + '</td><td>' + authBtn + '</td><td>' + wifiBtn + '</td><td>' + detailBtn + '</td></tr>';
+            }
+            table = table.format(trs);
+            if (table != "" && trs!="") {
+                div += '<div class="weui_cells">';
+                div += '<table>{0}</table>';
+                div += '</div>';
+                div = div.format(table);
+            }
+            return div;
+        });
+    });
+</script>

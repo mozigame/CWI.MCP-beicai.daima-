@@ -1,0 +1,5 @@
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\bin\Debug\CWI.Cache.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\bin\Debug\CWI.Cache.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Debug\CWI.Cache.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Debug\CWI.Cache.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Debug\CWI.Cache.pdb

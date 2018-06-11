@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7DFAEFE-5652-424E-8CB0-DB2FC83BC016}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWI.MCP.Controllers</RootNamespace>
+    <AssemblyName>CWI.MCP.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Evt.Framework.Common">
+      <HintPath>..\Bin\Framework\Evt.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.DataAccess">
+      <HintPath>..\Bin\Framework\Evt.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.Mvc">
+      <HintPath>..\Bin\Framework\Evt.Framework.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseControllers\AbstractController.cs" />
+    <Compile Include="BaseControllers\BackendBaseController.cs" />
+    <Compile Include="BaseControllers\WebBaseController.cs" />
+    <Compile Include="BaseControllers\WeiXinBaseController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\BPS\ErrorController.cs" />
+    <Compile Include="Web\BPS\UserController.cs" />
+    <Compile Include="Web\DEMO\ErrorController.cs" />
+    <Compile Include="Web\DEMO\SysController.cs" />
+    <Compile Include="Web\IOT\DeviceController.cs" />
+    <Compile Include="Web\IOT\ErrorController.cs" />
+    <Compile Include="Web\IOT\SystemController.cs" />
+    <Compile Include="Web\MPS\ErrorController.cs" />
+    <Compile Include="Web\MPS\UserController.cs" />
+    <Compile Include="Web\OPEN\ApiController.cs" />
+    <Compile Include="Web\OPEN\ApplyController.cs" />
+    <Compile Include="Web\OPEN\DocController.cs" />
+    <Compile Include="Web\OPEN\ErrorController.cs" />
+    <Compile Include="Web\OPEN\ExpressController.cs" />
+    <Compile Include="Web\OPEN\HomerController.cs" />
+    <Compile Include="Web\OPEN\SystemController.cs" />
+    <Compile Include="Web\OPEN\UserController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWI.MCP.Common\CWI.MCP.Common.csproj">
+      <Project>{5B8DB3C8-9ED9-4EF4-840D-A8BE274538C0}</Project>
+      <Name>CWI.MCP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Models\CWI.MCP.Models.csproj">
+      <Project>{0A28C0A9-8974-444F-8F71-0D85EDA2CE6C}</Project>
+      <Name>CWI.MCP.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Services\CWI.MCP.Services.csproj">
+      <Project>{3ED0D37C-672E-45B0-9019-A99CB018EC4B}</Project>
+      <Name>CWI.MCP.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

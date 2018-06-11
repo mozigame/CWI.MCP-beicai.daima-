@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "API接口-关联打印机";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/api/accesstoken" class="list-group-item">获取接口凭证</a>
+                        <a href="/api/bindprinters" class="list-group-item active">关联打印机</a>
+                        <a href="/api/unbindprinters" class="list-group-item">解绑打印机</a>
+                        <a href="/api/printticket" class="list-group-item">打印小票</a>
+                        <a href="/api/printexpress" class="list-group-item">打印快递面单</a>
+                        <a href="/api/chkprintersenablebind" class="list-group-item">检验打印机</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>关联打印机</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此接口，即可实现应用平台商家与打印机相关联。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求地址</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>http://mcp.yingmei.me:8686/mcp/sys/bindprinters</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应格式</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>JSON</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求参数</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>必须</th>
+                                    <th>类型及范围</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>app_id</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>应用ID，开发者创建应用时，微云打开放平台会为应用自动分配此ID，开发者在“应用管理”应用详情中可查看app_id</td>
+                                </tr>
+                                <tr>
+                                    <td>access_token</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>调用接口凭证，注意有效期，过期需重新获取</td>
+                                </tr>
+                                <tr>
+                                    <td>merchant_code</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>商家编码，由第三方集成平台传入，内容为接入的微云打平台应用下商家唯一标识即可</td>
+                                </tr>
+                                <tr>
+                                    <td>printer_codes</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>制造编号串，由制造编号及校验码以“#”连接标识一台打印机，多台打印间用“，”隔开</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+POST http://mcp.yingmei.me:8686/mcp/sys/bindprinters
+
+POST data:
+app_id=665358db4d6311e5ac9902004c4f4f50&access_token=b1678286e7674ca787383c86aebb307d&merchant_code=ligongshop1&printer_codes=8c5e2d654d#1234,9c5e2d654d#8765
+							</pre>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>类型</th>
+                                    <th>示例值</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Int</td>
+                                    <td>"status": 1 | 0</td>
+                                    <td>1:成功，0:失败</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>String</td>
+                                    <td>"data": "ok" | "error info"</td>
+                                    <td>关联成功。调用失败则返回错误信息</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+{
+   "status": 1,
+   "data": "ok"
+} 
+							</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

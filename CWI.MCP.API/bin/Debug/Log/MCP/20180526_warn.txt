@@ -1,0 +1,120 @@
+2018-05-26 19:10:37,810 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:10:36.000|Evt.Framework.Common.MessageException: 打印机断网或者网络不稳定！
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1565
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:ACAB4CDE4E944D6C932A6087648DA7CF
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:11:41,084 [11] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:11:40.000|Evt.Framework.Common.MessageException: 打印机18160956AD前面存在未打印任务，创建任务失败
+   在 CWI.MCP.Services.PrintOrderService.Print(BillViewModel bill) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 64
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 218
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:2AA4B53966094A5DAD7F76FB3C11087A
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:15:29,017 [11] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:15:28.000|Evt.Framework.Common.MessageException: 打印机断网或者网络不稳定！
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1565
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:FD015A30E3794328B83F2D15889A9049
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:21:23,852 [7] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:21:22.000|CWI.MCP.Common.InnerException: 打印机18160956AD前面存在未打印任务，创建任务失败
+   在 CWI.MCP.Services.PrintOrderService.Print(BillViewModel bill) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 64
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 218
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:C09D3F33804A4B808B354A1FE47E17C1
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:22:45,810 [10] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:22:44.000|Evt.Framework.Common.MessageException: 打印机故障，开盖或缺纸，或者无可用状态可用状态，请重启打印机试试，或者联系管理员
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1558
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:C14BFC866462493D8C2ADDE0F0AE5D16
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:33:02,123 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:33:01.000|Evt.Framework.Common.MessageException: 打印机故障，开盖或缺纸，或者无可用状态可用状态，请重启打印机试试，或者联系管理员
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1560
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"20180526190651","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:D244CD3C20D14059BB826C95EDA40C7D
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:33:57,084 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:33:55.000|Evt.Framework.Common.MessageException: 打印机故障，开盖或缺纸，或者无可用状态可用状态，请重启打印机试试，或者联系管理员
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1560
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"201805261906511","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:AF80847CD3AA4B17A21315DC7C25E3B7
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:37:54,212 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:37:53.000|Evt.Framework.Common.MessageException: 打印机故障，开盖或缺纸，或者无可用状态可用状态，请重启打印机试试，或者联系管理员
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1557
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"2018052619065111111","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:FEF7A031E7664503B327BA914B877A25
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:38:36,527 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:38:36.000|CWI.MCP.Common.InnerException: 打印机18160956AD前面存在未打印任务，创建任务失败
+   在 CWI.MCP.Services.PrintOrderService.Print(BillViewModel bill) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 64
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 218
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"2018052619065111111","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:5DE86319C15341809875FA7604CE6FA7
+  URL:http://localhost:8686/mcp/sys/Print
+
+
+2018-05-26 19:39:06,057 [10] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-26 19:39:05.000|Evt.Framework.Common.MessageException: 打印机故障，开盖或缺纸，或者无可用状态可用状态，请重启打印机试试，或者联系管理员
+   在 CWI.MCP.Services.PrintOrderService.UpdateOrderCreatTimeIfSameBill(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrintOrderService.cs:行号 1557
+   在 CWI.MCP.API.Controllers.MCP.SysController.Print(BillViewModel billModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 212
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"billModel":{"bill_type":"3","template_id":"T0020101","copies":"1","bill_no":"2018052619065111111","bill_content":"{   \"maxcount\": 0,   \"p1_1\": \"单式\",   \"p1_2\": \"2\",   \"p1_num\": [{     \"bluenum\": \"07\",     \"bulemode\": \"机选\",     \"n\": 1,     \"redmode\": \"机选\",     \"rednum\": \"14 16 20 22 25 33\"   }],   \"p2_1\": \"1\",   \"p2_2\": \"2018013\",   \"p2_3\": \"2018/01/30\",   \"p2_4\": \"39101102\",   \"p2_5\": \"\",   \"p2_6\": \"2018/01/30\",   \"p2_7\": \"13:56:23\",   \"p2_8\": \"￥20\",   \"p3_1\": \"www.bglc.net\",   \"p3_2\": \"6269-049052175-1245670\",   \"p3_3\": \"TRFCZP-34MCKG-X\u002698BF-QCQY%3-9K58X\",   \"p3_4\": \"62690490521751245670\",   \"type\": 2 }","sign":null,"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"37ed84f7e1f549e5849f718bb8d5a6b0","merchant_code":"2018","printer_codes":"18160956AD"}}  SessionID:DA2E300ED55B4A29A3363D1AB963E921
+  URL:http://localhost:8686/mcp/sys/Print
+
+

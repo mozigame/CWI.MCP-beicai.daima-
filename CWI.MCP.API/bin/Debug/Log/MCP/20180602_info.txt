@@ -1,0 +1,7 @@
+2018-06-02 23:50:00,800 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-06-02 23:50:00.000|数据库已成功连接,正在启动服务
+2018-06-02 23:50:01,423 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-06-02 23:50:00.000|
+
+路由选择控制器 Base 耗时：0秒15毫秒
+2018-06-02 23:50:02,714 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-06-02 23:50:01.000|
+
+路由选择控制器 sys 耗时：0秒7毫秒

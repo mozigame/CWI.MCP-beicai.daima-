@@ -1,0 +1,53 @@
+﻿@using CWI.MCP.Models;
+@using CWI.MCP.Common;
+@{
+    ViewBag.Title = "设备管理";
+}
+<style type="text/css">
+     body { font-family:Helvetica,Arial,sans-serif; background-color:#f0f0f6; }
+</style>
+<div class="weui_cells_tips"></div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><p class="title">设备Mac</p></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="content"></p>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd"><p class="title">设备Sn</p></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="content"></p>
+        </div>
+    </div>
+    <div class="weui_cell" onclick="openShopLocation();">
+        <div class="weui_cell_bd">
+            <p class="title">设备ID</p>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="content"></p>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd">
+            <p class="title">二维码</p>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="content"><img class="image" src="" alt="" /></p>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd">
+            <p class="title">WiFi</p>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p class="content">
+              <span style="color: red;">未开通</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="weui_btn_area">
+    <a href="/device/config"  class="weui_btn weui_btn_primary">配置WiFi</a>
+    <a href="/device/list"  class="weui_btn weui_btn_primary">设备列表</a>
+</div>

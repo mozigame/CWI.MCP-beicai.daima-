@@ -1,0 +1,116 @@
+﻿@using CWI.MCP.Models.ViewModels.MCP.OPEN
+@model CWI.MCP.Models.ViewModels.MCP.OPEN.DevApplyViewModel
+@{
+    ViewBag.Title = "应用设置";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+    <ol class="breadcrumb">
+        <li>
+            <a href="/apply/applymanagement">应用管理</a>
+        </li>
+        <li class="active">
+            应用设置
+        </li>
+    </ol>
+<div class="appinfo">
+    <div class="panel panel-appinfo">
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left">
+                    <img src="../../Images/128X128.ico" alt="" class="media-object" width="64" height="64"/>
+                </div>
+                @if (Model != null)
+                {
+                    <div class="media-body">
+                        <p>微云打</p>
+                        <p>AppId: @Model.AppId</p>
+                        <p>AppKey: @Model.AppKey</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+        <div class="panel panel-appinfo">
+            <div class="panel-heading">应用设置
+            </div>
+            <div class="panel-body">
+                <div class="cell-item">
+                    <div class="col-sm-1">
+                        <p>应用名称</p>
+                    </div>
+                    <div class="col-sm-11">
+                        @if (string.IsNullOrEmpty(Model.AppName))
+                        {
+                            <p>&nbsp;</p>
+                        }
+                        else
+                        {
+                            <p>@Model.AppName</p>
+                        }
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="col-sm-1">
+                        <p>应用描述</p>
+                    </div>
+                    <div class="col-sm-11">
+                        @if (string.IsNullOrEmpty(Model.Memo))
+                        {
+                            <p>&nbsp;</p>
+                        }
+                        else
+                        {
+                            <p>@Model.Memo</p>
+                        }
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="col-sm-1">
+                        <p>回调地址</p>
+                    </div>
+                    <div class="col-sm-11">
+                        @if (string.IsNullOrEmpty(Model.UpdateCallbackUrl))
+                        {
+                            <p>&nbsp;</p>
+                        }
+                        else
+                        {
+                            <p>@Model.UpdateCallbackUrl</p>
+                        }
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="col-sm-1">
+                        <p>签名Key</p>
+                    </div>
+                    <div class="col-sm-11">
+                        @if (string.IsNullOrEmpty(Model.SignKey))
+                        {
+                            <p>&nbsp;</p>
+                        }
+                        else
+                        {
+                            <p>@Model.SignKey</p>
+                        }
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="col-sm-1">
+                        <p>LOGO</p>
+                    </div>
+                    <div class="col-sm-11">
+                        <p><img src="@Model.LogoPath" alt="" width="64" height="64">
+                        </p>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <a href="/apply/addapplyinfo?appId=@Model.AppId" class="btn btn-action btn-sm">编辑</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

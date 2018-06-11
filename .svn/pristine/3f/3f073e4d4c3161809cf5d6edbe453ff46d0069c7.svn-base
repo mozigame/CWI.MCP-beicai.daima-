@@ -1,0 +1,503 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2015，COOLWI.COM
+// 变更历史：
+//      姓名       日期                 说明
+// --------------------------------------------
+//      王军锋     2014/12/13 10:35:00  创建
+//---------------------------------------------
+
+using CWI.MCP.Models;
+using CWI.MCP.Common;
+using System.Collections.Generic;
+using CWI.MCP.Common.ORM;
+using Evt.Framework.Common;
+using System;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Reflection;
+using System.Text;
+using System.Runtime.Caching;
+
+namespace CWI.MCP.Services
+{
+    public class AppService : BaseService
+    {
+        /// <summary>
+        /// 失败后尝试次数
+        /// </summary>
+        private const int tryMax = 5;
+
+        /// <summary>
+        /// 尝试延长执行间隔，单位：毫秒
+        /// </summary>
+        private const int delayTryInterval = 3000;
+
+        private ObjectCache cache = MemoryCache.Default;
+
+        #region 公有方法
+
+        /// <summary>
+        /// 获取访问令牌
+        /// </summary>
+        /// <param name="app">应用参数</param>
+        /// <returns>访问令牌</returns>
+        public object GetAccessToken(AppViewModel app)
+        {
+            try
+            {
+                //1.校验应用信息
+                CheckApp(app.app_id, app.app_key);
+
+                //2.获取访问令牌
+                var tokenDic = new Dictionary<string, object>();
+                ConditionCollection cc = new ConditionCollection();
+                cc.Add(new Condition("app_id", TryConvertUtil.ToString(app.app_id)));
+                cc.Add(new Condition("app_key", TryConvertUtil.ToString(app.app_key)));
+                var accToken = this.GetRepository<McpAppTokenInfo>().GetModel(cc);
+
+                var dbNow = CommonUtil.GetDBDateTime();
+                if (accToken != null)
+                {
+                    //更新token及有效期
+                    tokenDic = UpdateAccessToken(app);
+
+                    #region 原版日期判断代码 2018-3-28 13:52:34 out
+
+                    //if (accToken.CreatedOn.AddSeconds(accToken.ExpiresIn).AddSeconds(60) <= dbNow)
+                    //{
+                    //    //更新token及有效期
+                    //    tokenDic = UpdateAccessToken(app);
+                    //}
+                    //else
+                    //{
+                    //    //有效期内直接返回
+                    //    TimeSpan span = dbNow - accToken.CreatedOn;
+                    //    double newExpiresIn = accToken.ExpiresIn - span.TotalSeconds;
+                    //    tokenDic.Add("access_token", TryConvertUtil.ToString(accToken.AccessToken));
+                    //    tokenDic.Add("expires_in", newExpiresIn);
+                    //}
+
+                    #endregion
+                }
+                else
+                {
+                    //创建新token及有效期
+                    tokenDic = CreateAccessToken(app);
+                }
+                return tokenDic;
+            }
+            catch (Exception ex)
+            {
+                throw new MessageException(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 校验访问令牌
+        /// </summary>
+        /// <param name="appId">应用ID</param>
+        /// <param name="accessToken">访问令牌</param>
+        /// <returns>是否合法</returns>
+        public bool CheckAccessToken(string appId, string accessToken)
+        {
+            ConditionCollection c1 = new ConditionCollection();
+            c1.Add(new Condition("app_id", TryConvertUtil.ToString(appId)));
+            c1.Add(new Condition("access_token", TryConvertUtil.ToString(accessToken)));
+            var token = this.GetRepository<McpAppTokenInfo>().GetModel(c1);
+            if (token != null)
+            {
+                return token.CreatedOn.AddSeconds(token.ExpiresIn) > CommonUtil.GetDBDateTime();
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 通过AppId获取名称
+        /// </summary>
+        /// <param name="appId"></param>
+        public string GetAppNameById(string appId)
+        {
+            ConditionCollection cc = new ConditionCollection();
+            cc.Add(new Condition("app_id", appId));
+            var model = this.GetRepository<McpApplicationInfo>().GetModel(cc);
+            return model == null ? string.Empty : model.AppName;
+        }
+
+        /// <summary>
+        /// 获取AppId
+        /// </summary>
+        /// <param name="accessToken">访问令牌</param>
+        /// <returns></returns>
+        public string GetAppIdByAccessToken(string accessToken)
+        {
+            var cc = new ConditionCollection();
+            cc.Add(new Condition("access_token", TryConvertUtil.ToString(accessToken)));
+            var token = this.GetRepository<McpAppTokenInfo>().GetModel(cc);
+            if (token != null)
+            {
+                return token.CreatedOn.AddSeconds(token.ExpiresIn) > CommonUtil.GetDBDateTime() ? token.AppId : string.Empty;
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// 获取应用信息
+        /// </summary>
+        /// <param name="appId"></param>
+        /// <param name="appKey"></param>
+        /// <returns></returns>
+        public McpApplicationInfo GetApplication(string appId, string appKey)
+        {
+            var cc = new ConditionCollection();
+            cc.Add(new Condition("app_id", appId));
+            cc.Add(new Condition("app_key", appKey));
+            return this.GetRepository<McpApplicationInfo>().GetModel(cc);
+        }
+
+        /// <summary>
+        /// 获取应用信息列表
+        /// </summary>
+        /// <returns></returns>
+        public List<McpApplicationInfo> GetApplicationList()
+        {
+            return this.GetRepository<McpApplicationInfo>().ListModel();
+        }
+
+        /// <summary>
+        /// 获取应用签名密钥
+        /// </summary>
+        /// <param name="appId"></param>
+        /// <param name="appKey"></param>
+        /// <returns></returns>
+        public string GetAppSigKey(string appId, string appKey)
+        {
+            if (cache.Contains(appId))
+            {
+                return cache.Get("appId") as string;
+            }
+            else
+            {
+                var app = GetApplication(appId, appKey);
+                if (app != null)
+                {
+                    cache.Add(appId, app.SignKey, DateTimeOffset.Now.AddHours(12));
+                    return app.SignKey;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 打印任务状态回调
+        /// </summary>
+        /// <param name="resultCode">状态码</param>
+        /// <param name="orderId">订单编号</param>
+        /// <param name="printerCodes">打印设备编码</param>
+        public void AppCallBack(int resultCode, string orderId, string printerCodes = "")
+        {
+            //判断，有些状态不用回调，例如断网
+            int[] printStatueCode = {1,3,4,6,7};
+            if (!printStatueCode.Contains(resultCode))
+            {
+                LogUtil.Info($"跳过回调：该状态不回调-{resultCode}，订单-{orderId}");
+                return;
+            }
+            LogUtil.Info(string.Format("开始执行打印任务回调，设备号：{0},订单号：{1},状态: {2}", printerCodes, orderId, resultCode));
+            //获取打印订单信息
+            var cc = new ConditionCollection();
+            cc.Add(new Condition("order_id", orderId));
+            var order = this.GetRepository<McpOrderInfo>().GetModel(cc);
+            if (order != null)
+            {
+                //获取订单所属应用信息
+                var c1 = new ConditionCollection();
+                c1.Add(new Condition("app_id", order.AppId));
+                var app = this.GetRepository<McpApplicationInfo>().GetModel(c1);
+                if (app != null)
+                {
+                    //执行回调更新第三方应用数据状态
+                    if (!string.IsNullOrWhiteSpace(app.UpdateCallbackUrl))
+                    {
+                        if (string.IsNullOrWhiteSpace(printerCodes))
+                        {
+                            var c2 = new ConditionCollection();
+                            c2.Add(new Condition("order_id", order.OrderId));
+                            var printers = this.GetRepository<McpOrderPrinterInfo>().ListModel(c2);
+                            StringBuilder sbPrinter = new StringBuilder();
+                            if (printers != null)
+                            {
+                                printers.ForEach(d => sbPrinter.AppendFormat("{0},", d.PrinterCode));
+                                printerCodes = sbPrinter.ToString().TrimEnd(',');
+                            }
+                        }
+                        var callbackModel = new CallBackViewModel()
+                        {
+                            bill_no = order.BillNo,
+                            printer_code = printerCodes,
+                            result_code = resultCode.ToString(),
+                            key = app.SignKey
+                        };
+                        int status = 0, tryNum = 1;
+                        try
+                        {
+                            status = ExceCallBack(callbackModel, app.UpdateCallbackUrl, tryNum);
+                            if (status != 1)
+                            {
+                                System.Threading.Thread.Sleep(delayTryInterval);
+                                if (tryNum <= tryMax)
+                                {
+                                    status = ExceCallBack(callbackModel, app.UpdateCallbackUrl, ++tryNum);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogUtil.Error(ex.Message);
+                            System.Threading.Thread.Sleep(delayTryInterval);
+                            if (tryNum <= tryMax)
+                            {
+                                status = ExceCallBack(callbackModel, app.UpdateCallbackUrl, ++tryNum);
+                            }
+                            else
+                            {
+                                throw new MessageException(ex.Message);
+                            }
+                        }
+
+                        //更新回调标识
+                        if (status > 0)
+                        {
+                            order.CallbackStatus = status;
+                            order.ModifiedOn = CommonUtil.GetDBDateTime();
+                            this.GetRepository<McpOrderInfo>().Update(order, "callback_status,modified_on");
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 设备回调
+        /// </summary>
+        /// <param name="statusCode">状态码</param>
+        /// <param name="printerCode">打印设备编码</param>
+        /// <param name="faultTime">异常时间</param>
+        public void DeviceCallBack(int statusCode, string printerCode, DateTime faultTime)
+        {
+            LogUtil.Info(string.Format("打印设备回调:发送设备状态通知,设备号：{0},状态码: {1},故障时间：{2}", printerCode, statusCode, faultTime));
+
+            //获取设备所属应用信息
+            McpApplicationInfo app = null;
+            var cc = new ConditionCollection();
+            cc.Add(new Condition("printer_code", printerCode));
+            var deviceApps = this.GetRepository<McpMerchantPrinterInfo>().ListModel(cc);
+            var apps = GetApplicationList();
+
+            if (deviceApps != null && deviceApps.Count > 0)
+            {
+                foreach (var devApp in deviceApps)
+                {
+                    //执行回调更新第三方应用数据状态
+                    app = apps.Find(d => d.AppId.Equals(devApp.AppId, StringComparison.CurrentCultureIgnoreCase));
+                    if (app != null && !string.IsNullOrWhiteSpace(app.AuthCallbackUrl))
+                    {
+                        var callbackModel = new CallBackViewModel()
+                        {
+                            printer_code = printerCode,
+                            result_code = statusCode.ToString(),
+                            fault_time = faultTime.ToString(RegexConsts.DATETIME_FORMAT),
+                            key = app.SignKey
+                        };
+                        int status = 0, tryNum = 1;
+                        try
+                        {
+                            status = ExceCallBack(callbackModel, app.AuthCallbackUrl, tryNum);
+                            if (status != 1)
+                            {
+                                System.Threading.Thread.Sleep(delayTryInterval);
+                                if (tryNum <= tryMax)
+                                {
+                                    status = ExceCallBack(callbackModel, app.AuthCallbackUrl, ++tryNum);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            LogUtil.Error(ex.Message);
+                            System.Threading.Thread.Sleep(delayTryInterval);
+                            if (tryNum <= tryMax)
+                            {
+                                status = ExceCallBack(callbackModel, app.AuthCallbackUrl, ++tryNum);
+                            }
+                            else
+                            {
+                                throw new MessageException(ex.Message);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region 私有方法
+
+        #region 安全
+
+        /// <summary>
+        /// 校验应用
+        /// </summary>
+        /// <param name="appId">应用ID</param>
+        /// <param name="appKey">应用Key</param>
+        /// <returns>是否有效</returns>
+        public bool CheckApp(string appId, string appKey = "")
+        {
+            bool isOk = false;
+            ConditionCollection c1 = new ConditionCollection();
+            c1.Add(new Condition("app_id", TryConvertUtil.ToString(appId)));
+            if (!string.IsNullOrWhiteSpace(appKey))
+            {
+                c1.Add(new Condition("app_key", TryConvertUtil.ToString(appKey)));
+            }
+            var application = this.GetRepository<McpApplicationInfo>().GetModel(c1);
+            if (application != null)
+            {
+                switch (application.StatusCode)
+                {
+                    case (int)StatusCodeType.New:
+                        throw new MessageException(string.Format("应用处于{0}状态！", StatusCodeType.New.GetRemark()));
+
+                    case (int)StatusCodeType.Disabled:
+
+                        throw new MessageException(string.Format("应用处于{0}状态！", StatusCodeType.Disabled.GetRemark()));
+
+                    case (int)StatusCodeType.Deleted:
+                        throw new MessageException(string.Format("应用处于{0}状态！", StatusCodeType.Deleted.GetRemark()));
+
+                    default: break;
+                };
+
+                isOk = true;
+            }
+            else
+            {
+                throw new MessageException("无效应用，app_id或app_key参数错误！");
+            }
+            return isOk;
+        }
+
+        /// <summary>
+        /// 创建访问令牌
+        /// </summary>
+        /// <param name="app">应用参数</param>
+        /// <returns>访问令牌</returns>
+        private Dictionary<string, object> CreateAccessToken(AppViewModel app)
+        {
+            var tokenDic = new Dictionary<string, object>();
+            var token = new McpAppTokenInfo()
+            {
+                AppId = app.app_id,
+                AppKey = app.app_key,
+                AccessToken = CommonUtil.GetGuidNoSeparator(),
+                ExpiresIn = ConfigUtil.TokenExpireIn,
+                CreatedOn = CommonUtil.GetDBDateTime(),
+            };
+            this.GetRepository<McpAppTokenInfo>().Create(token);
+            tokenDic.Add("access_token", TryConvertUtil.ToString(token.AccessToken));
+            tokenDic.Add("expires_in", token.ExpiresIn);
+            return tokenDic;
+        }
+
+        /// <summary>
+        /// 更新访问令牌
+        /// </summary>
+        /// <param name="app">应用参数</param>
+        /// <returns>访问令牌</returns>
+        private Dictionary<string, object> UpdateAccessToken(AppViewModel app)
+        {
+            var tokenDic = new Dictionary<string, object>();
+            var token = new McpAppTokenInfo()
+            {
+                AppId = app.app_id,
+                AppKey = app.app_key,
+                AccessToken = CommonUtil.GetGuidNoSeparator(),
+                ExpiresIn = ConfigUtil.TokenExpireIn,
+                CreatedOn = CommonUtil.GetDBDateTime(),
+            };
+            this.GetRepository<McpAppTokenInfo>().Update(token, "access_token,expires_in,created_on");
+            tokenDic.Add("access_token", TryConvertUtil.ToString(token.AccessToken));
+            tokenDic.Add("expires_in", token.ExpiresIn);
+            return tokenDic;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 执行回调
+        /// </summary>
+        /// <param name="backModel">回调参数</param>
+        /// <param name="url">回调地址</param>
+        /// <param name="tryNum">尝试次数</param>
+        /// <returns>回调结果</returns>
+        private int ExceCallBack(CallBackViewModel backModel, string url, int tryNum)
+        {
+            var status = 0;
+            StringBuilder sbQuest = new StringBuilder();
+            Type t = backModel.GetType();
+            foreach (PropertyInfo pi in t.GetProperties())
+            {
+                var fieldName = pi.Name;
+                if (!fieldName.ToLower().Equals("sign") && !fieldName.ToLower().Equals("key"))
+                {
+                    var fieldValue = pi.GetValue(backModel, null);
+                    if (fieldValue != null)
+                    {
+                        sbQuest.AppendFormat("{0}={1}&", fieldName, fieldValue);
+                    }
+                }
+            }
+            var parms = sbQuest.ToString().TrimEnd('&');
+            var sign = CommonUtil.GetMD5Sign(backModel.key, parms);
+
+            LogUtil.Info(string.Format("第{0}次尝试回调，请求地址：{1},sign={2}。", tryNum, (url + "?" + parms), sign));
+            var result = NetUtil.ResponseByPost(url, string.Format("{0}&sign={1}", parms, sign));
+            if (!string.IsNullOrWhiteSpace(result))
+            {
+                var apiModel = JsonConvert.DeserializeObject<ApiResultInfo>(result);
+                status = apiModel.status;
+            }
+            return status;
+        }
+
+        /// <summary>
+        /// 获取应用列表
+        /// </summary>
+        /// <returns></returns>
+        private List<McpApplicationInfo> GetAppList()
+        {
+            var appsCacheKey = "AppList";
+            if (cache.Contains(appsCacheKey))
+            {
+                return cache.Get(appsCacheKey) as List<McpApplicationInfo>;
+            }
+            else
+            {
+                var apps = GetApplicationList();
+                cache.Add(appsCacheKey, apps, DateTimeOffset.Now.AddHours(12));
+                return apps;
+            }
+        }
+
+        #endregion
+    }
+}

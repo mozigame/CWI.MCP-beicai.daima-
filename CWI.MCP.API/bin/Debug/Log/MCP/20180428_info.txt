@@ -1,0 +1,12 @@
+2018-04-28 10:53:13,251 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 10:53:17.000|数据库已成功连接,正在启动服务
+2018-04-28 10:53:14,111 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 10:53:17.000|
+
+路由选择控制器 Base 耗时：0秒23毫秒
+2018-04-28 15:49:36,763 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 15:49:40.000|数据库已成功连接,正在启动服务
+2018-04-28 15:49:37,817 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 15:49:41.000|
+
+路由选择控制器 Base 耗时：0秒51毫秒
+2018-04-28 15:56:14,309 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 15:56:18.000|
+
+路由选择控制器 sys 耗时：0秒8毫秒
+2018-04-28 15:56:22,636 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-28 15:56:26.000|关联打印设备,输入参数：{"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"7a330d89818e4351890dc355d988599d","merchant_code":"2018","printer_codes":"18160956AD#C073"}

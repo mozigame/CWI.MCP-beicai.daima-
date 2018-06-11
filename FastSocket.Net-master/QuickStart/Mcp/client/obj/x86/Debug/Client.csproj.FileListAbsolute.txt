@@ -1,0 +1,17 @@
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\Client.exe.config
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\Client.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\Client.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Client.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Server.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.SocketBase.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Client.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Client.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Server.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Server.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.Server.dll.config
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.SocketBase.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\bin\Debug\FastSocket.SocketBase.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\obj\x86\Debug\Client.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\obj\x86\Debug\Client.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\obj\x86\Debug\Client.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Mcp\client\obj\x86\Debug\Client.pdb

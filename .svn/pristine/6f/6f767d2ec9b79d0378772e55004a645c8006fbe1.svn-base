@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打开放平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+	<link rel="icon" href="../../Images/logo.png" type="image/png">
+	<link rel="shortcut icon" href="../../Images/logo.png" type="image/png">
+	<link rel="bookmark" href="../../Images/logo.png" type="image/png">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">
+				<img src="../../Images/icon-head-login.png" height="20" alt="">
+			</a>
+			<a href="" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="">123@123.com</a></li>
+			<li><a href="./login.html"><img src="../../Images/icon-logout.png" height="20" alt=""> &nbsp;退出</a></li>
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="content">
+			<div class="page-sidebar">
+<!-- 				<div class="sidebar-on">
+					<i class="icon icon-menu-left"></i>
+				</div> -->
+				<ul class="nav sidebar-menu">
+					<li class="active">
+						<a href="" class="parent">
+							<i class="icon icon-menu-home"></i>首页<i class="icon icon-menu-right"></i></a>
+						<ul class="submenu hidden">
+							<li>
+								<a href="" class="parent">item1<i class="icon icon-menu-right"></i></a>
+								<ul class="submenu hidden">
+									<li>
+										<a href="">item1-1</a>
+									</li>
+									<li><a href="">item1-2</a></li>
+									<li><a href="">item1-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="" class="parent">item2</a>
+								<ul class="submenu hidden">
+									<li>
+										<a href="">item2-1</a>
+									</li>
+									<li><a href="">item2-2</a></li>
+									<li><a href="">item2-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">item3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./express_info.html">
+							<i class="icon icon-menu-express"></i>快递单</a>
+					</li>
+					<li>
+						<a href="./api.html">
+							<i class="icon icon-menu-api"></i>API说明</a>
+					</li>
+					<li>
+						<a href="./jieru.html">
+							<i class="icon icon-menu-guide"></i>接入指南</a>
+					</li>
+					<li>
+						<a href="./app.html">
+							<i class="icon icon-menu-app"></i>应用管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-content">
+				<div class="silder">
+					<div class="silder-group">
+						<div class="silder-item">1
+							<img src="" alt="">
+						</div>
+						<div class="silder-item">2
+							<img src="" alt="">
+						</div>
+						<div class="silder-item">3
+							<img src="" alt="">
+						</div>
+						<div class="silder-item">4
+							<img src="" alt="">
+						</div>
+					</div>
+					<ul class="silder-mark">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<!-- 公司信息 -->
+<!-- 				<div class="container">
+					<div class="footer footer-open">
+						<p>© 1998 - 2016 Tencent All Right Reserved.</p>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/open.js"></script>
+<script type="text/javascript">
+	$(".sidebar-menu a").treeMenu(function(open){
+		if (open) {
+			$(this).children().last().removeClass("icon-menu-right").addClass("icon-menu-down");
+		} else {
+			$(this).children().last().removeClass("icon-menu-down").addClass("icon-menu-right");
+		}
+	});
+
+	function silder(){
+		var w = $(".silder").width();
+		var l = $(".silder-item").length;
+		var i = 1;
+		var intval;
+		$(".silder-group").width(l * w);
+		$(".silder-item").width(w);
+		$(".silder-mark li").on("mouseover",function(){
+			clearInterval(intval);
+			$(".silder-mark li").removeClass("active");
+			$(this).addClass("active");
+			i = $(this).index();
+			$(".silder-group").css("margin-left","-"+(i*w)+"px");
+		});
+
+		$(".silder-mark li").on("mouseout",function(){
+			run();
+		});
+		function run(){
+			intval = setInterval(function(){
+				$(".silder-group").css("margin-left","-"+(i*w)+"px");
+				$(".silder-mark li").removeClass("active");
+				$(".silder-mark li").eq(i).addClass("active");
+				i++;
+				if (i===l) {i=0}
+			},1000);
+		}
+		run();
+	}
+	silder();
+</script>
+</body>
+</html>

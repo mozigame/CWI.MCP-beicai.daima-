@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var result = ViewBag.Result;
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="join-guide">
+            <div class="guide-body">
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                        <h4>检验打印机</h4>
+                    </div>
+                    <div class="item-body">
+                        <p>调用此api接口，（批量）校验打印机是否可以关联。</p>
+                    </div>
+                </div>
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                    </div>
+                    <div class="item-body">
+                        <form id="register" action="/sys/doChkPrintersEnableBind" class="form-horizontal" method="post">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-3 control-label">accessToken：</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="access_token" value="" />
+                                        19ce7ad8a3c34119bbdcec46966b1f57
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-3 control-label">printerCodes：</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="printer_codes" value="" />
+                                        8C18D9FF2901,8C18D9FF242F,7CC709A8E18D
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <button type="submit" class="btn btn-action" data-verify-submit>提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @{
+                        if (!string.IsNullOrWhiteSpace(result))
+                        {
+                            <div class="apiinfo-item">
+                                <div class="item-heading">
+                                    <h4>响应结果示例</h4>
+                                </div>
+                                <div class="item-body">
+                                    <pre>@result</pre>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

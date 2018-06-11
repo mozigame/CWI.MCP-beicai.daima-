@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "重置密码";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="register">
+        <form id="forget" action="" class="form-horizontal" autocomplete="off">
+            <div class="forget">
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <div class="alert alert-danger hidden" role="alert"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label text-right">手机号码</label>
+                    <div class="col-sm-9">
+                        <input id="mobile" type="text" class="form-control" name="mobile" data-verify-phone=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label text-right">图形验证码</label>
+                    <div class="col-sm-5">
+                        <input id="picCode" type="text" name="picCode" class="form-control" data-verify-code="4"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="defcaptcha" src="/user/authenticationCode" alt="图形验证码" onclick="getImageCode(this)" title="看不清,换一张"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-default" style="width: 100%;" data-verify-smscode="#mobile|#picCode,#mobile" >获取短信验证码</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label text-right">手机验证码</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="mobileCode" id="mobileCode" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label text-right">新密码</label>
+                    <div class="col-sm-9">
+                        <input id="userPwd" name="userPwd" type="password" class="form-control" data-verify-len="6|16"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label text-right">确认密码</label>
+                    <div class="col-sm-9">
+                        <input id="reUserPwd" name="reUserPwd" type="password" class="form-control" data-verify-len="6|16"  data-verify-pass="#userPwd,两次输入密码不一致"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-action">重置密码</button>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:right;">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <a href="/user/login" target="_self">去登录 </a>
+                </div>
+            </div>
+            </div>
+        </form>
+        </div>
+    <script type="text/javascript">
+        $("#forget")
+            .validateForm({
+                render: function (conf) {
+                    var r = conf.verify,
+                        mess = conf.mess,
+                        elem = conf.elem,
+                        type = conf.verify_type,
+                        error_elem = conf.error_elem;
+                    if (r) {
+                        $(error_elem).addClass("hidden");
+                    } else {
+                        switch (type) {
+                            case "code":
+                            case "phone":
+                                error_elem.innerHTML = mess;
+                                error_elem.className = "error-mess";
+                                elem.parentNode.appendChild(error_elem);
+                                var nw = $(elem).parent().next().outerWidth(true);
+                                error_elem.style.right = "-" + ($(error_elem).innerWidth() + nw) + "px";
+                                break;
+                            default:
+                                error_elem.innerHTML = mess;
+                                error_elem.className = "error-mess";
+                                elem.parentNode.appendChild(error_elem);
+                                error_elem.style.right = "-" + error_elem.offsetWidth + "px";
+                                break;
+                        }
+                    }
+                },
+                smscode: function (conf) {
+                    var param = {};
+                    param.mobile = $("#mobile").val();
+                    param.picCode = $("#picCode").val();
+                    param.codeType = 1;
+                    var errorHandler = $('.alert');
+                    if ($(conf.elem).attr("data-on")) {
+                        return;
+                    }
+                    $(conf.elem).attr("disabled", true);
+                    $.post("/user/GetSmsVerifyCode",
+                            param,
+                            function (result) {
+                                if (result.status) {
+                                    errorHandler.addClass("hidden");
+                                    $(conf.elem).attr("data-on", "1");
+                                    var i = 120;
+                                    conf.elem.innerHTML = i + "秒后重新获取";
+                                    var intval = setInterval(function () {
+                                        i--;
+                                        conf.elem.innerHTML = i + "秒后重新获取";
+                                        if (i === 0) {
+                                            clearInterval(intval);
+                                            conf.elem.innerHTML = "获取验证码";
+                                            conf.elem.setAttribute("data-on", "");
+                                            $(conf.elem).attr("disabled", false);
+                                        };
+                                    },
+                                        1000);
+                                } else {
+                                    $(conf.elem).attr("disabled", false);
+                                    errorHandler.html("<i class='fa fa-remove-sign'></i>" + result.data + ".");
+                                    errorHandler.removeClass("hidden");
+                                }
+                            },
+                            "json");
+                },
+                submit: function() {
+                    var param = $("#forget").serialize();
+                    $.ajax({
+                        url: "/user/doforgetpassword",
+                        type: "post",
+                        dataType: "json",
+                        data: param,
+                        success: function(result) {
+                            var errorHandler = $('.alert');
+                            if (result.status == "1") {
+                                errorHandler.addClass("hidden");
+                                alert('重置密码成功！');
+                                location.href = '/user/login';
+                            } else {
+                                errorHandler.html("<i class='fa fa-remove-sign'></i>" + result.data + ".");
+                                errorHandler.removeClass("hidden");
+                            }
+                        }
+                    });
+                }
+            });
+
+        function getImageCode(img) {
+            var date = new Date();
+            img.src = "/user/authenticationcode?" + date.getTime();
+        };
+
+    </script>
+</div>

@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "API接口-获取接口凭证";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/api/accesstoken" class="list-group-item active">获取接口凭证</a>
+                        <a href="/api/bindprinters" class="list-group-item">关联打印机</a>
+                        <a href="/api/unbindprinters" class="list-group-item">解绑打印机</a>
+                        <a href="/api/printticket" class="list-group-item">打印小票</a>
+                        <a href="/api/printexpress" class="list-group-item">打印快递面单</a>
+                        <a href="/api/chkprintersenablebind" class="list-group-item">检验打印机</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>获取接口凭证</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此接口，可获取调用接口凭证。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求地址</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>http://mcp.yingmei.me:8686/mcp/sys/getaccesstoken</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应格式</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>JSON</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求参数</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>必须</th>
+                                    <th>类型及范围</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>app_id</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td> 应用ID，开发者创建应用时，微云打开放平台会为应用自动分配此ID，开发者在“应用管理”应用详情中可查看app_id</td>
+                                </tr>
+                                <tr>
+                                    <td>app_key</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td> 应用密钥，开发者创建应用时，微云打放平台会为应用自动生成此密钥，开发者在“应用管理”应用详情可查看app_key</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+GET http://mcp.yingmei.me:8686/mcp/sys/getaccesstoken
+
+GET data:
+app_id=665358db4d6311e5ac9902004c4f4f50&app_key=8c5e2d654d6411e5
+							</pre>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>类型</th>
+                                    <th>示例值</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Int</td>
+                                    <td>"status": 1 | 0</td>
+                                    <td>1:成功，0:失败</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>String</td>
+                                    <td>"data": {
+                                        "access_token": "b1678286e7674ca787383c86aebb307d",
+                                        "expires_in": 151313,
+                                        } | "error info"
+                                    </td>
+                                    <td> 调用成功，返回调用接口凭证access_token及有效期expires_in，单位：秒。调用失败则返回错误信息</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+{
+   "status": 1,
+   "data": {
+      "access_token": "b1678286e7674ca787383c86aebb307d",
+      "expires_in": 151313
+   }
+}    
+							</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

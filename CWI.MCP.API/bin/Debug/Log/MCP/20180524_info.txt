@@ -1,0 +1,24 @@
+2018-05-24 11:20:59,262 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:20:59.000|数据库已成功连接,正在启动服务
+2018-05-24 11:21:03,275 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:21:03.000|
+
+路由选择控制器 Base 耗时：0秒64毫秒
+2018-05-24 11:24:15,836 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:24:15.000|数据库已成功连接,正在启动服务
+2018-05-24 11:24:16,648 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:24:15.000|
+
+路由选择控制器 Base 耗时：0秒32毫秒
+2018-05-24 11:24:53,507 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:24:52.000|
+
+路由选择控制器 sys 耗时：0秒44毫秒
+2018-05-24 11:24:56,824 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:24:55.000|关联打印设备,输入参数：{"app_id":"327c571408fb406b932d493501aab183","access_token":"4192d6e626734be38ec48c95c71e5b5f","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}
+2018-05-24 11:26:47,577 [11] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:26:46.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-05-24 11:26:49,778 [11] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:26:48.000|关联打印设备,输入参数：{"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"f379438c7d2a4e02a05368c1480dd15c","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}
+2018-05-24 11:27:55,021 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:27:53.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-05-24 11:27:57,379 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:27:56.000|关联打印设备,输入参数：{"app_id":"327c571408fb406b932d493501aab183","access_token":"4192d6e626734be38ec48c95c71e5b5f","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}
+2018-05-24 11:39:49,546 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:39:48.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-05-24 11:39:51,660 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-24 11:39:50.000|关联打印设备,输入参数：{"app_id":"327c571408fb406b932d493501aab183","access_token":"43282ea9f38e4b04bb5a433f837a4590","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}

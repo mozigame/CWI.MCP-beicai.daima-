@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册账号</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+	<link rel="icon" href="../../Images/logo.png" type="image/png">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">
+				<img src="../../Images/icon-head-login.png" height="20" alt="">
+			</a>
+			<a href="" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<!-- <li><a href="">登录</a></li> -->
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container">
+	<ol class="breadcrumb">
+		<li>
+			<a href=""><a href="./login.html">首页</a></a>
+		</li>
+		<li class="active">
+			注册
+		</li>
+	</ol>
+	<div class="register">
+		<form id="register" action="./register_success.html" class="form-horizontal" method="post">
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+					<div class="alert alert-danger" role="alert">账号或密码错误!</div>
+				</div>
+			</div>
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">邮箱</label>
+		 		<div class="col-sm-9">
+		 			<input type="text" class="form-control" data-verify-mail="" />
+		 		</div>
+		 	</div>
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">密码</label>
+		 		<div class="col-sm-9">
+		 			<input id="pass" type="password" class="form-control" data-verify-len="6|15" />
+		 		</div>
+		 	</div>
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">确认密码</label>
+		 		<div class="col-sm-9">
+		 			<input  id="confirm_pass" type="password" class="form-control" data-verify-pass="#pass" data-verify-len="6|15" />
+		 		</div>
+		 	</div>
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">图形验证码</label>
+		 		<div class="col-sm-5">
+		 			<input id="code" type="text" name="code" class="form-control" data-verify-code="6,请填写6位图形验证码!" />
+		 		</div>
+		 		<div class="col-sm-4">
+		 			<img class="defcaptcha" src="../../Images/defcaptcha.png" alt="图形验证码" title="看不清,换一张" />
+		 		</div>
+		 	</div>
+
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">手机号码</label>
+		 		<div class="col-sm-5">
+		 			<input id="phone" type="text" name="phone_number" class="form-control" data-verify-phone="" />
+		 		</div>
+		 		<div class="col-sm-4">
+		 			<button type="button" data-verify-smscode="#code|#phone,#phone" class="btn btn-default" style="width:100%;">获取验证码</button>
+		 		</div>
+		 	</div>
+		 	<div class="form-group">
+		 		<label for="" class="col-sm-3 control-label">手机验证码</label>
+		 		<div class="col-sm-3">
+		 			<input type="text" name="smscode" class="form-control" />
+		 		</div>
+		 	</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9">
+		 			<div class="checkbox">
+		 				<label>
+		 					<input type="checkbox" data-verify-check="请阅读并同意此协议" name="" />我已阅读并接受<a href="./xieyi.html">《本协议》</a>
+		 				</label>
+		 			</div>
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9 col-sm-offset-3">
+					<button id="allow_submit" type="submit" class="btn btn-disabled" disabled>注册</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9 col-sm-offset-3" style="text-align:right;">
+					已有账号?<a href="">登录</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- 公司信息 -->
+<div class="container footer">
+	<div class="footer-open">
+		<p>© 1998 - 2016 卡莫POS All Right Reserved.</p>
+	</div>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/validate_form.js"></script>
+<script type="text/javascript" src="../../Scripts/open.js"></script>
+<script type="text/javascript">
+	$("#register").validateForm({
+		render:function(conf){
+			var r = conf.verify, mess = conf.mess, elem = conf.elem, type = conf.verify_type ,error_elem = conf.error_elem;
+			if (r) {
+				$(error_elem).addClass("hidden");
+				if (type === "check") {
+					$("#allow_submit").attr("disabled",false);
+					$("#allow_submit").removeClass("btn-disabled").addClass("btn-action");
+				}
+			} else {
+				switch(type){
+					case "code":
+					case "phone":
+						error_elem.innerHTML = mess;
+						error_elem.className = "error-mess";
+						elem.parentNode.appendChild(error_elem);
+						var nw = $(elem).parent().next().outerWidth(true);
+						error_elem.style.right = "-" + ($(error_elem).innerWidth() + nw) + "px";
+					break;
+					case "check":
+						$("#allow_submit").attr("disabled",true);
+						$("#allow_submit").removeClass("btn-action").addClass("btn-disabled");
+					break;
+					default:
+						error_elem.innerHTML = mess;
+						error_elem.className = "error-mess";
+						elem.parentNode.appendChild(error_elem);
+						error_elem.style.right = "-" + error_elem.offsetWidth + "px";
+					break;
+				}
+			}
+		},
+		smscode: function(conf){
+			var param = {};
+				param[conf.name] = conf.phoneNumber;
+			if ($(conf.elem).attr("data-on")) {return;}
+			$(conf.elem).attr("disabled",true);
+			$.post("/api.php",param,function(result){
+				if (result.status) {
+					$(conf.elem).attr("data-on","1");
+					var i = 5;
+					conf.elem.innerHTML = i+"秒后重新获取";
+					var intval = setInterval(function(){
+						i--;
+						conf.elem.innerHTML = i+"秒后重新获取";
+						if (i === 0) {
+							clearInterval(intval);
+							conf.elem.innerHTML = "获取验证码";
+							conf.elem.setAttribute("data-on","");
+							$(conf.elem).attr("disabled",false);
+						};
+					},1000);
+				} else {
+					$(conf.elem).parent().append('<div class="text-danger">'+result.data+'</div>');
+				}
+			},"json");
+		}
+	});
+	$(".defcaptcha").on("click",function(){
+		var src = this.src;
+		var d = new Date();
+		var t = d.getTime();
+		if (src.lastIndexOf("?") !== -1) {
+			src = src.slice(0,src.lastIndexOf("?"));
+		}
+		src+="?"+t;
+		this.src=src;
+	});
+</script>
+</body>
+</html>

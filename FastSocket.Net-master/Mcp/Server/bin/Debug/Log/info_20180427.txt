@@ -1,0 +1,4 @@
+2018-04-27 17:13:11,618 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-27 17:13:10.000|{"tp":202,"did":"17080906UI","id":1316c2c2-24d4-4af9-8d63-053055635fec,"type":3,"code":1,"OrderContent":(null)}
+2018-04-27 17:14:59,075 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-27 17:14:58.000|{"tp":202,"did":"17080906UI","id":1316c2c2-24d4-4af9-8d63-053055635fec,"type":3,"code":1,"OrderContent":1)}
+2018-04-27 17:17:39,883 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-27 17:17:39.000|{"tp":202,"did":"17080906UI","id":"1316c2c2-24d4-4af9-8d63-053055635fec","type":3,"code":1,"OrderContent":(null)}
+2018-04-27 17:18:28,797 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-27 17:18:28.000|{"tp":202,"did":"17080906UI","id":"1316c2c2-24d4-4af9-8d63-053055635fec","type":3,"code":1,"OrderContent":1}

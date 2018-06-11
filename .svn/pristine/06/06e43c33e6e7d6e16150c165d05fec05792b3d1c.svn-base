@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ED0D37C-672E-45B0-9019-A99CB018EC4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWI.MCP.Services</RootNamespace>
+    <AssemblyName>CWI.MCP.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Evt.Framework.Common">
+      <HintPath>..\Bin\Framework\Evt.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.DataAccess">
+      <HintPath>..\Bin\Framework\Evt.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.Mvc">
+      <HintPath>..\Bin\Framework\Evt.Framework.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>..\Bin\Framework\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopSdk">
+      <HintPath>..\Bin\Other\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\APICommon\SysServericeContext.cs" />
+    <Compile Include="Common\APICommon\IServiceContext.cs" />
+    <Compile Include="Common\APICommon\ServiceContext.cs" />
+    <Compile Include="Common\VerifyCodeService.cs" />
+    <Compile Include="MCP\DeveloperService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MCP\UserAccountService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="System\AdminService.cs" />
+    <Compile Include="System\AppService.cs" />
+    <Compile Include="Common\BillCodeCreator.cs" />
+    <Compile Include="Common\BaseService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\DeviceService.cs" />
+    <Compile Include="System\PrinterService.cs" />
+    <Compile Include="System\PrintOrderService.cs" />
+    <Compile Include="System\SysService.cs" />
+    <Compile Include="System\TcpService.cs" />
+    <Compile Include="System\TemplateService.cs" />
+    <Compile Include="WeChat\WeChatService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWI.Cache.Factory\CWI.Cache.Factory.csproj">
+      <Project>{a37c16f4-4346-4cf6-804e-e211d6d76912}</Project>
+      <Name>CWI.Cache.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.Cache.Redis\CWI.Cache.Redis.csproj">
+      <Project>{65792fd3-3d94-4ffc-b23c-b41d695e4d4f}</Project>
+      <Name>CWI.Cache.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.Cache\CWI.Cache.csproj">
+      <Project>{56360448-41ac-4fec-8b18-be7a0153474a}</Project>
+      <Name>CWI.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Common\CWI.MCP.Common.csproj">
+      <Project>{5B8DB3C8-9ED9-4EF4-840D-A8BE274538C0}</Project>
+      <Name>CWI.MCP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Models\CWI.MCP.Models.csproj">
+      <Project>{0A28C0A9-8974-444F-8F71-0D85EDA2CE6C}</Project>
+      <Name>CWI.MCP.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

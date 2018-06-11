@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Btmp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tit>
+    <Li s="10" b="0" a="1" t="欢迎光临" />
+    <Li s="14" b="1" a="1" t="$merchant_name$" />
+    <Li s="10" b="0" a="1" t="【$shop_name$】" />
+    <St a="1" t="-------------------------" />
+  </Tit>
+  <Hdr>
+    <Li>
+      <Cn s="9" b="0" a="0" t="交易单号：" />
+      <Cn s="9" b="0" a="0" t="$bill_no$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="0" a="0" t="POS机号：" />
+      <Cn s="9" b="0" a="0" t="$pos_no$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="0" a="0" t="收银员：" />
+      <Cn s="9" b="0" a="0" t="$cashier$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="0" a="0" t="卡莫账号：" />
+      <Cn s="9" b="0" a="0" t="$account_no$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="0" a="0" t="交易时间：" />
+      <Cn s="9" b="0" a="0" t="$trade_time$" />
+    </Li>
+    <St a="1" t="-------------------------" />
+  </Hdr>
+  <Bdy>
+    <Li>
+      <Cn s="9" b="1" a="0" t="交易类型：" />
+      <Cn s="9" b="0" a="0" t="$trade_type$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="1" a="0" t="交易金额：" />
+      <Cn s="9" b="0" a="0" t="$trade_amount$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="1" a="0" t="账户余额：" />
+      <Cn s="9" b="0" a="0" t="$balance$" />
+    </Li>
+    <Li>
+      <Cn s="9" b="1" a="0" t="备    注：" />
+      <Cn s="9" b="0" a="0" t="$remark$" />
+    </Li>
+    <St a="1" t="-------------------------" />
+  </Bdy>
+  <Sig>
+    <Li s="9" b="0" a="0" t="客户签名：" />
+    <Sc r="3" />
+    <St a="1" t="-------------------------" />
+  </Sig>
+  <Rmk>
+    <Li s="8" b="0" a="1" t="$website$" />
+    <Li s="8" b="0" a="1" t="多谢惠顾，欢迎下次光临" />
+    <Sc r="3" />
+  </Rmk>
+</Btmp>

@@ -1,0 +1,300 @@
+﻿// 版权信息：版权所有(C) 2011，Evervictory Tech
+// 变更历史：
+// 姓名         日期          说明
+// --------------------------------------------------------
+//    王军锋     2011/12/16       创建
+// --------------------------------------------------------
+
+using System;
+using System.Text;
+using System.IO;
+using System.Net;
+using System.Collections.Generic;
+using Evt.Framework.Common;
+using CWI.MCP.Common.Extensions.MVC;
+using System.Web;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.InteropServices;
+
+namespace  CWI.MCP.Common
+{
+    /// <summary>
+    /// 网络实现工具类
+    /// </summary>
+    public class NetUtil
+    {
+        [DllImport("wininet")]
+        private extern static bool InternetGetConnectedState(out int connectionDescription, int reservedValue);
+
+        /// <summary>
+        /// 检测本机是否联网
+        /// </summary>
+        /// <returns></returns>
+        public static bool IsConnectedInternet
+        {
+            get
+            {
+                int i = 0;
+                if (InternetGetConnectedState(out i, 0))
+                {
+                    //已联网
+                    return true;
+                }
+                else
+                {
+                    //未联网
+                    return false;
+                }
+            }
+        }
+
+        #region Web请求
+
+        /// <summary>
+        /// 通过GET请求获得响应文本
+        /// </summary>
+        /// <param name="url">将要被请求的URL</param>
+        /// <param name="param">请求参数，各参数key=value之间使用参数连接符进行连接</param>
+        /// <returns>响应文本</returns>
+        public static string ResponseByGet(string url, string param)
+        {
+            if (String.IsNullOrEmpty(url))
+                throw new MessageException("url不能为空值");
+
+            url = url.Trim();
+            if (!String.IsNullOrEmpty(param))
+            {
+                if (url.IndexOf("?")<=0) url += "?";
+                url += param;
+            }
+
+            LogUtil.Debug(string.Format("url:{0}", url));
+
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+                Stream stream = response.GetResponseStream();
+                StreamReader sr = new StreamReader(stream, Encoding.UTF8);
+                string text = sr.ReadToEnd();
+
+                sr.Close();
+                return text;
+            }
+            catch (Exception ex)
+            {
+                throw new MessageException("请求网络发生错误：" + ex.Message + "，请稍候再试");
+            }
+        }
+
+        /// <summary>
+        /// 通过POST请求获得响应文本
+        /// </summary>
+        /// <param name="url">将要被请求的URL</param>
+        /// <param name="param">请求参数，各参数key=value之间使用参数连接符进行连接</param>
+        /// <returns>响应文本</returns>
+        public static string ResponseByPost(string url, string param)
+        {
+            if (String.IsNullOrEmpty(url))
+                throw new MessageException("url不能为空值");
+
+            url = url.Trim();
+
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+
+                if (!String.IsNullOrEmpty(param))
+                {
+                    byte[] paramArray = Encoding.UTF8.GetBytes(param);
+                    request.ContentLength = paramArray.Length;
+
+                    Stream stream = request.GetRequestStream();
+                    stream.Write(paramArray, 0, paramArray.Length);
+                    stream.Close();
+                }
+
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                if (response!=null)
+                {
+                    LogUtil.Info(string.Format("已经发送回调请求,返回值不为空,域名：{0};参数:{1}",url,param));
+                }
+                else
+                {
+                    LogUtil.Info(string.Format("已经发送回调请求，返回值为空,域名：{0};参数:{1}", url, param));
+                }
+                Stream responseStream = response.GetResponseStream();
+                StreamReader sr = new StreamReader(responseStream, Encoding.UTF8);
+                string text = sr.ReadToEnd();
+
+                sr.Close();
+                return text;
+            }
+            catch (Exception ex)
+            {
+                throw new MessageException("请求网络发生错误：" + ex.Message + "，请稍候再试");
+            }
+        }
+
+        #endregion
+
+        #region 基础请求
+
+        /// <summary>
+        /// 同步方式发起http post请求
+        /// </summary>
+        /// <param name="url">请求URL</param>
+        /// <param name="parameters">参数</param>
+        /// <returns>请求返回值</returns>
+        public static string SendPostRequest(string url, Dictionary<string, string> parameters)
+        {
+            return SendRequest(url, "POST", parameters);
+        }
+
+        /// <summary>
+        /// 同步方式发起http get请求
+        /// </summary>
+        /// <param name="url">请求URL</param>
+        /// <param name="parameters">参数</param>
+        /// <returns>请求返回值</returns>
+        public static string SendGetRequest(string url, Dictionary<string, string> parameters)
+        {
+            return SendRequest(url, "GET", parameters);
+        }
+
+        /// <summary>
+        /// 发送请求
+        /// </summary>
+        /// <param name="url">Url</param>
+        /// <param name="httpMethod">方法</param>
+        /// <param name="parameters">参数</param>
+        /// <returns>响应结果</returns>
+        private static string SendRequest(string url, string httpMethod, Dictionary<string, string> parameters)
+        {
+            StreamWriter requestWriter = null;
+            StreamReader responseReader = null;
+            string responseData = null;
+
+            if (httpMethod == "GET" && parameters.Count > 0)
+            {
+                url += "?" + parameters.ToParamString();
+            }
+            HttpWebRequest webRequest = WebRequest.Create(url) as HttpWebRequest;
+
+            webRequest.Method = httpMethod;
+            webRequest.ContentType = "application/x-www-form-urlencoded";
+            webRequest.ServicePoint.Expect100Continue = false;
+            Stream responseStream = null;
+
+            try
+            {
+                if (httpMethod == "POST")
+                {
+                    requestWriter = new StreamWriter(webRequest.GetRequestStream());
+                    requestWriter.Write(parameters.ToParamString());
+                    requestWriter.Close();
+                    requestWriter = null;
+                }
+
+                responseStream = webRequest.GetResponse().GetResponseStream();
+                responseReader = new StreamReader(responseStream);
+                responseData = responseReader.ReadToEnd();
+            }
+            finally
+            {
+                if (requestWriter != null)
+                {
+                    requestWriter.Close();
+                    requestWriter = null;
+                }
+
+                if (responseStream != null)
+                {
+                    responseStream.Close();
+                    responseStream = null;
+                }
+
+                if (responseReader != null)
+                {
+                    responseReader.Close();
+                    responseReader = null;
+                }
+
+                webRequest = null;
+            }
+
+            return responseData;
+        }
+
+        #endregion
+
+        #region WeiXin请求
+
+        /// <summary>
+        ///  微信Get请求接口
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string WeChatSendGetRequest(string url)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string result = SendRequest(url, "GET", parameters);
+            return result;
+        }
+
+        /// <summary>
+        ///  微信POST请求
+        /// </summary>
+        /// <param name="tokenUrl"></param>
+        /// <param name="json"></param>
+        /// <returns></returns>
+        public static string WechatSendPostRequest(string tokenUrl, string json)
+        {
+            byte[] postBytes = Encoding.UTF8.GetBytes(json);
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(tokenUrl);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = postBytes.Length;
+            using (Stream reqStream = request.GetRequestStream())
+            {
+                reqStream.Write(postBytes, 0, postBytes.Length);
+            }
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream responseStream = response.GetResponseStream();
+            StreamReader sr = new StreamReader(responseStream, Encoding.GetEncoding("utf-8"));
+            string responseText = sr.ReadToEnd();
+            sr.Close();
+            sr.Dispose();
+            responseStream.Close();
+            return responseText;
+        }
+
+        #endregion
+
+        #region 其他
+
+        /// <summary>
+        /// 取当前站点的虚拟目录名
+        /// </summary>
+        /// <returns></returns>
+        public static string GetCurrentVirsualDirName()
+        {
+            return HttpContext.Current.Request.ApplicationPath;
+        }
+
+        /// <summary>
+        /// 检测IP
+        /// </summary>
+        /// <returns></returns>
+        public static bool ValidVisitorIp()
+        {
+            return false;
+        }
+
+        #endregion
+    }
+}

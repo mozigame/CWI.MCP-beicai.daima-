@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF63A2CB-358A-4C4F-9DCB-DE9A7425AF76}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWI.MCP.IOT</RootNamespace>
+    <AssemblyName>CWI.MCP.IOT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Evt.Framework.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\Evt.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Images\128X128.ico" />
+    <Content Include="Images\404.png" />
+    <Content Include="Images\500.png" />
+    <Content Include="Images\app-logo.jpg" />
+    <Content Include="Images\arrows_down_double.png" />
+    <Content Include="Images\arrows_up_double.png" />
+    <Content Include="Images\checked.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\local.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\wx-logo.jpg" />
+    <Content Include="Images\wx-qrcode.jpg" />
+    <Content Include="Resources\EmlContent.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\dropload.js" />
+    <Content Include="Scripts\dropload.min.js" />
+    <Content Include="Scripts\jssdk-demo.js" />
+    <Content Include="Scripts\zepto.md5.js" />
+    <Content Include="Scripts\zepto.min.js" />
+    <Content Include="Styles\dropload.css" />
+    <Content Include="Styles\weui.css" />
+    <Content Include="Styles\weui.min.css" />
+    <Content Include="Theme\example\example.css" />
+    <Content Include="Theme\example\example.js" />
+    <Content Include="Theme\example\style.css" />
+    <Content Include="Theme\images\app-logo.jpg" />
+    <Content Include="Theme\images\app-qrcode.png" />
+    <Content Include="Theme\images\arrows_down_double.png" />
+    <Content Include="Theme\images\arrows_up_double.png" />
+    <Content Include="Theme\images\checked.png" />
+    <Content Include="Theme\images\delete.png" />
+    <Content Include="Theme\images\doc.png" />
+    <Content Include="Theme\example\images\icon_nav_actionSheet.png" />
+    <Content Include="Theme\example\images\icon_nav_article.png" />
+    <Content Include="Theme\example\images\icon_nav_button.png" />
+    <Content Include="Theme\example\images\icon_nav_cell.png" />
+    <Content Include="Theme\example\images\icon_nav_dialog.png" />
+    <Content Include="Theme\example\images\icon_nav_icons.png" />
+    <Content Include="Theme\example\images\icon_nav_msg.png" />
+    <Content Include="Theme\example\images\icon_nav_toast.png" />
+    <Content Include="Theme\images\local.png" />
+    <Content Include="Theme\images\pdf.png" />
+    <Content Include="Theme\images\png.png" />
+    <Content Include="Theme\images\ppt.png" />
+    <Content Include="Theme\images\txt.png" />
+    <Content Include="Theme\example\images\vcode.jpg" />
+    <Content Include="Theme\images\vsd.png" />
+    <Content Include="Theme\images\wx-logo.jpg" />
+    <Content Include="Theme\images\wx-logo.png" />
+    <Content Include="Theme\images\wx-qrcode.jpg" />
+    <Content Include="Theme\images\xls.png" />
+    <Content Include="Theme\example\index.html" />
+    <Content Include="Theme\example\snapshot\actionSheet.png" />
+    <Content Include="Theme\example\snapshot\button.png" />
+    <Content Include="Theme\example\snapshot\cell.png" />
+    <Content Include="Theme\example\snapshot\dialog1.png" />
+    <Content Include="Theme\example\snapshot\dialog2.png" />
+    <Content Include="Theme\example\snapshot\grid.png" />
+    <Content Include="Theme\example\snapshot\icons.png" />
+    <Content Include="Theme\example\snapshot\progress.png" />
+    <Content Include="Theme\example\snapshot\qrcode.png" />
+    <Content Include="Theme\example\snapshot\result.png" />
+    <Content Include="Theme\example\snapshot\text.png" />
+    <Content Include="Theme\example\snapshot\toast1.png" />
+    <Content Include="Theme\example\snapshot\toast2.png" />
+    <Content Include="Theme\images\xiuxi.png" />
+    <Content Include="Theme\images\prom.png" />
+    <Content Include="Theme\images\yingye.png" />
+    <Content Include="Theme\js\dropload.js" />
+    <Content Include="Theme\js\dropload.min.js" />
+    <Content Include="Theme\js\jssdk-demo.js" />
+    <Content Include="Theme\js\zepto.md5.js" />
+    <Content Include="Theme\js\zepto.min.js" />
+    <Content Include="Theme\js\common.js" />
+    <Content Include="Theme\style\dropload.css" />
+    <Content Include="Theme\style\weui.css" />
+    <Content Include="Theme\style\weui.min.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWI.MCP.Common\CWI.MCP.Common.csproj">
+      <Project>{5b8db3c8-9ed9-4ef4-840d-a8be274538c0}</Project>
+      <Name>CWI.MCP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Controllers\CWI.MCP.Controllers.csproj">
+      <Project>{a7dfaefe-5652-424e-8cb0-db2fc83bc016}</Project>
+      <Name>CWI.MCP.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CWI.MCP.Models\CWI.MCP.Models.csproj">
+      <Project>{0a28c0a9-8974-444f-8f71-0d85eda2ce6c}</Project>
+      <Name>CWI.MCP.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\appsettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\memcached.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Settings.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DropDown.cshtml" />
+    <None Include="Properties\PublishProfiles\Web.config.pubxml" />
+    <None Include="Resources\jsapi\apiclient_cert.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
+    <Content Include="Views\Device\List.cshtml" />
+    <Content Include="Views\Device\Detail.cshtml" />
+    <Content Include="Views\Device\Config.cshtml" />
+    <Content Include="Views\System\About.cshtml" />
+    <Content Include="Views\System\Message.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8083</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

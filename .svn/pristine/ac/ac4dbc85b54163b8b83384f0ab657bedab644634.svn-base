@@ -1,0 +1,11 @@
+﻿@using CWI.MCP.Common;
+@using CWI.MCP.Common.Extensions;
+@using CWI.MCP.Common.Extensions.MVC;
+@{ 
+  
+}
+<div class="content">
+    <div class="list">
+    </div>
+</div>
+<script type="text/javascript" src="@RoutingUtil.JsUrl("/Scripts/dropload.min.js")"></script>

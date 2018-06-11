@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打开放平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="./login.html">退出</a></li>
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="content">
+			<div class="page-sidebar">
+				<ul class="nav sidebar-menu">
+					<li>
+						<a href="index.html">首页</a>
+						<ul class="submenu">
+							<li>
+								<a href="">item1</a>
+								<ul class="submenu">
+									<li>
+										<a href="">item1-1</a>
+									</li>
+									<li><a href="">item1-2</a></li>
+									<li><a href="">item1-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">item2</a></li>
+							<li><a href="">item3</a></li>
+						</ul>
+					</li>
+					<li><a href="">快递单</a></li>
+					<li><a href="">API说明</a></li>
+					<li><a href="">接入指南</a></li>
+					<li class="active"><a href="">应用管理</a></li>
+				</ul>
+			</div>
+			<div class="page-content">
+				<ol class="breadcrumb">
+					<li>
+						<a href=""><a href="./index.html">首页</a></a>
+					</li>
+					<li>
+						<a href=""><a href="./app.html">应用管理</a></a>
+					</li>
+					<li class="active">
+						应用设置
+					</li>
+				</ol>
+				<div class="appinfo">
+					<div class="panel panel-appinfo">
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-left">
+									<img src="../../Images/128X128.ico" alt="" class="media-object" width="64" height="64" />
+								</div>
+								<div class="media-body">
+									<p>卡莫微云打 <a href="" class="btn btn-danger btn-sm pull-right">删除应用</a></p>
+									<p>AppID: 12345678</p>
+									<p>AppSecret: 12345678 <a href="" class="btn">重置</a></p>
+									<p class="text-success">已通过</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-appinfo">
+						<div class="panel-heading">应用设置</div>
+						<div class="panel-body">
+							<div class="cell-item">
+								<div class="col-sm-1"><p>应用名称</p></div>
+								<div class="col-sm-11"><p>卡莫微云打</p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-1"><p>应用描述</p></div>
+								<div class="col-sm-11"><p>卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打卡莫微云打</p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-1"><p>应用官网</p></div>
+								<div class="col-sm-11"><p>http://www.baidu.com</p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-1"><p>回调地址</p></div>
+								<div class="col-sm-11"><p>http://www.baidu.com</p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-1"><p>签名Key</p></div>
+								<div class="col-sm-11"><p>baidu</p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-1"><p>LOGO</p></div>
+								<div class="col-sm-11"><p><img src="../../Images/128X128.ico" alt="" width="64" height="64"></p></div>
+							</div>
+							<div class="cell-item">
+								<div class="col-sm-offset-1 col-sm-11">
+									<a href="" class="btn btn-default btn-sm" data-toggle="modal" data-target="#edit_app">编辑</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="edit_app" tabindex="-1" role="dialog" aria-labelledby="create_app_label">
+
+	<form id="edit_app_form" action="post" class="form-horizontal" enctype="multipart/form-data">
+	  	<div class="modal-dialog" role="document">
+	  		<div class="alert alert-danger" role="alert">账号或密码错误!</div>
+		    <div class="modal-content">
+		      	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        	<h4 class="modal-title" id="create_app_label">创建应用</h4>
+		      	</div>
+		      	<div class="modal-body">
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">应用名称</label>
+		      				<div class="col-sm-10">
+		      					<input type="text" name="name" class="form-control" data-verify-len="3,16" />
+		      				</div>
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">应用地址</label>
+		      				<div class="col-sm-10">
+		      					<input type="text" name="url" class="form-control" />
+		      				</div>
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">回调地址</label>
+		      				<div class="col-sm-10">
+		      					<input type="text" name="callback_url" class="form-control" />
+		      				</div>
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">签名Key</label>
+		      				<div class="col-sm-10">
+		      					<input type="text" name="code" class="form-control" />
+		      				</div>
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">应用LOGO</label>
+		      				<div class="col-sm-10">
+		      					<input type="file" class="form-control" />
+		      				</div>
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="" class="col-sm-2 control-label">应用描述</label>
+		      				<div class="col-sm-10">
+		      					<textarea name="" cols="30" rows="5" class="form-control"></textarea>
+		      				</div>
+		      			</div>
+		      		
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="submit" class="btn btn-action" data-verify-submit>确定</button>
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		      	</div>
+		    </div>
+	  	</div>
+	</form>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/open_extends.js"></script>
+<script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#edit_app_form").validateForm();
+	});
+</script>
+</body>
+</html>

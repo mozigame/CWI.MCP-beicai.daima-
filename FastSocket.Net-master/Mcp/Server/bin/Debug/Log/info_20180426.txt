@@ -1,0 +1,31 @@
+2018-04-26 15:29:47,762 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:29:47.000|{
+"tp": 202,
+"id": "0421bea4d0c1f5f345f190a64e2e560dc9d4",
+"key": "DeYdRRXKdH2L",
+"did": "18100001SQ",
+"code": "1",
+type:1,,
+"OrderContent":"www.baidu.com"
+}
+2018-04-26 15:30:51,074 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:30:50.000|{"tp": 202,"id": "0421bea4d0c1f5f345f190a64e2e560dc9d4","key": "DeYdRRXKdH2L","did": "18100001SQ","code": "1",type:1,"OrderContent":"www.baidu.com"}
+2018-04-26 15:31:00,494 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:31:00.000|【202】打印机上报：更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1,类型：1,详细数据：{"Tp":202,"Did":"18100001SQ","Id":"0421bea4d0c1f5f345f190a64e2e560dc9d4","Code":1,"ConnId":0,"IpPort":null,"Type":1,"orderContent":"www.baidu.com"}
+2018-04-26 15:43:27,795 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:43:27.000|更新打印机辅助指令执行状态，更新成功：订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,打印机编号-18100001SQ,状态-1
+2018-04-26 15:44:09,617 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:44:09.000|修改打印机18100001SQ域名domin成功,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4
+2018-04-26 15:44:34,654 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:44:34.000|【202】已经回复打印机更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1
+2018-04-26 15:45:00,333 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:44:59.000|{"tp": 202,"id": "0421bea4d0c1f5f345f190a64e2e560dc9d4","key": "DeYdRRXKdH2L","did": "18100001SQ","code": "2",type:1,"OrderContent":"www.baidu.com"}
+2018-04-26 15:45:01,414 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:01.000|【202】打印机上报：更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 2,类型：1,详细数据：{"Tp":202,"Id":"0421bea4d0c1f5f345f190a64e2e560dc9d4","Did":"18100001SQ","Code":2,"Type":1,"orderContent":"www.baidu.com","ConnId":0,"IpPort":null}
+2018-04-26 15:45:01,480 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:01.000|更新打印机辅助指令执行状态，更新成功：订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,打印机编号-18100001SQ,状态-2
+2018-04-26 15:45:01,530 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:01.000|修改打印机18100001SQ域名domin成功,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4
+2018-04-26 15:45:01,531 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:01.000|【202】已经回复打印机更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 2
+2018-04-26 15:45:38,533 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:38.000|{"tp": 202,"id": "0421bea4d0c1f5f345f190a64e2e560dc9d4","key": "DeYdRRXKdH2L","did": "18100001SQ","code": "1",type:1,"OrderContent":"mcp.yinmei.me"}
+2018-04-26 15:45:41,571 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:41.000|【202】打印机上报：更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1,类型：1,详细数据：{"Tp":202,"Id":"0421bea4d0c1f5f345f190a64e2e560dc9d4","Did":"18100001SQ","Code":1,"Type":1,"orderContent":"mcp.yinmei.me","ConnId":0,"IpPort":null}
+2018-04-26 15:45:41,635 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:41.000|更新打印机辅助指令执行状态，更新成功：订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,打印机编号-18100001SQ,状态-1
+2018-04-26 15:45:41,676 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:41.000|修改打印机18100001SQ域名domin成功,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4
+2018-04-26 15:45:41,677 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 15:45:41.000|【202】已经回复打印机更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1
+2018-04-26 16:15:03,007 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:15:02.000|{"tp": 202,"id": "0421bea4d0c1f5f345f190a64e2e560dc9d4","key": "DeYdRRXKdH2L","did": "18100001SQ","code": "1",type:2,"OrderContent":"www.baidu.com"}
+2018-04-26 16:15:06,227 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:15:05.000|【202】打印机上报：更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1,类型：2,详细数据：{"Tp":202,"Did":"18100001SQ","Id":"0421bea4d0c1f5f345f190a64e2e560dc9d4","Code":1,"ConnId":0,"IpPort":null,"Type":2,"orderContent":"www.baidu.com"}
+2018-04-26 16:15:07,960 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:15:07.000|更新打印机辅助指令执行状态，更新成功：订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,打印机编号-18100001SQ,状态-1
+2018-04-26 16:15:52,737 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:15:52.000|【202】已经回复打印机更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d4,状态: 1
+2018-04-26 16:16:17,737 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:16:17.000|{"tp": 202,"id": "0421bea4d0c1f5f345f190a64e2e560dc9d41","key": "DeYdRRXKdH2L","did": "18100001SQ","code": "1",type:2,"OrderContent":"www.baidu.com"}
+2018-04-26 16:16:19,853 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:16:19.000|【202】打印机上报：更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d41,状态: 1,类型：2,详细数据：{"Tp":202,"Id":"0421bea4d0c1f5f345f190a64e2e560dc9d41","Did":"18100001SQ","Code":1,"Type":2,"orderContent":"www.baidu.com","ConnId":0,"IpPort":null}
+2018-04-26 16:16:19,880 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:16:19.000|【202】已经回复打印机更新辅助命令状态请求，设备号：18100001SQ,订单号：0421bea4d0c1f5f345f190a64e2e560dc9d41,状态: 1

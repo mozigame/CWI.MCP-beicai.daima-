@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="join-guide">
+            <div class="guide-heading">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">1</span>
+                            <span class="guide-steup-text">获取访问令牌</span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">2</span>
+                            <span class="guide-steup-text">关联打印机</span>
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                            <span class="guide-steup-icon active">3</span>
+                            <span class="guide-steup-text">打 印 票 据</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-body">
+                <div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>获取访问令牌</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此api接口，可获取访问令牌即身份认证。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>关联打印机</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此api接口，可将应用商家与打印相关联。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>解绑打印机</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此api接口，可将应用商家与打印相解除关联关系。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>打印票据</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此api接口，根据不同参数可打印小票或快递单。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

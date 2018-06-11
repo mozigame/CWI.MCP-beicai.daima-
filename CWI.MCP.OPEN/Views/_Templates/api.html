@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打开放平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="../../Styles/bootstrap-ie6.min.css">
+	<link rel="stylesheet" href="../../Styles/ie.css">
+	<![endif]-->
+	<link rel="stylesheet" href="../../Styles/open.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="">退出</a></li>
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="content">
+			<div class="page-sidebar">
+				<ul class="nav sidebar-menu">
+					<li>
+						<a href="index.html">首页</a>
+						<ul class="submenu">
+							<li>
+								<a href="">item1</a>
+								<ul class="submenu">
+									<li>
+										<a href="">item1-1</a>
+									</li>
+									<li><a href="">item1-2</a></li>
+									<li><a href="">item1-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">item2</a></li>
+							<li><a href="">item3</a></li>
+						</ul>
+					</li>
+					<li><a href="">快递单</a></li>
+					<li class="active"><a href="">API说明</a></li>
+					<li><a href="">接入指南</a></li>
+					<li><a href="">应用管理</a></li>
+				</ul>
+			</div>
+			<div class="page-content">
+				<div class="panel panel-app">
+					<div class="panel-heading">
+						<h3>API接口列表</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-2">
+								<div class="row">
+									<div class="list-group list-group-api">
+										<a href="" class="list-group-item active">接口1</a>
+										<a href="" class="list-group-item">接口2</a>
+										<a href="" class="list-group-item">接口3</a>
+										<a href="" class="list-group-item">接口4</a>
+										<a href="" class="list-group-item">接口5</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-10">
+								<div id="apiinfo" class="apiinfo">
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>接口1</h4>
+										</div>
+										<div class="item-body">
+											<p>调用此api接口，可面向全网手机用户（电信、移动、联通）下发已经通过平台审核的自定义短信内容。</p>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>请求地址</h4>
+										</div>
+										<div class="item-body">
+											<p>http://api.189.cn/v2/emp/templateSms/sendSms</p>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>响应格式</h4>
+										</div>
+										<div class="item-body">
+											<p>JSON</p>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>请求参数</h4>
+										</div>
+										<div class="item-body">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>参数名</th>
+														<th>必须</th>
+														<th>类型及范围</th>
+														<th>说明</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>app_app_app_id</td>
+														<td>true</td>
+														<td>string</td>
+														<td> 	应用ID，开发者创建应用时，天翼开放平台会为应用自动分配此ID，开发者进入"管理中心"，在“应用详情”中可查看app_id应用ID，开发者创建应用时，天翼开放平台会为应用自动分配此ID，开发者进入"管理中心"，在“应用详情”中可查看app_id。</td>
+													</tr>
+													<tr>
+														<td>app_id</td>
+														<td>true</td>
+														<td>string</td>
+														<td> 	应用ID，开发者创建应用时，天翼开放平台会为应用自动分配此ID，开发者进入"管理中心"，在“应用详情”中可查看app_id。</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>请求参数示例</h4>
+										</div>
+										<div class="item-body">
+											<pre>
+POST http://api.189.cn/v2/emp/templateSms/sendSms
+
+POST data:
+acceptor_tel=13123185312&template_id=91000001&template_param={"日报":"nihao","晚报":"nidao","url":"www.baidu.com"}&app_id=418839000000031xxx&access_token=c49fabf158e25985ed1284a75716a9b9137067210xxxx&timestamp=2013-09-06+16%3A07%3A42
+											</pre>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>响应结果</h4>
+										</div>
+										<div class="item-body">
+											<table class="table table-bordered">
+												<thead>
+													<tr>
+														<th>参数名</th>
+														<th>必须</th>
+														<th>类型及范围</th>
+														<th>说明</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>app_id</td>
+														<td>true</td>
+														<td>string</td>
+														<td> 	应用ID，开发者创建应用时，天翼开放平台会为应用自动分配此ID，开发者进入"管理中心"，在“应用详情”中可查看app_id。</td>
+													</tr>
+													<tr>
+														<td>app_id</td>
+														<td>true</td>
+														<td>string</td>
+														<td> 	应用ID，开发者创建应用时，天翼开放平台会为应用自动分配此ID，开发者进入"管理中心"，在“应用详情”中可查看app_id。</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="apiinfo-item">
+										<div class="item-heading">
+											<h4>响应结果示例</h4>
+										</div>
+										<div class="item-body">
+											<pre>
+{
+	"res_code":"0",
+	"res_message":"Success",
+	"idertifier":"0000001"
+}
+											</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 公司信息 -->
+<!-- 				<div class="container">
+					<div class="footer footer-open">
+						<p>© 1998 - 2016 Tencent All Right Reserved.</p>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B8DB3C8-9ED9-4EF4-840D-A8BE274538C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWI.MCP.Common</RootNamespace>
+    <AssemblyName>CWI.MCP.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\Bin\Framework\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\Evt.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\Evt.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Bin\Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MemcachedProviders">
+      <HintPath>..\Bin\Framework\MemcachedProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.MSProject, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Bin\Office\Microsoft.Office.Interop.MSProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mysql.data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=aa71425da671c7fc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\Bin\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\Bin\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\Bin\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\Bin\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\MVC4\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Framework\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopSdk">
+      <HintPath>..\Bin\Other\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ApiDescriptionAttribute.cs" />
+    <Compile Include="Attributes\ByteLengthAttribute.cs" />
+    <Compile Include="Attributes\CommonUrlAttribute.cs" />
+    <Compile Include="Attributes\EnumDescriptionAttribute.cs" />
+    <Compile Include="Attributes\SkipAuthorizationAttribute.cs" />
+    <Compile Include="Attributes\PayDescriptionAttribute.cs" />
+    <Compile Include="Attributes\ValidateSignAttribute.cs" />
+    <Compile Include="Attributes\ZeroToEmptyAttribute.cs" />
+    <Compile Include="DataAccess\Configs\DbUtil.cs" />
+    <Compile Include="DataAccess\Configs\Settings.cs" />
+    <Compile Include="Definitions\CacheKeyConsts.cs" />
+    <Compile Include="Definitions\Consts.cs" />
+    <Compile Include="Definitions\DictionaryConsts.cs" />
+    <Compile Include="Definitions\FuncConsts.cs" />
+    <Compile Include="Definitions\PayConsts.cs" />
+    <Compile Include="Definitions\RegexConsts.cs" />
+    <Compile Include="Definitions\TcpConsts.cs" />
+    <Compile Include="Definitions\ToolTipConsts.cs" />
+    <Compile Include="Definitions\WeChatConsts.cs" />
+    <Compile Include="Enums\EnumTypeCollectoin.cs" />
+    <Compile Include="Enums\EnumWeChatCollection.cs" />
+    <Compile Include="Enums\EnumWorkFlowCollection.cs" />
+    <Compile Include="Enums\Pay\SignType.cs" />
+    <Compile Include="Enums\SMS\SMSTemplateType.cs" />
+    <Compile Include="Enums\TcpOperateType.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Exceptions\DataTableExtensions.cs" />
+    <Compile Include="Exceptions\Error404Exception.cs" />
+    <Compile Include="Exceptions\InnerException.cs" />
+    <Compile Include="Exceptions\RedirectException.cs" />
+    <Compile Include="Exceptions\WxPayException.cs" />
+    <Compile Include="Extensions\Common\EnumExtend.cs" />
+    <Compile Include="Extensions\Common\MethodExtension.cs" />
+    <Compile Include="Extensions\Convert\DataTableExtensions.cs" />
+    <Compile Include="Extensions\Convert\DateExtensions.cs" />
+    <Compile Include="Extensions\Convert\DecimalExtensions.cs" />
+    <Compile Include="Extensions\Convert\DoubleExtensions.cs" />
+    <Compile Include="Extensions\Convert\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\Convert\IListExtensions.cs" />
+    <Compile Include="Extensions\Convert\ObjectExtensions.cs" />
+    <Compile Include="Extensions\Convert\StringExtensions.cs" />
+    <Compile Include="Extensions\Log4net\ActionPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\ControllerPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\DeviceIdPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\DeviceTypePatternLayoutConverter.cs.cs" />
+    <Compile Include="Extensions\Log4net\ExtensionInternalUtils.cs" />
+    <Compile Include="Extensions\Log4net\HeaderParamDataPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\ParamDataPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\ProSignPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\RequestTypePatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\RequestUrlPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\SessionIDPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\Log4net\UrlStatPatternLayout.cs" />
+    <Compile Include="Extensions\Log4net\UserIdPatternLayoutConverter.cs" />
+    <Compile Include="Extensions\MVC\CommonExtension.cs" />
+    <Compile Include="Extensions\MVC\MethodExtension.cs" />
+    <Compile Include="Extensions\MVC\RouteParameter.cs" />
+    <Compile Include="Extensions\MVC\UrlStatFilter.cs" />
+    <Compile Include="Extensions\ViewModels\EUrlStatViewModel.cs" />
+    <Compile Include="Extensions\ViewModels\RequestClientInfoQueryModel.cs" />
+    <Compile Include="Factories\PageSeoFactory.cs" />
+    <Compile Include="HTTP\ApiClient.cs" />
+    <Compile Include="HTTP\APIParameter.cs" />
+    <Compile Include="HTTP\AsyncHttp.cs" />
+    <Compile Include="HTTP\HttpUtil.cs" />
+    <Compile Include="HTTP\SyncHttp.cs" />
+    <Compile Include="Models\ApiResultInfo.cs" />
+    <Compile Include="Models\EmlContentInfo.cs" />
+    <Compile Include="DataAccess\ORM\Condition.cs" />
+    <Compile Include="DataAccess\ORM\ConditionCollection.cs" />
+    <Compile Include="DataAccess\ORM\DataAccessExtend.cs" />
+    <Compile Include="DataAccess\ORM\ICondition.cs" />
+    <Compile Include="DataAccess\ORM\TermCondition.cs" />
+    <Compile Include="Models\RequestClientInfoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmsSdk\CCPRestSDK.cs" />
+    <Compile Include="Utils\CacheUtil.cs" />
+    <Compile Include="Utils\ErrorCodeUtil.cs" />
+    <Compile Include="Utils\ExcelUtil.cs" />
+    <Compile Include="Utils\HtmlConvertUtil.cs" />
+    <Compile Include="Utils\SingleIntance.cs" />
+    <Compile Include="Utils\SysDateTime.cs" />
+    <Compile Include="Utils\CommonUtil.cs" />
+    <Compile Include="Utils\ConfigUtil.cs" />
+    <Compile Include="Utils\HttpRequestUtility.cs" />
+    <Compile Include="Utils\TemplateConfigUtil.cs" />
+    <Compile Include="Utils\CookieUtil.cs" />
+    <Compile Include="Extensions\Common\CustomRequestValidation.cs" />
+    <Compile Include="Utils\EmailUtil.cs" />
+    <Compile Include="Utils\FileOperateUtil.cs" />
+    <Compile Include="Utils\HighChartsUtil.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Utils\LogUtil.cs" />
+    <Compile Include="Utils\MD5CryptionUtil.cs" />
+    <Compile Include="Utils\MemcachedUtil.cs" />
+    <Compile Include="Utils\NetUtil.cs" />
+    <Compile Include="Utils\ParserWebData.cs" />
+    <Compile Include="Utils\ReflectUtil.cs" />
+    <Compile Include="Utils\RegexUtil.cs" />
+    <Compile Include="Utils\RequestUtil.cs" />
+    <Compile Include="Utils\ResponseUtil.cs" />
+    <Compile Include="Utils\RoutingUtil.cs" />
+    <Compile Include="Utils\RSACryptionUtil.cs" />
+    <Compile Include="Utils\SecurityUtil.cs" />
+    <Compile Include="Utils\SerializerUtil.cs" />
+    <Compile Include="Models\SessionData.cs" />
+    <Compile Include="Utils\SessionUtil.cs" />
+    <Compile Include="Utils\SmsUtil.cs" />
+    <Compile Include="Utils\TryConvertUtil.cs" />
+    <Compile Include="Utils\TxtFileUtil.cs" />
+    <Compile Include="Utils\UploadFileUtil.cs" />
+    <Compile Include="Utils\VerifyCodeUtil.cs" />
+    <Compile Include="Utils\XmlUtil.cs" />
+    <Compile Include="WebAPI\ErrorHandler.cs" />
+    <Compile Include="WebAPI\Session.cs" />
+    <Compile Include="WebAPI\SessionManager.cs" />
+    <Compile Include="WeiXin\TemplateApi.cs" />
+    <Compile Include="WeiXin\TemplateMessageJson\TemplateDataItem.cs" />
+    <Compile Include="WeiXin\TemplateMessageJson\TemplateMessageModel.cs" />
+    <Compile Include="WeiXin\TemplateMessageJson\TempleteModel.cs" />
+    <Compile Include="WeiXin\TemplateMessageJson\WXMenuButton.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

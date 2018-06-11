@@ -1,0 +1,15 @@
+2018-05-17 14:46:40,489 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:46:50.000|数据库已成功连接,正在启动服务
+2018-05-17 14:46:42,427 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:46:51.000|
+
+路由选择控制器 Base 耗时：0秒43毫秒
+2018-05-17 14:48:49,970 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:49:00.000|数据库已成功连接,正在启动服务
+2018-05-17 14:48:51,160 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:49:01.000|
+
+路由选择控制器 Base 耗时：0秒13毫秒
+2018-05-17 14:55:38,039 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:55:48.000|数据库已成功连接,正在启动服务
+2018-05-17 14:55:38,836 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:55:48.000|
+
+路由选择控制器 Base 耗时：0秒60毫秒
+2018-05-17 14:55:58,511 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-05-17 14:56:08.000|
+
+路由选择控制器 sys 耗时：0秒26毫秒

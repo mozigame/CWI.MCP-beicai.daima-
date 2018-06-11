@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "接口规则-协议规则";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/doc/interfacerules" class="list-group-item active">协议规则</a>
+                        <a href="/doc/paramrules" class="list-group-item">参数规定</a>
+                        <a href="/doc/safetyspecification" class="list-group-item">安全规范</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>应用接入微云打平台，调用API必须遵循以下规则：</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <td class="bg-grey">传输方式</td>
+                                    <td>采用HTTP传输</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-grey">提交方式</td>
+                                    <td>采用POST或GET方法提交，根据具体接口来定</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-grey">数据格式</td>
+                                    <td>提交数据格式详见具体接口示例、返回数据为JSON格式</td>
+                                </tr>
+                                 <tr>
+                                    <td class="bg-grey">字符编码</td>
+                                    <td>统一采用UTF-8字符编码</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-grey">签名算法</td>
+                                    <td>MD5，后续会兼容SHA1、SHA256、HMAC等。</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-grey">签名要求</td>
+                                    <td>请求和接收数据均需要校验签名，详细方法请参考 <a target="_blank"  href="/doc/safetyspecification">安全规范-签名算法</a></td>
+                                </tr>
+                                <tr >
+                                    <td class="bg-grey">判断逻辑</td>
+                                    <td>先判断协议字段返回，再判断业务返回，最后判断交易状态</td>
+                                 </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+             </div>
+        </div>
+     </div>
+</div>
+</div>

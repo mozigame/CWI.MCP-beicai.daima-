@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" />
+    <section name="redisconfig" type="CWI.Cache.Redis.RedisConfigInfo,CWI.Cache.Redis" />
+  </configSections>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+  <appSettings>
+    
+    <!-- 本服务端口-->
+    <add key="ServicePort" value="8686" />
+    <!-- TCP服务IP-->
+    <add key="TCPServerIP" value="120.76.25.48" />
+    <!-- TCP服务端口-->
+    <add key="TCPServerPort" value="8765" />
+    <!--服务类型（请勿随意更改）：0-映美云通用；1-北彩服务-->
+    <add key="ServiceType" value="0"/>
+    <!--防重打的服务器列表（请勿随意更改），比如北彩服务器就要做防重打，其他服务器则相反要做防丢单，多个数据通过逗号隔开-->
+    <add key="NotRePrintServiceType" value="1,2,3"/>
+    <!--防重打时的状态查询条件，如北彩服务器-->
+    <add key="NotRePrintOrderStatus" value="0"/>
+    <!--防丢单时的状态查询条件，默认的，如外卖平台-->
+    <add key="RePrintOrderStatus" value="0,2,5,6,7,8,9,10,11,12,99"/>
+    <!-- CacheUtil开关值, 1为打开，0为关闭-->
+    <add key="CacheUtilSwitch" value="1" />
+    <!-- CacheUtil超时时间， 单位是秒 -->
+    <add key="CacheUtilExpireTime" value="60" />
+    <!-- Debug版本是否使用服务启动 -->
+    <add key="IsDebugRunService" value="0" />
+    <add key="IsLogToDb" value="1" />
+    <!--令牌有效期，单位：秒-->
+    <add key="TokenExpireIn" value="604800" />
+    <!--19位打印订单号应用特别处理-->
+    <add key="OneNineOrderIdAppIds" value="a5dc14cbe98d4e229e60a7c1e52b6808,a7d36f1726bc4adabf79f4e8a0dd664d,dc7636f7ab8c4c72afd28d8da8e0e48c" />
+    <!--关联应用AppId串-->
+    <add key="AssociatedAppIds" value="5f675406eb904dd99f47f36dbb9879cc,2f92a8758c7b4b9b9892b2562c39de4f,d734897b5dad44448a2c8429061dd3a2" />
+    <!--微信硬件平台产品ID-->
+    <add key="ProductId" value="38988" />
+    <!--微信硬件平台授权及通信的加密key：格式采用16进制串的方式（长度为32字节）【暂未用到】-->
+    <add key="AuthKey" value="1234567890ABCDEF1234567890ABCDEF" />
+    <!--微信硬件平台接入签名密钥-->
+    <add key="IotToken" value="970e9c78809711e7a2ed02004c4f4f50" />
+    <!--微信硬件平台WiFi配网密钥-->
+    <add key="WiFiKey" value="9t1ZYij73JpYQenf" />
+    <add key="WechatAppIdForIot" value="wxfbfa89784fcdf4fb" />
+    <add key="WechatAppSecretForIot" value="2dbaf3298f71c970ea61ec92250a2f7e" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <!--打印订单Html转图片保存地址-->
+    <add key="ImageAddress" value="E:\WebSites\mcp\open.yingmei.me\Content\Upload\PrinterImages\"/>
+    <!--打印订单Html转图片Http保存地址-->
+    <add key="HttpAddress" value="http://open.yingmei.me/Content/Upload/PrinterImages/"/>
+  </appSettings>
+  <redisconfig WriteServerList="127.0.0.1:6868" ReadServerList="127.0.0.1:6868" MaxWritePoolSize="60" MaxReadPoolSize="60" AutoStart="true" LocalCacheTime="300" RecordeLog="false">
+  </redisconfig>
+  <log4net>
+    <root>
+      <appender-ref ref="InfoLog" />
+      <appender-ref ref="WarnLog" />
+      <appender-ref ref="TraceLog" />
+      <appender-ref ref="ErrorLog" />
+      <appender-ref ref="FatalLog" />
+      <appender-ref ref="RemoteSyslogAppender" />
+    </root>
+    <!--定义输出到文件中-->
+    <appender name="ErrorLog" type="log4net.Appender.RollingFileAppender">
+      <!--日志文件名,其中 [%前缀] 部分表示前缀-->
+      <file type="log4net.Util.PatternString" value="Log\MCP\" />
+      <!--<file value="logfile"/>-->
+      <!--是否在文件中追加 -->
+      <appendToFile value="true" />
+      <!--按日期和大小写日志文件，超过大小则备份,超过日期重写-->
+      <rollingStyle value="Composite" />
+      <!--最大变换数量 -->
+      <maxSizeRollBackups value="100" />
+      <!--最大文件大小 -->
+      <maximumFileSize value="10MB" />
+      <datePattern value="yyyyMMdd&quot;_error.txt&quot;" />
+      <!--日志文件名是否为静态-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="ERROR" />
+        <param name="LevelMax" value="ERROR" />
+      </filter>
+    </appender>
+    <appender name="FatalLog" type="log4net.Appender.RollingFileAppender">
+      <!--日志文件名,其中 [%前缀] 部分表示前缀-->
+      <file type="log4net.Util.PatternString" value="Log/MCP/%date{yyyy-MM-dd}.log" />
+      <!--<file value="logfile"/>-->
+      <!--是否在文件中追加 -->
+      <appendToFile value="true" />
+      <!--按日期和大小写日志文件，超过大小则备份,超过日期重写-->
+      <rollingStyle value="Composite" />
+      <!--最大变换数量 -->
+      <maxSizeRollBackups value="100" />
+      <!--最大文件大小 -->
+      <maximumFileSize value="10MB" />
+      <datePattern value="yyyyMMdd" />
+      <!--日志文件名是否为静态-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="FATAL" />
+        <param name="LevelMax" value="FATAL" />
+      </filter>
+    </appender>
+    <appender name="InfoLog" type="log4net.Appender.RollingFileAppender">
+      <!--日志文件名,其中 [%前缀] 部分表示前缀-->
+      <file type="log4net.Util.PatternString" value="Log\MCP\" />
+      <!--<file value="logfile"/>-->
+      <!--是否在文件中追加 -->
+      <appendToFile value="true" />
+      <!--按日期和大小写日志文件，超过大小则备份,超过日期重写-->
+      <rollingStyle value="Composite" />
+      <!--最大变换数量 -->
+      <maxSizeRollBackups value="100" />
+      <!--最大文件大小 -->
+      <maximumFileSize value="10MB" />
+      <datePattern value="yyyyMMdd&quot;_info.txt&quot;" />
+      <!--日志文件名是否为静态-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="INFO" />
+        <param name="LevelMax" value="INFO" />
+      </filter>
+    </appender>
+    <appender name="WarnLog" type="log4net.Appender.RollingFileAppender">
+      <!--日志文件名,其中 [%前缀] 部分表示前缀-->
+      <file type="log4net.Util.PatternString" value="Log\MCP\" />
+      <!--<file value="logfile"/>-->
+      <!--是否在文件中追加 -->
+      <appendToFile value="true" />
+      <!--按日期和大小写日志文件，超过大小则备份,超过日期重写-->
+      <rollingStyle value="Composite" />
+      <!--最大变换数量 -->
+      <maxSizeRollBackups value="100" />
+      <!--最大文件大小 -->
+      <maximumFileSize value="10MB" />
+      <datePattern value="yyyyMMdd&quot;_warn.txt&quot;" />
+      <!--日志文件名是否为静态-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="WARN" />
+        <param name="LevelMax" value="WARN" />
+      </filter>
+    </appender>
+    <appender name="TraceLog" type="log4net.Appender.RollingFileAppender">
+      <!--日志文件名,其中 [%前缀] 部分表示前缀-->
+      <file type="log4net.Util.PatternString" value="Log\MCP\" />
+      <!--<file value="logfile"/>-->
+      <!--是否在文件中追加 -->
+      <appendToFile value="true" />
+      <!--按日期和大小写日志文件，超过大小则备份,超过日期重写-->
+      <rollingStyle value="Composite" />
+      <!--最大变换数量 -->
+      <maxSizeRollBackups value="100" />
+      <!--最大文件大小 -->
+      <maximumFileSize value="10MB" />
+      <datePattern value="yyyyMMdd&quot;_trace.txt&quot;" />
+      <!--日志文件名是否为静态-->
+      <staticLogFileName value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="DEBUG" />
+        <param name="LevelMax" value="DEBUG" />
+      </filter>
+    </appender>
+    <appender name="RemoteSyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+      <encoding value="utf-8" />
+      <facility value="Syslog" />
+      <remoteAddress value="192.168.1.218" />
+      <identity value="MyApp[%level][%property{log4net:HostName}]" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%m%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <levelMin value="ERROR" />
+        <levelMax value="FATAL" />
+        <AcceptOnMatch value="false" />
+      </filter>
+      <filter type="log4net.Filter.StringMatchFilter">
+        <StringToMatch value="" />
+      </filter>
+      <filter type="log4net.Filter.DenyAllFilter" />
+    </appender>
+    <appender name="AdoNetAppender_Mysql" type="log4net.Appender.AdoNetAppender">
+      <bufferSize value="1" />
+      <connectionType value="MySql.Data.MySqlClient.MySqlConnection,MySql.Data" />
+      <connectionString value="server=127.0.0.1;port=3306;uid=replication;pwd=123456;DataBase=opt_stat;charset=utf8;allow zero datetime=true;Max Pool Size=10000" />
+      <commandText value="INSERT INTO request_record(request_url,param_data,controller,action,session_id,request_type,pro_sign) VALUES(@request_url,@param_data,@controller,@action,@session_id,@request_type,@pro_sign)" />
+      <parameter>
+        <parameterName value="@request_url" />
+        <dbType value="String" />
+        <size value="255" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%RequestUrl" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@param_data" />
+        <dbType value="String" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%ParamData" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@controller" />
+        <dbType value="String" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%Controller" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@action" />
+        <dbType value="String" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%Action" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@session_id" />
+        <dbType value="String" />
+        <size value="36" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%SessionID" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@request_type" />
+        <dbType value="String" />
+        <size value="8" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%RequestType" />
+        </layout>
+      </parameter>
+      <parameter>
+        <parameterName value="@pro_sign" />
+        <dbType value="String" />
+        <size value="16" />
+        <layout type=" CWI.MCP.Common.Extensions.Log4net.Log4net.UrlStatPatternLayout">
+          <conversionPattern value="%ProSign" />
+        </layout>
+      </parameter>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <levelMin value="INFO" />
+        <levelMax value="INFO" />
+      </filter>
+    </appender>
+    <logger name="dbLogger">
+      <appender-ref ref="AdoNetAppender_Mysql">
+      </appender-ref>
+    </logger>
+  </log4net>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

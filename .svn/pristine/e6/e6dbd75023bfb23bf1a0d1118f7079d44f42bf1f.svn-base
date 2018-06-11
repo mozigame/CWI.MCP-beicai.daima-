@@ -1,0 +1,119 @@
+﻿@using CWI.MCP.Models.ViewModels.MCP.OPEN
+@{
+    ViewBag.Title = "接入指南";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="panel panel-app">
+    <div class="join-guide">
+            <div class="guide-heading">
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">1</span>
+                            <span class="guide-steup-text">注 册 帐 号</span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">2</span>
+                            <span class="guide-steup-text">配 置 应 用</span>
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">3</span>
+                            <span class="guide-steup-text">集 成 接 口</span>
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">4</span>
+                            <span class="guide-steup-text">关联打印机</span>
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                            <span class="guide-steup-separator" style="right: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="guide-steup">
+                            <span class="guide-steup-icon active">5</span>
+                            <span class="guide-steup-text">打 印 票 据</span>
+                            <span class="guide-steup-separator" style="left: -30px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-body">
+                <div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>注 册 帐 号</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>通过手机号及短信验证码注册开放平台开发者帐号，注册成功后即可正常使用。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>配 置 应 用</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>1.开发者登录成功后可以创建自己的应用，一个开发者可以创建多个应用；</p>
+                            <p>2.应用的回调地址为打印机执行完任务后的回调，为可选项，若需配置应用中需开发此回调接口，详情请参考 <a target="_blank"  href="/doc/viewcallback">回调说明</a></p>
+                            <p>3.若配置了回调地址则签名密钥必填，确保回调接口的请求安全,详细方法请参考 <a target="_blank"  href="/doc/safetyspecification">接口规则-安全规范-签名算法</a></p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>集 成 接 口</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>开发者需对应用集成微云打平台提供的API接口。</p>
+                            <p>1.通过调用获取访问凭证接口获得身份认证；</p>
+                            <p>2.通过调用打印接口即可实现，打印小票和快递面单为同一接口，根据参数进行识别；</p>
+                            <p>注：集成接口详情请参考 <a target="_blank"  href="/api/accesstoken">API接口列表</a></p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>关联打印机</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>在应用中调用关联（或解绑）打印机接口，将应用商家与打印相关联（或解绑）。</p>
+                            <p>目前支持的打印机型号主要有：</p>
+                            <p>1.小票热敏打印机：MCP-58（58mm）、MCP-330（80mm）、MCP-350（80mm）、MCP-360（80mm带声光报警提示）；</p>
+                            <p>2.小票针式打印机：MCP-230D/DC（75mm）、MCP-610D/DC（75mm）；</p>
+                            <p>3.快递面单针式打印机：FP-570K；</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>打 印 票 据</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>应用中根据应用系统业务调用打印接口即可实现打印小票或快递面单。</p>
+                            <p>小票支持格式为html格式，只能支持简单的html标签。</p>
+                            <p>快递面单目前仅支持：顺丰快递、圆通速递，后面会陆续支持主流及常见的快递商及快递面单模板。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="panel panel-app">
+    
+</div>

@@ -1,0 +1,79 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2015，COOLWI.COM
+// 变更历史：
+//      姓名          日期              说明
+// --------------------------------------------
+//      王军锋        2012/02/21         创建
+//---------------------------------------------
+using Evt.Framework.Mvc;
+using System.ComponentModel.DataAnnotations;
+using CWI.MCP.Common;
+
+namespace CWI.MCP.Models
+{
+    /// <summary>
+    /// 回调参数【请按首字母排序】
+    /// </summary>
+    public class CallBackViewModel : ViewModel
+    {
+        /// <summary>
+        /// 票据单号
+        /// </summary>
+        public string bill_no { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        public string order_id { get; set; }
+
+        /// <summary>
+        /// 异常时间
+        /// </summary>
+        public string fault_time { get; set; }
+
+        /// <summary>
+        ///  随机字符串
+        /// </summary>cuo
+        public string nonce_str { get; set; }
+
+        /// <summary>
+        /// 打印设备编号
+        /// </summary>
+        public string printer_code { get; set; }
+
+        /// <summary>
+        /// 结果状态码
+        /// </summary>
+        public string result_code { get; set; }
+
+        /// <summary>
+        /// 签名类型
+        /// </summary>
+        public string sign_type { get; set; }
+
+        /// <summary>
+        /// 时间戳;
+        /// </summary>
+        public string time_stamp { get; set; }
+
+        /// <summary>
+        /// 签名
+        /// </summary>
+        public string sign { get; set; }
+
+        /// <summary>
+        /// 签名密钥
+        /// </summary>
+        public string key { get; set; }
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public CallBackViewModel()
+        {
+            this.sign_type = "MD5";
+            this.time_stamp = SysDateTime.SecondTicks_1970.ToString();
+            this.nonce_str = CommonUtil.GetGuidNoSeparator();
+        }
+    }
+}

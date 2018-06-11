@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "激活成功";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<script type="text/javascript">
+	    $.post("/user/doactivesuccess", location.search.replace("?", ""), function (res) {
+	        if (res.status) {
+	            $(".register-active").html('<p class="register-success-info">激活成功</p>');
+	        } else {
+	            $(".register-active").html('<p class="register-error-info">' + res.data + '</p>');
+	        }
+	    }, "json");
+	</script>
+
+<div class="container">
+	<div class="register-success">
+		<div class="register-active">
+		</div>
+		<p>
+			<a href="/user/login" class="btn btn-action">跳转至登陆页面</a>
+		</p>
+	</div>
+</div>

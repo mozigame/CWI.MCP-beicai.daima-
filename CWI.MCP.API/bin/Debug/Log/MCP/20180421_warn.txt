@@ -1,0 +1,74 @@
+2018-04-21 10:40:52,765 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 10:40:52.000|Evt.Framework.Common.MessageException: 更新打印机17320152WV版本号失败，请重试
+   在 CWI.MCP.Services.SysService.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\SysService.cs:行号 133
+   在 CWI.MCP.API.Controllers.MCP.SysController.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 80
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"verModel":{"Type":"3","Ver":"1.1.98","Mac":"17320152WV"}}  SessionID:C8402EEDF54B410CB68E1852596E012E
+  URL:http://localhost:8686/mcp/sys/CheckVersion?type=3&ver=1.1.98&mac=17320152WV
+
+
+2018-04-21 11:14:25,548 [8] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 11:14:25.000|Evt.Framework.Common.MessageException: 设备不存在！
+   在 CWI.MCP.Services.SysService.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\SysService.cs:行号 126
+   在 CWI.MCP.API.Controllers.MCP.SysController.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 80
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"verModel":{"Type":"3","Ver":"1.1.99","Mac":"17320152WV1"}}  SessionID:B2CD1DDFEA6A4284998830B0040A744B
+  URL:http://localhost:8686/mcp/sys/CheckVersion?type=3&ver=1.1.99&mac=17320152WV1
+
+
+2018-04-21 11:15:15,017 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 11:15:14.000|Evt.Framework.Common.MessageException: 设备不存在！
+   在 CWI.MCP.Services.SysService.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\SysService.cs:行号 126
+   在 CWI.MCP.API.Controllers.MCP.SysController.CheckVersion(VerViewModel verModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 80
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"verModel":{"Type":"f3","Ver":"1.1.106","Mac":"17320152WV1"}}  SessionID:EC89C331D4B04451961E835286EB9114
+  URL:http://localhost:8686/mcp/sys/CheckVersion?type=f3&ver=1.1.106&mac=17320152WV1
+
+
+2018-04-21 14:24:42,154 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 14:24:41.000|Evt.Framework.Common.MessageException: 无效访问令牌:a3395b7f1de647d0b0963a3e3b70f36b1
+   在 CWI.MCP.Services.PrinterService.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 1006
+   在 CWI.MCP.API.Controllers.MCP.SysController.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 324
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"queryModel":{"app_id":"3a97adc2b23a4890b32ffd59a461872d","access_token":"a3395b7f1de647d0b0963a3e3b70f36b1","app_key":null,"bill_no":null,"printer_codes":"17320152WV,17080362WV,17080364WV","domain":null}}  SessionID:BD81B3B68B3A4C1493B25609CEB69E24
+  URL:http://localhost:8686/mcp/sys/GetPrintVersion?printer_codes=17320152WV,17080362WV,17080364WV&app_id=3a97adc2b23a4890b32ffd59a461872d&access_token=a3395b7f1de647d0b0963a3e3b70f36b1
+
+
+2018-04-21 14:25:04,927 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 14:25:04.000|Evt.Framework.Common.MessageException: 无效应用，app_id或app_key参数错误！
+   在 CWI.MCP.Services.AppService.CheckApp(String appId, String appKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\AppService.cs:行号 387
+   在 CWI.MCP.Services.PrinterService.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 996
+   在 CWI.MCP.API.Controllers.MCP.SysController.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 324
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"queryModel":{"app_id":"3a97adc2b23a4890b32ffd59a461872d1","access_token":"a3395b7f1de647d0b0963a3e3b70f36b","app_key":null,"bill_no":null,"printer_codes":"17320152WV,17080362WV,17080364WV","domain":null}}  SessionID:D6101848F156444AB95787473F87077B
+  URL:http://localhost:8686/mcp/sys/GetPrintVersion?printer_codes=17320152WV,17080362WV,17080364WV&app_id=3a97adc2b23a4890b32ffd59a461872d1&access_token=a3395b7f1de647d0b0963a3e3b70f36b
+
+
+2018-04-21 14:25:20,779 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-21 14:25:20.000|Evt.Framework.Common.MessageException: 无效应用，app_id或app_key参数错误！
+   在 CWI.MCP.Services.AppService.CheckApp(String appId, String appKey) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\AppService.cs:行号 387
+   在 CWI.MCP.Services.PrinterService.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 996
+   在 CWI.MCP.API.Controllers.MCP.SysController.GetPrintVersion(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 324
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"queryModel":{"app_id":null,"access_token":"a3395b7f1de647d0b0963a3e3b70f36b","app_key":null,"bill_no":null,"printer_codes":"17320152WV,17080362WV,17080364WV","domain":null}}  SessionID:D6101848F156444AB95787473F87077B
+  URL:http://localhost:8686/mcp/sys/GetPrintVersion?printer_codes=17320152WV,17080362WV,17080364WV&access_token=a3395b7f1de647d0b0963a3e3b70f36b
+
+

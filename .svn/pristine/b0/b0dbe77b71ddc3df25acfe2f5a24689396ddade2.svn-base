@@ -1,0 +1,228 @@
+﻿@using CWI.MCP.Common
+@{
+    ViewBag.Title = "微云打开放平台";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--banner-->
+<div class="open_banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="open_max_width">
+                    <h1>免费好用的开放平台</h1>
+                    <p>高集成  多兼容  可拓展</p>
+                    <a href="/api/accesstoken">查看api文档</a>
+                    <img src="@RoutingUtil.ImgUrl("/Images/Home/ban2.png")" alt="" />
+                </div>
+            </div>
+
+            <div class="item ">
+                <div class="open_max_width">
+                    <h1>多元化集成接口与服务支持</h1>
+                    <p>让你的应用和打印机关联得更有深度</p>
+                    <a href="/system/guide">如何使用</a>
+                    <img src="@RoutingUtil.ImgUrl("/Images/Home/ban1.png")" alt="" />
+                </div>
+            </div>
+            @*<div class="item">
+                <a href="/system/guide"></a>
+
+            </div>
+            <div class="item">
+                <a href="/system/guide"></a>
+
+            </div>*@
+        </div>
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Controls -->
+        <!--<a class="open_left_control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
+        <a class="open_right_control" href="#carousel-example-generic" role="button" data-slide="next"></a>-->
+    </div>
+</div>
+
+<!-- Introduction of platform -->
+
+<div class="open_platform_intr">
+    <div class="open_max_width">
+        <div class="open_intr_title text-center">
+            <h1>平台简介</h1>
+        </div>
+        <div class="open_intr_content text-center">
+            “微云打-开放平台”是由深圳映美卡莫网络有限公司独立开发、为软件应用开发者免费提供打印机技术接口及相关服务的专业平台。开发者可通过开放平台，接入多种打印机接口及相关服务，将自己的应用与微云打打印机深度关联，并获得多种小票和快递面单模板参数，从而实现多元化的打印功能和服务。
+        </div>
+    </div>
+</div>
+<!--  platform function -->
+<div class="open_platform_fun">
+    <div class="open_max_width">
+        <div class="open_intr_title text-center">
+            <h1>平台功能与服务</h1>
+        </div>
+
+        <div class="open_plat_fun_box text-center">
+            <div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg">多元化的打印接口</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    开放平台拥有多种打印接口可供调用，帮助开发者将自己的应用与微云打打印机深度关联，实现控制打印机打印、清洗及更换设置等多种功能，并支持更多功能的扩展开发。
+                </div>
+            </div>
+            <div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg1">多样化的模板参数</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    为开发者提供多种小票和快递面单的模板参数，并支持扩展开发，适应多种使用场景。
+                </div>
+            </div>
+            <div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg2">智能化的接口集成</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    集成多个第三方平台的技术接口，开发者只需通过开放平台，就能接入其他多个平台。
+                </div>
+            </div>
+            <div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg3">稳定高效的服务支持</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    通过开放平台，开发者可以获得开发、调试等全方位的技术咨询与服务支持，提升开发效率。
+                </div>
+            </div>
+            @*<div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg4">完美适应多种环境</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    适用Android、iOS、Windows、Linux等多种操作系统，支持多类型智能终端接入，简单实用。
+                </div>
+            </div>
+            <div class="open_fun_item">
+                <div class="open_plat_item_title">
+                    <h2 class="open_item_bg5">高扩展性</h2>
+                </div>
+                <div class="open_plat_item_content">
+                    微云打开放平台为开发者提供了高度可拓展的空间，开发者可根据自身需求开发更多个性化功能。
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+
+<!--Platform advantage-->
+<div class="open_plat_adv">
+    <div class="open_max_width">
+        <div class="open_intr_title text-center">
+            <h1>平台优势</h1>
+        </div>
+        <div class="open_adv_list">
+            <div class="open_adv_list_item text-center">
+                <div class="open_adv_icon open_adv_icon_bg1">
+
+                </div>
+                <div class="open_adv_item_c">
+                    <p>高度集成，提升效率</p>
+                    <div>
+                        集成深度关联打印机和第三方外卖平台（美团外卖、百度外卖、饿了么）接口，帮助开发者有效节省时间成本和人力成本，提升开发效率。
+                    </div>
+                </div>
+
+            </div>
+            <div class="open_adv_list_item text-center">
+                <div class="open_adv_icon open_adv_icon_bg2">
+
+                </div>
+                <div class="open_adv_item_c">
+                    <p>兼容可拓展，省时省力</p>
+                    <div>
+                        微云打开放平台拥有较高的可拓展性和兼容性，可供开发者开发出更多不同的定制化功能，在实现强大功能的同时，也兼顾不同场景的应用。
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="open_adv_list_item text-center">
+                <div class="open_adv_icon open_adv_icon_bg3">
+
+                </div>
+                <div class="open_adv_item_c">
+                    <p>轻量化部署，安全稳定</p>
+                    <div>
+                        微云打开放平台无需调用臃肿的SDK即可接入众多接口，简洁轻便。同时，采用阿里云服务器，保证数据传输的高效、安全和稳定。
+
+                    </div>
+                </div>
+            </div>
+            <div class="open_adv_list_item text-center">
+                <div class="open_adv_icon open_adv_icon_bg4">
+
+                </div>
+                <div class="open_adv_item_c">
+                    <p>强大功能，免费使用</p>
+                    <div>
+                        微云打开放平台众多的开发接口与相关服务可供任何团队和个人免费使用。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Application scenario-->
+<div class="open_app_scenario">
+    <div class="open_max_width">
+        <div class="open_intr_title text-center">
+            <h1>应用场景</h1>
+        </div>
+        <div class="open_app_list">
+            <div class="open_app_item open_app_bg1">
+                <div class="open_app_hover">
+                    <h2>通过开放平台接口，将应用与打印机进行深度关联，根据不同业务，给打印机下达多种指令。</h2>
+
+                </div>
+                <h2>打印行业</h2>
+
+            </div>
+            <div class="open_app_item open_app_bg2">
+                <div class="open_app_hover">
+                    <h2>将餐饮店在美团外卖、百度外卖和饿了么等外卖平台的业务集成在同一个应用，无需反复切换应用和过多操作，就能管理和打印不同平台的外卖订单。</h2>
+
+                </div>
+                <h2>外卖行业</h2>
+
+            </div>
+
+            <div class="open_app_item open_app_bg3">
+                <div class="open_app_hover">
+                    <h2>结合自身的业务需求接入开放平台接口，在应用内生成定制化的快递面单。</h2>
+
+                </div>
+                <h2>快递行业</h2>
+
+            </div>
+
+            <div class="open_app_item open_app_bg4">
+                <div class="open_app_hover">
+                    <h2>将小票和发票打印以及其他业务流程有机结合，根据不同场景，打印相应小票和单据。</h2>
+
+                </div>
+                <h2>零售及更多行业···</h2>
+
+            </div>
+        </div>
+    </div>
+</div>

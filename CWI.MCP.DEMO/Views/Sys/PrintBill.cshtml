@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var result = ViewBag.Result;
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="join-guide">
+            <div class="guide-body">
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                        <h4>打印票据</h4>
+                    </div>
+                    <div class="item-body">
+                        <p>调用此api接口，可打印小票或快递单。</p>
+                    </div>
+                </div>
+                <div class="apiinfo-item">
+                    <div class="item-heading">
+                    </div>
+                    <div class="item-body">
+                        <form id="register" action="/sys/DoPrint" class="form-horizontal" method="post">
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <label for="" class="control-label col-sm-3">appId：</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="app_id" value="" />
+                                        f61034cf434311e6bd5302004c4f4f50
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="" class="control-label col-sm-4">accessToken：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="access_token" value="" />
+                                        19ce7ad8a3c34119bbdcec46966b1f57
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <label for="" class="col-sm-3 control-label">printerCodes：</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="printer_codes" value="" />
+                                        8C18D9FF2999 或 8C18D9FF242F 或 7CC709A8E18D 
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="" class="col-sm-4 control-label">merchantCode：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="merchant_code" value="" />
+                                        M001
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <label for="" class="col-sm-3 control-label">billNo：</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="bill_no" value=""/>
+                                        @string.Format("{0}001", DateTime.Now.ToString("yyyyMMdd"))
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="" class="col-sm-4 control-label">copies：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="copies" value="1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <label for="" class="col-sm-3 control-label">billType：</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="bill_type" value="" />
+                                        <p>
+                                           1：Html格式小票，2: ESC指令小票, 3: 特定模版小票（例如彩票模版），</br>
+                                           4: Json格式小票，99: 快递单</br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="" class="col-sm-4 control-label">templateId：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="template_id" value="" />
+                                        <p>Html格式小票: 模板为空，</br>
+                                           彩票: 【双色球模版】T0020101,【福彩模版】T0020201,</br>
+                                           快递单：【顺丰模板一】T0010101，【顺丰模板二】T0010102，【圆通模板一】 T0010201</br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-7">
+                                    <label for="" class="col-sm-3 control-label">billContent：</label>
+                                    <div class="col-sm-9">
+                                        <textarea cols="25" rows="9" class="form-control" name="bill_content"></textarea>
+                                        1. http://demo.yinmei.me/billtemplate/001/xiaopiao.html</br>
+                                        2. http://order.yinmei.me/bill/getSamllBill?id=c1e918dde4be4a6ca61ad428fc71caab&templeid=1</br>
+                                        3. http://order.yinmei.me/bill/getSamllBill?id=c1e918dde4be4a6ca61ad428fc71caab&templeid=3</br>
+                                        4. http://order.yinmei.me/bill/getSamllBill?id=c1e918dde4be4a6ca61ad428fc71caab&templeid=5</br>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <button type="submit" class="btn btn-action" data-verify-submit>提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @{
+                        if (!string.IsNullOrWhiteSpace(result))
+                        {
+                        <div class="apiinfo-item">
+                            <div class="item-heading">
+                                <h4>响应结果示例</h4>
+                            </div>
+                            <div class="item-body">
+                                <pre>@result</pre>
+                            </div>
+                        </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+2018-04-26 16:07:17,216 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:07:22.000|数据库已成功连接,正在启动服务
+2018-04-26 16:07:18,101 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:07:22.000|
+
+路由选择控制器 Base 耗时：0秒99毫秒
+2018-04-26 16:12:31,575 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:12:36.000|
+
+路由选择控制器 sys 耗时：0秒71毫秒
+2018-04-26 16:12:34,908 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-26 16:12:39.000|第三方查看设备18100001SQ，17320152WV域名...

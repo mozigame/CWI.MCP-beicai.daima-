@@ -1,0 +1,6 @@
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\bin\Debug\Client.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\bin\Debug\Client.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\obj\Debug\Client.exe
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\QuickStart\Udp\Client\obj\Debug\Client.pdb

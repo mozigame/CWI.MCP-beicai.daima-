@@ -1,0 +1,57 @@
+﻿@{ 
+    ViewBag.Title = "WiFi配置";
+    var wifiKey = ViewBag.WiFiKey as string;
+    var configModel = ViewBag.ConfigModel as CWI.MCP.Models.WxJsApiConfigViewModel;
+}
+<style type="text/css">
+     body { font-family:Helvetica,Arial,sans-serif; background-color:#f0f0f6; }
+</style>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var CANCEL = "configWXDeviceWiFi:cancel";  
+    var FAIL = "configWXDeviceWiFi:fail";  
+    var OK = "configWXDeviceWiFi:ok";  
+
+    wx.config({
+        beta: true, // 开启内测接口调用，注入wx.invoke方法
+        debug: false, // 开启调试模式
+        appId: '@configModel.appId',         // 第三方app唯一标识
+        timestamp: '@configModel.timestamp', // 生成签名的时间戳
+        nonceStr: '@configModel.nonceStr',   // 生成签名的随机串
+        signature: '@configModel.signature', // 签名
+        jsApiList: ['configWXDeviceWiFi']    // 需要使用的jsapi列表
+    });
+
+    $(function () {
+        common.showLoadingToast("获取WiFi网络中...");
+    });
+
+    var second = 5;
+    wx.ready(function () {
+        wx.checkJsApi({
+            jsApiList: ['configWXDeviceWiFi'],
+            success: function (res) {
+                if (res.errMsg != "checkJsApi:ok") {
+                    common.showErrorTip('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
+                    return;
+                }
+                wx.invoke('configWXDeviceWiFi', { 'key': '@wifiKey' }, function (res) {
+                    var err_msg = res.err_msg;
+                    if (err_msg == CANCEL) {
+                        window.location = '/system/message?code=0';
+                    }
+                    else if (err_msg == OK) {
+                        window.location = '/system/message?code=1';
+                    }
+                    else if (err_msg == FAIL) {
+                        window.location = '/system/message?code=2';
+                    }
+                    else {
+                        common.showErrorTip(res.err_msg);
+                        return;
+                    }
+                });
+            }
+        });
+    });
+</script>

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "注册成功";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+	<div class="register-success">
+		<p class="register-success-info">注册成功</p>
+		<p>激活链接已发送到您的邮箱,请进入您的邮箱 @ViewBag.Email 进行激活</p>
+		<p>激活链接24小时内有效,请尽快完善您的账号</p>
+		<a href="/user/login" class="btn btn-action">跳转至登录页面</a>
+	</div>
+</div>

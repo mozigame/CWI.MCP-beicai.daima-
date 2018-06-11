@@ -1,0 +1,1109 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2014，COOLWI.COM
+// 变更历史：
+//      姓名          日期              说明
+// --------------------------------------------
+//      王军锋        2014/08/16        创建
+//---------------------------------------------
+
+using CWI.MCP.Common.Attributes;
+
+namespace CWI.MCP.Common
+{
+    /// <summary>
+    /// 逻辑枚举信息
+    /// </summary>
+    public enum LogicType
+    {
+        /// <summary>
+        /// 否
+        /// </summary>
+        No = 0,
+
+        /// <summary>
+        /// 是
+        /// </summary>
+        Yes = 1
+    }
+
+    /// <summary>
+    /// 响应状态
+    /// </summary>
+    public enum ResponseStatusType
+    {
+        /// <summary>
+        /// 执行失败
+        /// </summary>
+        [EnumDescription("执行失败")]
+        Failed = 0,
+
+        /// <summary>
+        /// 执行成功
+        /// </summary>
+        [EnumDescription("执行成功")]
+        OK = 1,
+
+        /// <summary>
+        /// 内部错误，当前未使用
+        /// </summary>
+        [EnumDescription("内部错误，当前未使用")]
+        InnerError = 2,
+
+        /// <summary>
+        /// 未登录
+        /// </summary>
+        [EnumDescription("未登录")]
+        Unauthorized = 3,
+
+        /// <summary>
+        /// 需要客户端确认
+        /// </summary>
+        [EnumDescription("需要客户端确认")]
+        Confirm = 4,
+
+        /// <summary>
+        /// 系统未知异常
+        /// </summary>
+        [EnumDescription("系统未知异常")]
+        UnknownError = 5
+    }
+
+
+    /// <summary>
+    /// 设备类型
+    /// </summary>
+    public enum DeviceType
+    {
+        /// <summary>
+        /// 其他设备
+        /// </summary>
+        [EnumDescription("其他")]
+        Other = 0,
+
+        /// <summary>
+        /// Android
+        /// </summary>
+        [EnumDescription("Android")]
+        Android = 1,
+
+        /// <summary>
+        /// IOS
+        /// </summary>
+        [EnumDescription("IOS")]
+        IOS = 2,
+
+        /// <summary>
+        /// PC
+        /// </summary>
+        [EnumDescription("PC")]
+        PC = 3
+    }
+
+    /// <summary>
+    /// 用户状态枚举
+    /// </summary>
+    public enum UserStatusType
+    {
+        /// <summary>
+        /// 全部状态
+        /// </summary>
+        [EnumDescription("全部状态")]
+        All = 0,
+
+        /// <summary>
+        /// 启用状态
+        /// </summary>
+        [EnumDescription("启用")]
+        Valid = 1,
+
+        /// <summary>
+        /// 停用状态
+        /// </summary>
+        [EnumDescription("此帐号已被停用，请与管理员联系！")]
+        Disabled = 2,
+
+        /// <summary>
+        /// 已删除状态
+        /// </summary>
+        [EnumDescription("此帐号已被删除，请与管理员联系！")]
+        Deleted = 3,
+
+        /// <summary>
+        /// 未激活
+        /// </summary>
+        [EnumDescription("此账号尚未激活，请登录绑定邮箱激活帐号！")]
+        NotActived = 4,
+
+        /// <summary>
+        /// 未配置
+        /// </summary>
+        [EnumDescription("此账号尚未配置打印终端，请您先配置再登录！")]
+        NotConfig = 5
+    }
+
+
+
+    /// <summary>
+    /// 状态码类型
+    /// </summary>
+    public enum StatusCodeType
+    {
+        /// <summary>
+        /// 新建状态
+        /// </summary>
+        [EnumDescription("新建")]
+        New = 0,
+
+        /// <summary>
+        /// 运营状态
+        /// </summary>
+        [EnumDescription("运营")]
+        Valid = 1,
+
+        /// <summary>
+        /// 停用状态
+        /// </summary>
+        [EnumDescription("停用")]
+        Disabled = 2,
+
+        /// <summary>
+        /// 已删除状态
+        /// </summary>
+        [EnumDescription("删除")]
+        Deleted = 3
+    }
+
+
+    /// <summary>
+    /// 验证方式
+    /// </summary>
+    public enum ValidateType
+    {
+        /// <summary>
+        /// 邮箱验证
+        /// </summary>
+        [EnumDescription("邮箱验证")]
+        Email = 1,
+
+        /// <summary>
+        /// 手机验证
+        /// </summary>
+        [EnumDescription("手机验证")]
+        Mobile = 2
+    }
+
+    /// <summary>
+    /// 邮件类型
+    /// </summary>
+    public enum EmailType
+    {
+        /// <summary>
+        /// 未知
+        /// </summary>
+        [EnumDescription("未知")]
+        UnKnown = 0,
+
+        /// <summary>
+        /// 绑定邮箱
+        /// </summary>
+        [EnumDescription("绑定邮箱")]
+        Bind = 1,
+
+        /// <summary>
+        /// 解除绑定
+        /// </summary>
+        [EnumDescription("解除绑定")]
+        UnBind = 2,
+
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        [EnumDescription("找回密码")]
+        GetPwd = 3,
+
+        /// <summary>
+        /// 处理失败反馈
+        /// </summary>
+        [EnumDescription("失败反馈")]
+        FaildFeedBack = 4,
+
+        /// <summary>
+        /// 处理成功反馈
+        /// </summary>
+        [EnumDescription("成功反馈")]
+        SuccessFeedBack = 5,
+
+        /// <summary>
+        /// 用户意见反馈
+        /// </summary>
+        [EnumDescription("用户反馈")]
+        UserFeedBack = 6,
+
+        /// <summary>
+        /// 陌生邮件提醒
+        /// </summary>
+        [EnumDescription("邮件提醒")]
+        EmailRemind = 7,
+
+        /// <summary>
+        /// 支付成功提醒
+        /// </summary>
+        [EnumDescription("支付成功提醒")]
+        PayedSuccess = 8,
+
+        /// <summary>
+        /// 微云打报告提醒
+        /// </summary>
+        [EnumDescription("微云打报告提醒")]
+        YmeAutoRpt = 99
+    }
+
+    /// <summary>
+    /// 短信类型
+    /// </summary>
+    public enum SMSType
+    {
+        /// <summary>
+        /// 未知
+        /// </summary>
+        [EnumDescription("未知")]
+        UnKnown = 0,
+
+        /// <summary>
+        /// 绑定手机
+        /// </summary>
+        [EnumDescription("绑定手机")]
+        Bind = 1,
+
+        /// <summary>
+        /// 解除绑定
+        /// </summary>
+        [EnumDescription("解除绑定")]
+        UnBind = 2,
+
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        [EnumDescription("找回密码")]
+        GetPwd = 3,
+
+        /// <summary>
+        /// 手机下载
+        /// </summary>
+        [EnumDescription("手机下载")]
+        Download = 4,
+
+        /// <summary>
+        /// 短信验证码
+        /// </summary>
+        [EnumDescription("短信验证码")]
+        ValidateCode = 5,
+
+        /// <summary>
+        /// 通知
+        /// </summary>
+        [EnumDescription("通知")]
+        Notify = 6
+    }
+
+    /// <summary>
+    /// 验证码类型
+    /// </summary>
+    public enum VerifyCodeType
+    {
+        /// <summary>
+        /// 绑定邮箱
+        /// </summary>
+        [EnumDescription("绑定邮箱")]
+        BindEmail = 1,
+
+        /// <summary>
+        /// 邮件找回密码
+        /// </summary>
+        [EnumDescription("邮件找回密码")]
+        GetPwdByEmail = 2,
+
+        /// <summary>
+        /// 修改绑定邮箱
+        /// </summary>
+        [EnumDescription("修改绑定邮箱")]
+        UpdateBindEmail = 3,
+
+        /// <summary>
+        /// 绑定手机
+        /// </summary>
+        [EnumDescription("绑定手机")]
+        BindMobile = 4,
+
+        /// <summary>
+        /// 手机找回密码
+        /// </summary>
+        [EnumDescription("手机修改密码")]
+        ModifyPwdByMobile = 5,
+
+        /// <summary>
+        /// 手机找回密码
+        /// </summary>
+        [EnumDescription("手机找回密码")]
+        GetPwdByMobile = 6,
+
+        /// <summary>
+        /// 修改绑定手机号
+        /// </summary>
+        [EnumDescription("修改绑定手机号")]
+        UpdateBindMobile = 7
+    }
+
+    /// <summary>
+    /// 验证码状态类型
+    /// </summary>
+    public enum VerifyCodeStatusType
+    {
+        /// <summary>
+        /// 验证正常
+        /// </summary>
+        [EnumDescription("验证正常")]
+        Normal = 0,
+
+        /// <summary>
+        /// 验证码错误
+        /// </summary>
+        [EnumDescription("短信验证码错误，请重新输入")]
+        Fail,
+
+        /// <summary>
+        /// 验证码已被使用
+        /// </summary>
+        [EnumDescription("短信验证码已被使用")]
+        Used,
+
+        /// <summary>
+        /// 验证码已过期
+        /// </summary>
+        [EnumDescription("短信验证码已过期")]
+        Expired
+    }
+
+    /// <summary>
+    /// 订单类型
+    /// </summary>
+    public enum OrderType
+    {
+        /// <summary>
+        /// 打印订单
+        /// </summary>
+        [EnumDescription("打印订单")]
+        PrintOrder = 1,
+
+        /// <summary>
+        /// 充值订单
+        /// </summary>
+        [EnumDescription("充值订单")]
+        RechargeOrder = 2
+    }
+
+    /// <summary>
+    /// 支付方式类型
+    /// </summary>
+    public enum PaymentType
+    {
+        /// <summary>
+        /// 支付宝支付
+        /// </summary>
+        [EnumDescription("支付宝支付")]
+        AliPay = 1,
+
+        /// <summary>
+        /// 微信支付
+        /// </summary>
+        [EnumDescription("微信支付")]
+        WeChat = 2,
+
+        /// <summary>
+        /// 银联支付
+        /// </summary>
+        [EnumDescription("银联支付")]
+        UnionPay = 3
+    }
+
+    /// <summary>
+    /// 微云打打印机状态
+    /// </summary>
+    public enum PrintStatusType
+    {
+        /// <summary>
+        /// 无数据
+        /// </summary>
+        [EnumDescription("无数据")]
+        NoFind = 0,
+
+        /// <summary>
+        /// 正常
+        /// </summary>
+        [EnumDescription("正常")]
+        Normal =1,
+
+        /// <summary>
+        /// 缺纸
+        /// </summary>
+        [EnumDescription("缺纸")]
+        OutPaper =2,
+
+        /// <summary>
+        /// 故障，如开盖
+        /// </summary>
+        [EnumDescription("故障，如开盖")]
+        Fault =3,
+
+        /// <summary>
+        /// 没有绑定商户
+        /// </summary>
+        [EnumDescription("没有绑定商户")]
+        NoBind =4 ,
+
+        /// <summary>
+        /// 其他异常
+        /// </summary>
+        [EnumDescription("其他异常")]
+        Other =99
+    }
+
+    /// <summary>
+    /// 微云打订单状态
+    /// </summary>
+    public enum PrintOrderStatusType
+    {
+        /// <summary>
+        /// 未打印
+        /// </summary>
+        [EnumDescription("未打印")]
+        UnPrinted = 0,
+
+        /// <summary>
+        /// 打印成功，打印机上报
+        /// </summary>
+        [EnumDescription("打印成功，打印机上报")]
+        PrintSuccess=1,
+
+        /// <summary>
+        /// 打印失败，打印机下载数据失败（打印机上报）
+        /// </summary>
+        [EnumDescription("打印失败，打印机下载数据失败（打印机上报）")]
+        PrintFail=2,
+
+        /// <summary>
+        /// 超时未打
+        /// </summary>
+        [EnumDescription("超时未打")]
+        OverTime = 3,
+
+        /// <summary>
+        /// 解绑清理
+        /// </summary>
+        [EnumDescription("解绑清理")]
+        UnbundlingClear = 4,
+
+        ///// <summary>
+        ///// 未打印但是已经推送
+        ///// </summary>
+        //[EnumDescription("未打印但是已经推送")]
+        //UnPrintedButPushed=5,
+
+        /// <summary>
+        /// 打印过程开盖（打印机上报）
+        /// </summary>
+        [EnumDescription("打印过程开盖（打印机上报）")]
+        OpenCoverPrinted = 6,
+
+        /// <summary>
+        /// 打印过程缺纸（打印机上报）
+        /// </summary>
+        [EnumDescription("打印过程缺纸（打印机上报）")]
+        OutPaperPrinted = 7,
+
+        /// <summary>
+        /// 推送时长连接断开
+        /// </summary>
+        [EnumDescription("打印失败，推送时长连接断开")]
+        OutConnection = 8,
+
+        /// <summary>
+        /// 推送时打印机处于开盖状态
+        /// </summary>
+        [EnumDescription("打印失败，推送时打印机处于开盖状态")]
+        OpenCoverPushed = 9,
+
+        /// <summary>
+        /// 打印失败，推送时打印机处于缺纸状态
+        /// </summary>
+        [EnumDescription("打印失败，推送时打印机处于缺纸状态")]
+        OutPaperPushed = 10,
+
+        /// <summary>
+        /// 打印失败，推送时发现打印机没有联网信息
+        /// </summary>
+        [EnumDescription("打印失败，推送时发现打印机没有联网信息")]
+        NoConnect = 11,
+
+        /// <summary>
+        /// 打印失败，推送时没有找到打印机可用状态信息
+        /// </summary>
+        [EnumDescription("打印失败，推送时没有找到打印机可用状态信息")]
+        NoFindPrint = 12,
+
+        /// <summary>
+        /// 订单其他故障状态
+        /// </summary>
+        [EnumDescription("订单其他故障状态")]
+        Other = 99,
+
+    }
+
+    /// <summary>
+    /// 打印任务推送状态
+    /// </summary>
+    public enum PrintOrderPushStatusType
+    {
+        /// <summary>
+        /// 未推送
+        /// </summary>
+        [EnumDescription("未推送")]
+        UnPushed=0,
+
+        /// <summary>
+        /// 已推送
+        /// </summary>
+        [EnumDescription("已推送")]
+        Pushed=1
+    }
+
+    /// <summary>
+    /// 服务器环境：1-北彩服务器
+    /// </summary>
+    public enum ServiceType
+    {
+        /// <summary>
+        /// 北彩服务器
+        /// </summary>
+        [EnumDescription("北彩服务器")]
+        BeicaiService =1
+    }
+
+    /// <summary>
+    ///  票据类型
+    /// </summary>
+    public enum BillType
+    {
+        /// <summary>
+        /// Html格式小票
+        /// </summary>
+        [EnumDescription("Html格式小票")]
+        Html = 1,
+
+        /// <summary>
+        /// ESC指令小票
+        /// </summary>
+        [EnumDescription("ESC指令小票")]
+        Esc,
+
+        /// <summary>
+        /// 特定模版小票
+        /// </summary>
+        [EnumDescription("特定模版小票")]
+        Template,
+
+        /// <summary>
+        /// Json格式小票
+        /// </summary>
+        [EnumDescription("Json格式小票")]
+        Json,
+
+        /// <summary>
+        /// Json格式小票
+        /// </summary>
+        [EnumDescription("网页转图片")]
+        HtmPict,
+
+        /// <summary>
+        /// 快递面单
+        /// </summary>
+        [EnumDescription("快递面单")]
+        Express = 99
+    }
+
+    /// <summary>
+    ///  参数类型
+    /// </summary>
+    public enum ParamType
+    {
+        /// <summary>
+        /// 字符型
+        /// </summary>
+        [EnumDescription("字符型")]
+        String = 1,
+
+        /// <summary>
+        /// 数字型
+        /// </summary>
+        [EnumDescription("数字型")]
+        Decimal,
+
+        /// <summary>
+        /// 布尔型
+        /// </summary>
+        [EnumDescription("布尔型")]
+        Bool,
+    }
+
+    /// <summary>
+    /// 打印结果编码
+    /// </summary>
+    public enum ResultCodeType
+    {
+        /// <summary>
+        /// 打印失败
+        /// </summary>
+        [EnumDescription("打印失败，打印机下载数据失败")]
+        Fail = 10000,
+
+        /// <summary>
+        /// 打印成功
+        /// </summary>
+        [EnumDescription("打印成功")]
+        Success = 10001,
+
+        /// <summary>
+        /// 打印失败
+        /// </summary>
+        [EnumDescription("打印失败，打印过程开盖（打印机上报）")]
+        OpenCoverPrinted = 10002,
+
+        /// <summary>
+        /// 打印机故障
+        /// </summary>
+        [EnumDescription("打印机缺纸，打印过程缺纸（打印机上报）")]
+        Fault = 10003,
+
+        /// <summary>
+        /// 打印机缺纸
+        /// </summary>
+        [EnumDescription("通讯超时")]
+        NeedPaper = 10004,
+
+        /// <summary>
+        /// 打印机网络故障
+        /// </summary>
+        [EnumDescription("打印机网络故障，打印失败，推送时长连接断开")]
+        NetworkFault = 10005,
+
+        /// <summary>
+        /// 打印机未关联
+        /// </summary>
+        [EnumDescription("打印机未关联")]
+        NotBind = 10006,
+
+        /// <summary>
+        /// 未找到打印机
+        /// </summary>
+        [EnumDescription("未找到打印机")]
+        NotFind = 10007,
+
+        /// <summary>
+        /// 超时未打印
+        /// </summary>
+        [EnumDescription("超时未打印")]
+        TimeOutUnPrint = 10008,
+
+        /// <summary>
+        /// 解绑清理
+        /// </summary>
+        [EnumDescription("解绑清理")]
+        UnBindClear = 10009,
+
+        /// <summary>
+        /// 打印失败，推送时打印机处于开盖状态
+        /// </summary>
+        [EnumDescription("打印失败，推送时打印机处于开盖状态")]
+        OpenCoverPushed = 10010,
+
+        /// <summary>
+        /// 打印失败，推送时打印机处于开盖状态
+        /// </summary>
+        [EnumDescription("打印失败，推送时打印机处于缺纸状态")]
+        OutPaperPushed = 10011,
+
+        /// <summary>
+        /// 打印失败，推送时发现打印机没有联网信息
+        /// </summary>
+        [EnumDescription("打印失败，推送时发现打印机没有联网信息")]
+        NoConnect = 10012,
+
+        /// <summary>
+        /// 打印失败，推送时没有找到打印机可用状态信息
+        /// </summary>
+        [EnumDescription("打印失败，推送时没有找到打印机可用状态信息")]
+        NoFindPrint = 10013,
+
+        /// <summary>
+        /// 未知错误
+        /// </summary>
+        [EnumDescription("未知错误")]
+        UnKnow = 99999
+    }
+
+    /// <summary>
+    /// 打印机异常类型
+    /// </summary>
+    public enum PrinterFaultType
+    {
+        /// <summary>
+        /// 正常
+        /// </summary>
+        [EnumDescription("正常")]
+        Enable = 1,
+
+        /// <summary>
+        /// 打印机缺纸
+        /// </summary>
+        [EnumDescription("打印机缺纸")]
+        NeedPaper,
+
+        /// <summary>
+        /// 打印机故障
+        /// </summary>
+        [EnumDescription("打印机故障如开盖")]
+        Fault,
+
+        /// <summary>
+        /// 打印机网络故障
+        /// </summary>
+        [EnumDescription("打印机网络故障")]
+        NetworkFault,
+
+        /// <summary>
+        /// 打印机未关联
+        /// </summary>
+        [EnumDescription("打印机未关联")]
+        NotBind,
+
+        /// <summary>
+        /// 未找到打印机
+        /// </summary>
+        [EnumDescription("未找到打印机")]
+        NotFind,
+
+        /// <summary>
+        /// 未知异常
+        /// </summary>
+        [EnumDescription("未知异常")]
+        Unknow = 99
+    }
+
+    /// <summary>
+    /// 生效类型
+    /// </summary>
+    public enum ActivatedType
+    {
+        /// <summary>
+        /// 待生效
+        /// </summary>
+        [EnumDescription("待生效")]
+        UnActivated = 1,
+        /// <summary>
+        /// 已生效
+        /// </summary>
+        [EnumDescription("已生效")]
+        Activated = 2,
+        /// <summary>
+        /// 失效
+        /// </summary>
+        [EnumDescription("失效")]
+        Invalid = 3
+    }
+
+    public enum PayStatusType
+    {
+        /// <summary>
+        /// 未支付
+        /// </summary>
+        [EnumDescription("未支付")]
+        UnPaid = 1,
+        /// <summary>
+        /// 已支付
+        /// </summary>
+        [EnumDescription("已支付")]
+        Paid = 2
+    }
+
+    /// <summary>
+    /// 操作类型 规则：第一位：大模块，第二位：小模块，后两位：1查2增3改4删除
+    /// </summary>
+    public enum OperateType
+    {
+        #region 管理
+        /// <summary>
+        /// 添加打印机
+        /// </summary>
+        [EnumDescription("添加打印机")]
+        PrinterAdd = 1102,
+
+
+        /// <summary>
+        /// 删除打印机
+        /// </summary>
+        [EnumDescription("删除打印机")]
+        PrinterDelete = 1104,
+
+
+        /// <summary>
+        /// 添加应用
+        /// </summary>
+        [EnumDescription("添加应用")]
+        ApprAdd = 1202,
+
+        /// <summary>
+        /// 添加应用
+        /// </summary>
+        [EnumDescription("添加应用")]
+        AppDelete = 1204,
+
+        /// <summary>
+        /// 修改模板
+        /// </summary>
+        [EnumDescription("修改模板")]
+        TemplateEdit = 1303,
+
+        #endregion
+
+        #region 财务
+        /// <summary>
+        /// 充值
+        /// </summary>
+        [EnumDescription("充值")]
+        Recharge = 2105,
+        #endregion
+
+        #region MyRegion
+        /// <summary>
+        /// 扣款
+        /// </summary>
+        [EnumDescription("扣款")]
+        Debit = 3105,
+
+
+        /// <summary>
+        /// 绑定手机
+        /// </summary>
+        [EnumDescription("绑定手机")]
+        ChangeMobile = 3205,
+
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        [EnumDescription("修改密码")]
+        ChangePassword = 3305
+        #endregion
+    }
+	
+	    /// <summary>
+    /// 是否激活(0-未激活,1-已激活)
+    /// </summary>
+    public enum IsActived
+    {
+        /// <summary>
+        /// 未激活
+        /// </summary>
+        [EnumDescription("未激活")]
+        NoActive  = 0,
+        /// <summary>
+        /// 已激活
+        /// </summary>
+        [EnumDescription("已激活")]
+        Active = 1
+    }
+
+    /// <summary>
+    /// 短信类型: 1-绑定手机号,2-解除绑定,3-找回密码,4-失败反馈,5-成功反馈,6-用户反馈
+    /// </summary>
+    public enum SmsTypeOpen
+    {
+        /// <summary>
+        /// 绑定手机号
+        /// </summary>
+        [EnumDescription("绑定手机号")]
+        Bind = 1,
+        /// <summary>
+        /// 解除绑定
+        /// </summary>
+        [EnumDescription("解除绑定")]
+        UnBind = 2,
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        [EnumDescription("找回密码")]
+        GetPwd = 3,
+        /// <summary>
+        /// 失败反馈
+        /// </summary>
+        [EnumDescription("失败反馈")]
+        FailDesc = 4,
+        /// <summary>
+        /// 成功反馈
+        /// </summary>
+        [EnumDescription("成功反馈")]
+        SuccessDesc = 5,
+        /// <summary>
+        /// 用户反馈
+        /// </summary>
+        [EnumDescription("用户反馈")]
+        UserBack = 6
+    }
+
+    /// <summary>
+    /// 邮件类型
+    /// </summary>
+    public enum MailTypeOpen
+    {
+        /// <summary>
+        /// 绑定手机号
+        /// </summary>
+        [EnumDescription("绑定邮箱")]
+        Bind = 1,
+        /// <summary>
+        /// 解除绑定
+        /// </summary>
+        [EnumDescription("解除绑定")]
+        UnBind = 2,
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        [EnumDescription("找回密码")]
+        GetPwd = 3,
+    }
+
+    /// <summary>
+    /// 执行结果状态值
+    /// </summary>
+    public enum ExecutiveStatus
+    {
+        /// <summary>
+        /// 有效
+        /// </summary>
+        [EnumDescription("有效")]
+        Valid = 1,
+        /// <summary>
+        /// 无效
+        /// </summary>
+        [EnumDescription("无效")]
+        UnValid =2
+    }
+
+    /// <summary>
+    /// 优先级
+    /// </summary>
+    public enum Priority
+    {
+        /// <summary>
+        /// 高
+        /// </summary>
+        [EnumDescription("高")]
+        High = 1,
+        /// <summary>
+        /// 中
+        /// </summary>
+        [EnumDescription("中")]
+        Middle = 2,
+        /// <summary>
+        /// 低
+        /// </summary>
+        [EnumDescription("低")]
+        Low = 3
+    }
+
+    /// <summary>
+    /// 应用状态
+    /// </summary>
+    public enum ApplyStatuCode
+    {
+        /// <summary>
+        /// 新建
+        /// </summary>
+        [EnumDescription("新建")]
+        CreateApp = 0,
+        /// <summary>
+        /// 运营
+        /// </summary>
+        [EnumDescription("运营")]
+        Operative = 1,
+        /// <summary>
+        /// 停用
+        /// </summary>
+        [EnumDescription("停用")]
+        Disabled = 2,
+        /// <summary>
+        /// 删除
+        /// </summary>
+        [EnumDescription("删除")]
+        Drop = 3
+    }
+
+    /// <summary>
+    /// 打印机辅助命令执行结果
+    /// </summary>
+    public enum PrintCmdResultStatuCode
+    {
+        /// <summary>
+        /// 未执行
+        /// </summary>
+        [EnumDescription("未执行")]
+        NoExecute = 0,
+
+        /// <summary>
+        /// 执行成功
+        /// </summary>
+        [EnumDescription("执行成功")]
+        Success = 1,
+
+        /// <summary>
+        /// 未执行，但已经推送
+        /// </summary>
+        [EnumDescription("未执行，但已经推送")]
+        Pushed = 2,
+
+        /// <summary>
+        /// 执行失败，打印机上报
+        /// </summary>
+        [EnumDescription("执行失败，打印机上报")]
+        Fail = 3,
+
+        /// <summary>
+        /// 执行失败，打印机网络故障
+        /// </summary>
+        [EnumDescription("执行失败，打印机网络故障")]
+        NetworkFault = 4,
+    }
+
+    /// <summary>
+    /// 打印机辅助201指令说明
+    /// </summary>
+    public enum PrintCmdStatue
+    {
+        /// <summary>
+        /// 修改域名
+        /// </summary>
+        [EnumDescription("修改域名")]
+        RenameDomain = 1,
+
+        /// <summary>
+        /// 关机重启
+        /// </summary>
+        [EnumDescription("关机重启")]
+        Restart = 2,
+
+        /// <summary>
+        /// 上传日志
+        /// </summary>
+        [EnumDescription("上传日志")]
+        UploadLog = 3,
+    }
+}

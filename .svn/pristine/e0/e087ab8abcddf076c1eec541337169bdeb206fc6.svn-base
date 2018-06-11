@@ -1,0 +1,86 @@
+﻿@using CWI.MCP.Common;
+@using CWI.MCP.Common.Extensions;
+@using CWI.MCP.Common.Extensions.MVC;
+@model CWI.MCP.Models.PagerModel
+@{
+    Model.Values.UpdateParameter();
+    int pageCount = Model.PageCount;
+    int pageIndex = TryConvertUtil.ToInt(Model.Values[Model.PageIndexKey], 1);
+    pageIndex = pageIndex <= 0 ? 1 : pageIndex;
+
+    //显示的页数
+    int capacity = ConfigUtil.PageCapacity;
+    int capacityIndex = (int)Math.Ceiling((decimal)pageIndex / capacity);
+    int startPage = (capacityIndex - 1) * capacity + 1;
+    int endPage = capacityIndex * capacity;
+
+    if (startPage < 1)
+    {
+        startPage = 1;
+    }
+    if (endPage > pageCount)
+    {
+        endPage = pageCount;
+    }
+}
+@if (pageCount > 1)
+{
+    <div>
+        <div class="dataTables_paginate paging_bootstrap">
+            <ul class="pagination" style="margin: 0px;">
+                @{
+                    if (pageIndex > 1)
+                    {
+                        //第一页
+                        Model.Values.Update(Model.PageIndexKey, 1, true);
+                        string urlFirst = Url.FullUrl(Model.Action, Model.Controller, Model.Values);
+                        <li><a href="@urlFirst">首页</a></li>
+                    }
+                    if (startPage > 1)
+                    {
+                        //上一页
+                        Model.Values.Update(Model.PageIndexKey, pageIndex - capacity, true);
+                        string urlPrev = Url.FullUrl(Model.Action, Model.Controller, Model.Values);
+                        <li class="prev"><a href="@urlPrev">《</a></li>
+                    }
+
+                    for (int i = startPage; i <= endPage; i++)
+                    {
+                        //中间的页面
+                        Model.Values.Update(Model.PageIndexKey, i, true);
+                        string urlMiddel = Url.FullUrl(Model.Action, Model.Controller, Model.Values);
+
+                        if (pageIndex == i)
+                        {
+                            <li class="active"><a href="javascript:void(0);">@i</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@urlMiddel">@i</a></li>
+                        }
+                    }
+
+                    if (endPage < pageCount)
+                    {
+                        // 下一页
+                        Model.Values.Update(Model.PageIndexKey, Math.Min(pageIndex + capacity, pageCount), true);
+                        string urlNext = Url.FullUrl(Model.Action, Model.Controller, Model.Values);
+                        <li class="next"><a href="@urlNext">》</a></li>
+                    }
+                    if (pageIndex < pageCount)
+                    {
+                        //最后一页
+                        Model.Values.Update(Model.PageIndexKey, pageCount, true);
+                        string urlLast = Url.FullUrl(Model.Action, Model.Controller, Model.Values);
+                        <li><a href="@urlLast">尾页</a></li>
+                    }
+                    <li>
+                        <div style="float: left; font-size: 14px; margin-top: 5px; margin-left: 10px">
+                            总数：<label>@Model.RecordCount</label>,共<label>@pageCount</label>页
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+                    }

@@ -1,0 +1,12 @@
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\CWI.Cache.Redis.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\CWI.Cache.Redis.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\CWI.Cache.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\ServiceStack.Common.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\ServiceStack.Interfaces.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\ServiceStack.Redis.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\ServiceStack.Text.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\bin\Debug\CWI.Cache.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\obj\Debug\CWI.Cache.Redis.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\obj\Debug\CWI.Cache.Redis.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\obj\Debug\CWI.Cache.Redis.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache.Redis\obj\Debug\CWI.Cache.Redis.pdb

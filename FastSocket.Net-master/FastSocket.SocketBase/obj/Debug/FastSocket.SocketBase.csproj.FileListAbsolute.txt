@@ -1,0 +1,7 @@
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\bin\Debug\FastSocket.SocketBase.xml
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\bin\Debug\FastSocket.SocketBase.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\bin\Debug\FastSocket.SocketBase.pdb
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\obj\Debug\FastSocket.SocketBase.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\obj\Debug\FastSocket.SocketBase.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\obj\Debug\FastSocket.SocketBase.dll
+D:\WorkYh\CWI.MCP\FastSocket.Net-master\FastSocket.SocketBase\obj\Debug\FastSocket.SocketBase.pdb

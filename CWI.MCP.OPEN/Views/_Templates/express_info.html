@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微云打开放平台</title>
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="">退出</a></li>
+			<!-- <li><a href="">注册</a></li> -->
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="content">
+			<div class="page-sidebar">
+				<ul class="nav sidebar-menu">
+					<li class="active">
+						<a href="index.html">首页</a>
+						<ul class="submenu">
+							<li>
+								<a href="">item1</a>
+								<ul class="submenu">
+									<li>
+										<a href="">item1-1</a>
+									</li>
+									<li><a href="">item1-2</a></li>
+									<li><a href="">item1-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">item2</a></li>
+							<li><a href="">item3</a></li>
+						</ul>
+					</li>
+					<li><a href="">快递单</a></li>
+					<li><a href="">API说明</a></li>
+					<li><a href="">接入指南</a></li>
+					<li><a href="">应用管理</a></li>
+				</ul>
+			</div>
+			<div class="page-content">
+				<div class="col-sm-2 row">
+					<div class="form-group">
+						<select name="" id="express_brand" class="form-control">
+							<option value="">选择快递商</option>
+							<option value="">顺丰快递</option>
+							<option value="">圆通快递</option>
+							<option value="">申通快递</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+						<select name="" id="express_brand_edtion" class="form-control">
+							<option value="">选择版本</option>
+							<option value="">顺丰快递01</option>
+							<option value="">顺丰快递02</option>
+							<option value="">顺丰快递03</option>
+						</select>
+					</div>
+				</div>
+				<div class="express">
+					<div class="express-media">
+						<img src="../../Images/express.jpg" alt="">
+					</div>
+					<div class="express-info">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>编码</th>
+									<th>描述</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>寄件单位</td>
+								</tr>
+									<tr>
+									<td>1</td>
+									<td>寄件单位</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>寄件单位</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".express-info").height($(".express-media").height());
+</script>
+</body>
+</html>

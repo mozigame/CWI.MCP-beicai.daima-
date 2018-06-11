@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "关于";
+}
+<style type="text/css">
+    body { font-family:Helvetica,Arial,sans-serif; background-color:#f0f0f6; }
+    .about {padding:25px 0px; font-size:14px;}
+    .about .logo,
+    .about .info {text-align:center; width:100%; margin:0 auto; color:#828282}
+</style>
+<div class="about">
+    <div class="logo">
+      <img src="@CWI.MCP.Common.RoutingUtil.ImgUrl("/Images/wx-logo.jpg")" alt="logo" style=" width:130px"/>
+      <p class="content"><b>软件版本v1.0.0 </b></p>
+    </div><br/>
+    <div class="info">
+      <div><p><img src="@CWI.MCP.Common.RoutingUtil.ImgUrl("/Images/wx-qrcode.jpg")" alt="qrcode" style=" width:180px"/></p></div>
+      <p><b>客服热线</b></p>
+      <p><b>400-930-8899</b></p>
+    </div>
+    <br />
+    <div class="info">
+     <p><b>Copyright &copy; 2014 - @DateTime.Today.Year </b></p>
+     <p><b>新会江裕信息产业有限公司 </b></p>
+    </div>  
+</div> 

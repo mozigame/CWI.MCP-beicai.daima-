@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A28C0A9-8974-444F-8F71-0D85EDA2CE6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWI.MCP.Models</RootNamespace>
+    <AssemblyName>CWI.MCP.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Evt.Framework.Common">
+      <HintPath>..\Bin\Framework\Evt.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.DataAccess">
+      <HintPath>..\Bin\Framework\Evt.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Evt.Framework.Mvc">
+      <HintPath>..\Bin\Framework\Evt.Framework.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ApiDataViewModel.cs" />
+    <Compile Include="Common\LoginInfo.cs" />
+    <Compile Include="Common\ModelConvertHelper.cs" />
+    <Compile Include="Common\PagerModel.cs" />
+    <Compile Include="Common\PagingResult.cs" />
+    <Compile Include="Common\ProcessResult.cs" />
+    <Compile Include="DataModels\MCP\McpAdminInfo.cs" />
+    <Compile Include="DataModels\MCP\McpApplicationInfo.cs" />
+    <Compile Include="DataModels\MCP\McpAppTokenInfo.cs" />
+    <Compile Include="DataModels\MCP\McpCallbackRecord.cs" />
+    <Compile Include="DataModels\MCP\McpDeveloperInfo.cs" />
+    <Compile Include="DataModels\MCP\McpEquipmentInfo.cs" />
+    <Compile Include="DataModels\MCP\McpMerchantPrinterInfo.cs" />
+    <Compile Include="DataModels\MCP\McpCmdOrderInfo.cs" />
+    <Compile Include="DataModels\MCP\McpOrderInfo.cs" />
+    <Compile Include="DataModels\MCP\McpCmdOrderPrinterInfo.cs" />
+    <Compile Include="DataModels\MCP\McpOrderPrinterInfo.cs" />
+    <Compile Include="DataModels\MCP\McpPrinterInfo.cs" />
+    <Compile Include="DataModels\MCP\McpPrinterStatusInfo.cs" />
+    <Compile Include="DataModels\MCP\McpSysBlacklistInfo.cs" />
+    <Compile Include="DataModels\MCP\McpSysEmailInfo.cs" />
+    <Compile Include="DataModels\MCP\McpSysSmsInfo.cs" />
+    <Compile Include="DataModels\MCP\McpSysVerifycodeInfo.cs" />
+    <Compile Include="DataModels\MCP\McpSysVersionInfo.cs" />
+    <Compile Include="DataModels\MCP\McpTemplateBusinessInfo.cs" />
+    <Compile Include="DataModels\MCP\McpTemplateInfo.cs" />
+    <Compile Include="DataModels\MCP\McpTemplateParamInfo.cs" />
+    <Compile Include="DataModels\MCP\McpTemplateParamSourceInfo.cs" />
+    <Compile Include="DataModels\MCP\McpTemplateTypeInfo.cs" />
+    <Compile Include="DataModels\MCP\McpWeixinDeviceInfo.cs" />
+    <Compile Include="DataModels\MCP\McpWeiXinTokenInfo.cs" />
+    <Compile Include="DataModels\MCP\McpWeiXinUserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryModels\TcpQueryModel.cs" />
+    <Compile Include="ViewModels\Common\TcpViewModel.cs" />
+    <Compile Include="ViewModels\IOT\ApiRetViewModel.cs" />
+    <Compile Include="ViewModels\IOT\AuthDeviceRetViewModel.cs" />
+    <Compile Include="ViewModels\IOT\BaseInfoRetViewModel.cs" />
+    <Compile Include="ViewModels\IOT\ConfigDeviceViewModel.cs" />
+    <Compile Include="ViewModels\IOT\DeviceInfoViewModel.cs" />
+    <Compile Include="ViewModels\IOT\DeviceViewModel.cs" />
+    <Compile Include="ViewModels\IOT\GetDeviceRetViewModel.cs" />
+    <Compile Include="ViewModels\IOT\NotifyViewModel.cs" />
+    <Compile Include="ViewModels\IOT\BaseRetViewModel.cs" />
+    <Compile Include="ViewModels\IOT\operation_status.cs" />
+    <Compile Include="ViewModels\IOT\RetDeviceInfoViewModel.cs" />
+    <Compile Include="ViewModels\IOT\StatusNotifyViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\AuthViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\BatchAuthViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\PrinterCheckViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\GetBillViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\PrinterBaseViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\PrtintViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\PrtintViewQueryModel.cs" />
+    <Compile Include="ViewModels\MCP\BMS\OperateMonthDebitViewModel.cs" />
+    <Compile Include="ViewModels\MCP\BMS\EquipmentViewModel.cs" />
+    <Compile Include="ViewModels\MCP\BMS\MerchantViewModel.cs" />
+    <Compile Include="ViewModels\MCP\Common\CallBackViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevApplyViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevExpressParamsViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevExpressTemplateParamsViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevExpressTemplateViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevExpressViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevRegisterViewMode.cs" />
+    <Compile Include="ViewModels\MCP\API\AppViewModel.cs" />
+    <Compile Include="ViewModels\MCP\Common\ChangeMobileViewModel.cs" />
+    <Compile Include="ViewModels\MCP\MMS\MerchantRegisterViewModel.cs" />
+    <Compile Include="ViewModels\MCP\Common\ChangePwdViewModel.cs" />
+    <Compile Include="ViewModels\MCP\MMS\PrinterTemplateViewModel.cs" />
+    <Compile Include="ViewModels\MCP\Common\VerViewModel.cs" />
+    <Compile Include="ViewModels\MCP\API\BillViewModel.cs" />
+    <Compile Include="ViewModels\MCP\OPEN\DevLoginViewModel.cs" />
+    <Compile Include="ViewModels\Push\PushMsgViewModel.cs" />
+    <Compile Include="ViewModels\Common\SearchViewModel.cs" />
+    <Compile Include="Common\PageViewModel.cs" />
+    <Compile Include="ViewModels\System\SmsVerifyCodeByAccountViewModel.cs" />
+    <Compile Include="ViewModels\MCP\Common\LoginViewModel.cs" />
+    <Compile Include="ViewModels\System\EmlVerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\System\SmsVerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Template\ExpressContentViewModel.cs" />
+    <Compile Include="ViewModels\Template\ExpressParamViewModel.cs" />
+    <Compile Include="ViewModels\WeChat\WeChatMsgViewModel.cs" />
+    <Compile Include="ViewModels\WeChat\WxFileViewModel.cs" />
+    <Compile Include="ViewModels\WeChat\WxJsApiParamsViewModel.cs" />
+    <Compile Include="ViewModels\Workflow\WfNodeActorViewModel.cs" />
+    <Compile Include="ViewModels\Workflow\WfViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebApi\IServiceContext.cs" />
+    <Compile Include="WebApi\ServiceContext.cs" />
+    <Compile Include="WebApi\Session.cs" />
+    <Compile Include="WebApi\SessionManager.cs" />
+    <Compile Include="WebApi\SysServericeContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWI.MCP.Common\CWI.MCP.Common.csproj">
+      <Project>{5B8DB3C8-9ED9-4EF4-840D-A8BE274538C0}</Project>
+      <Name>CWI.MCP.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

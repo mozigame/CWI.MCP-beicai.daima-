@@ -1,0 +1,80 @@
+﻿@using CWI.MCP.Common
+@{
+    var controller = ViewContext.RouteData.Values["Controller"].ToString().ToLower();
+    var action = ViewContext.RouteData.Values["Action"].ToString().ToLower();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>微云打-开放平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="微云打开放平台">
+    <meta name="keywords" content="云打印，打印机">
+    <link rel="stylesheet" type="text/css" href="@RoutingUtil.CssUrl("/Styles/bootstrap.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@RoutingUtil.CssUrl("/Styles/open.css")" />
+    <link rel="stylesheet" type="text/css" href="@RoutingUtil.CssUrl("/Styles/open_index.css")"/>
+    <script type="text/javascript" src="@RoutingUtil.JsUrl("/Scripts/jquery.min.js")"></script>
+    <script type="text/javascript" src="@RoutingUtil.JsUrl("/Scripts/validate_form.js")"></script>
+</head>
+<body style="min-width: 1200px;">
+    <!--header-->
+    <div class="open_header @(action == "index" ? "open_header_bg" : "") ">
+        <div class="open_header_nav open_max_width">
+            <div class="open_logo_img">
+                <a href="/home/index">
+                    <img src="@RoutingUtil.ImgUrl("/Images/Home/mcpLogo.png")" />
+                </a>
+            </div>
+            <div class="open_sign_reg">
+                @if (SessionUtil.Current == null)
+                {
+                    <div class="open_fun">
+                        <span class="open_sign_btn"><a href="/user/login">登录</a></span>
+                        <span class="open_rigs_btn"><a href="/user/register">注册</a></span>
+                    </div>
+                }
+                else
+                {
+                    <div class="open_user_info">
+                        <p>@string.Format("您好，{0}！", (SessionUtil.Current.Mobile))</p>
+                        <div class="open_user_hover">
+                            <div><a href="javascript:;" onclick="LoginOut();">退出</a></div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="open_nav_menu">
+                <div class="@(action == "index" ? "active" : "")"><a href="/home/index">首页</a></div>
+                <div class="@(action == "guide" ? "active" : "")"><a href="/system/guide">接入指南</a></div>
+                <div class="@(controller == "apply" ? "active" : "")"><a href="/apply/applymanagement">应用管理</a></div>
+                <div class="@(controller == "doc" ? "active" : "")"><a href="/doc/interfacerules">接口规则</a></div>
+                <div class="@(controller == "api" ? "active" : "")"><a href="/api/accesstoken">API列表</a></div>
+                <div class="@(controller == "express" ? "active" : "")"><a href="/express/expressinfo">快递面单</a></div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <!-- footer -->
+    <div class="open_footer">
+        <p>版权所有：深圳映美卡莫网络有限公司 © 2015 - @DateTime.Now.Year 版权所有 粤ICP备<a href="http://www.miitbeian.gov.cn/" onclick="javascript:viod();">10059556号-7</a> 法律公告 隐私保护</p>
+    </div>
+    <script type="text/javascript" src="@RoutingUtil.JsUrl("/Scripts/bootstrap.min.js")"></script>
+    <script type="text/javascript">
+        function LoginOut() {
+            if (confirm("您确定要退出登录吗？")) {
+                $.ajax({
+                    url: "/user/logout",
+                    type: "post",
+                    dataType: "json",
+                    data: "",
+                    success: function (result) {
+                        location.href = "/home/index";
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

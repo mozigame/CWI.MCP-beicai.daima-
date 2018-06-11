@@ -1,0 +1,8 @@
+2018-05-21 16:03:08,991 [8] DEBUG CWI.MCP.Common.LogUtil [(null)] - MCP|Debug|2018-05-21 16:03:08.000|GetPrintCodeIsConnected方法：区分打印机是否联网，sql语句：SELECT * FROM `mcp_printer` WHERE printer_code IN ('18110143VA') AND CONNECTION_ID!=0 AND CONNECTION_ID IS NOT NULL AND CONNECTION_ID!=''
+2018-05-21 17:14:47,123 [8] DEBUG CWI.MCP.Common.LogUtil [(null)] - MCP|Debug|2018-05-21 17:14:46.000|GetPrintCodeIsConnected方法：区分打印机是否联网，sql语句：SELECT * FROM `mcp_printer` WHERE printer_code IN ('18110143VA') AND CONNECTION_ID!=0 AND CONNECTION_ID IS NOT NULL AND CONNECTION_ID!=''
+2018-05-21 19:33:45,410 [7] DEBUG CWI.MCP.Common.LogUtil [(null)] - MCP|Debug|2018-05-21 19:33:45.000|当交易号20180521154851相同时，修改时间和状态SQL语句-UPDATE  `mcp_order` SET order_date=NOW() WHERE bill_no=@bill_no;UPDATE `mcp_order_printer` SET created_on=NOW()  ,order_status=0 
+                        WHERE order_id IN
+                        (SELECT `order_id` FROM `mcp_order` WHERE bill_no =@bill_no);
+2018-05-21 19:34:03,952 [7] DEBUG CWI.MCP.Common.LogUtil [(null)] - MCP|Debug|2018-05-21 19:34:03.000|当交易号20180521154851相同时，修改时间和状态SQL语句-UPDATE  `mcp_order` SET order_date=NOW() WHERE bill_no=@bill_no;UPDATE `mcp_order_printer` SET created_on=NOW()  
+                        WHERE order_id IN
+                        (SELECT `order_id` FROM `mcp_order` WHERE bill_no =@bill_no);

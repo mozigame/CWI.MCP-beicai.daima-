@@ -1,0 +1,158 @@
+2018-04-25 09:58:12,537 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 09:58:12.000|数据库已成功连接,正在启动服务
+2018-04-25 09:58:13,569 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 09:58:13.000|
+
+路由选择控制器 Base 耗时：0秒133毫秒
+2018-04-25 10:01:55,972 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:01:55.000|
+
+路由选择控制器 sys 耗时：0秒58毫秒
+2018-04-25 10:02:01,897 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:02:01.000|修改域名www.baidu.com...
+2018-04-25 10:03:17,339 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:03:17.000|连接TCP服务器成功！
+2018-04-25 10:03:17,341 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:03:17.000|向服务器发送消息：{tp:201,did:"16480045WP", id:"0425a908c0db1d4e4b7b8ac1e930b2627be5"}
+2018-04-25 10:03:17,341 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:03:17.000|第1次尝试发送TCP消息至设备：16480045WP。
+2018-04-25 10:05:38,815 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:05:38.000|执行心跳检测...
+2018-04-25 10:05:38,816 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:05:38.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:06:03,133 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:03.000|向服务器发送消息：{tp:201,did:"16480045WP", id:"0425a908c0db1d4e4b7b8ac1e930b2627be5"}
+2018-04-25 10:06:03,133 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:03.000|第1次尝试发送TCP消息至设备：16480045WP。
+2018-04-25 10:06:03,137 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:03.000|执行心跳检测...
+2018-04-25 10:06:03,137 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:03.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:06:13,434 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:13.000|执行心跳检测...
+2018-04-25 10:06:13,434 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:13.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:06:23,777 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:23.000|执行心跳检测...
+2018-04-25 10:06:23,781 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:23.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:06:36,999 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:36.000|执行心跳检测...
+2018-04-25 10:06:37,000 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:36.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:06:47,214 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:47.000|执行心跳检测...
+2018-04-25 10:06:47,214 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:06:47.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:07:12,296 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:12.000|执行心跳检测...
+2018-04-25 10:07:12,297 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:12.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:07:26,463 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:26.000|执行心跳检测...
+2018-04-25 10:07:26,463 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:26.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:07:58,950 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:58.000|执行心跳检测...
+2018-04-25 10:07:58,950 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:07:58.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:08:09,440 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:08:09.000|执行心跳检测...
+2018-04-25 10:08:09,440 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:08:09.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:08:20,576 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:08:20.000|执行心跳检测...
+2018-04-25 10:08:20,576 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:08:20.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:10:07,803 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:10:07.000|数据库已成功连接,正在启动服务
+2018-04-25 10:10:08,357 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:10:07.000|
+
+路由选择控制器 Base 耗时：0秒36毫秒
+2018-04-25 10:10:17,954 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:10:17.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 10:11:59,400 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:11:58.000|修改域名www.baidu.com...
+2018-04-25 10:13:34,438 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:13:33.000|连接TCP服务器成功！
+2018-04-25 10:13:36,064 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:13:35.000|执行心跳检测...
+2018-04-25 10:13:36,064 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:13:35.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:13:54,144 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:13:53.000|执行心跳检测...
+2018-04-25 10:13:54,193 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:13:53.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:14:04,322 [15] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:03.000|执行心跳检测...
+2018-04-25 10:14:04,330 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:03.000|向服务器发送消息：{tp:201,did:"16480045WP", id:"04259cf8847a7fbf442e83452cbc4b9856a5"}
+2018-04-25 10:14:04,336 [15] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:03.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:14:12,484 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:11.000|第1次尝试发送TCP消息至设备：16480045WP。
+2018-04-25 10:14:14,408 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:13.000|执行心跳检测...
+2018-04-25 10:14:14,421 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:13.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:14:31,884 [11] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:29.000|执行心跳检测...
+2018-04-25 10:14:31,884 [11] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:31.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:14:40,847 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:40.000|执行心跳检测...
+2018-04-25 10:14:40,848 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:40.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:14:50,848 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:50.000|执行心跳检测...
+2018-04-25 10:14:50,848 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:14:50.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:00,849 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:00.000|执行心跳检测...
+2018-04-25 10:15:00,849 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:00.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:10,862 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:10.000|执行心跳检测...
+2018-04-25 10:15:10,863 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:10.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:20,866 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:20.000|执行心跳检测...
+2018-04-25 10:15:20,866 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:20.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:30,877 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:30.000|执行心跳检测...
+2018-04-25 10:15:30,877 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:30.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:40,878 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:40.000|执行心跳检测...
+2018-04-25 10:15:40,878 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:40.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:50,880 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:50.000|执行心跳检测...
+2018-04-25 10:15:50,880 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:50.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:15:55,713 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:55.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-25 10:15:56,881 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:56.000|修改域名www.baidu.com...
+2018-04-25 10:15:58,705 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:58.000|向服务器发送消息：{tp:201,did:"16480045WP", id:"04252ef946293dc54d79a1382b429b63639b"}
+2018-04-25 10:15:58,705 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:15:58.000|第1次尝试发送TCP消息至设备：16480045WP。
+2018-04-25 10:19:18,734 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:19:18.000|执行心跳检测...
+2018-04-25 10:19:18,741 [14] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:19:18.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 10:19:50,221 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:19:50.000|数据库已成功连接,正在启动服务
+2018-04-25 10:19:51,132 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 10:19:50.000|
+
+路由选择控制器 Base 耗时：0秒90毫秒
+2018-04-25 14:39:14,760 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:39:14.000|数据库已成功连接,正在启动服务
+2018-04-25 14:39:15,464 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:39:14.000|
+
+路由选择控制器 Base 耗时：0秒34毫秒
+2018-04-25 14:39:25,310 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:39:24.000|
+
+路由选择控制器 sys 耗时：0秒2毫秒
+2018-04-25 14:39:29,857 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:39:29.000|Evt.Framework.Common.AuthenticationException: 会话超时，请重新登录！
+   在 CWI.MCP.API.Controllers.WebAPIFilterAttribute.CheckLoginAndOperation(HttpActionContext actionContext, BaseController bc) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\BaseController.cs:行号 319
+   在 CWI.MCP.API.Controllers.WebAPIFilterAttribute.OnActionExecuting(HttpActionContext actionContext) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\BaseController.cs:行号 246
+   在 System.Web.Http.Filters.ActionFilterAttribute.System.Web.Http.Filters.IActionFilter.ExecuteActionFilterAsync(HttpActionContext actionContext, CancellationToken cancellationToken, Func`1 continuation)
+  ParamData:{"queryModel":null}  SessionID:CB3C891C3BF1456A9893E42B4E2C3921
+  URL:http://localhost:8686/mcp/sys/CheckDomain?printer_codes=17320152WV,17080362WV,&app_id=3a97adc2b23a4890b32ffd59a461872d&access_token=a3395b7f1de647d0b0963a3e3b70f36b
+
+
+2018-04-25 14:40:06,577 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:40:06.000|数据库已成功连接,正在启动服务
+2018-04-25 14:40:07,058 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:40:06.000|
+
+路由选择控制器 Base 耗时：0秒14毫秒
+2018-04-25 14:40:21,302 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:40:21.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 14:41:03,993 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:41:04.000|数据库已成功连接,正在启动服务
+2018-04-25 14:41:04,421 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:41:04.000|
+
+路由选择控制器 Base 耗时：0秒17毫秒
+2018-04-25 14:41:11,727 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:41:11.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 14:42:01,772 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:01.000|数据库已成功连接,正在启动服务
+2018-04-25 14:42:02,280 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:01.000|
+
+路由选择控制器 Base 耗时：0秒18毫秒
+2018-04-25 14:42:05,513 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:04.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 14:42:09,101 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:08.000|第三方查看设备17320152WV,17080362WV,域名...
+2018-04-25 14:42:57,847 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:57.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-25 14:43:00,418 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:42:59.000|第三方查看设备17320152WV,17080362WV,域名...
+2018-04-25 14:45:48,815 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:45:48.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-25 14:45:50,664 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 14:45:50.000|第三方查看设备17320152WV,17080362WV,域名...
+2018-04-25 16:18:29,183 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:18:29.000|数据库已成功连接,正在启动服务
+2018-04-25 16:18:29,935 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:18:29.000|
+
+路由选择控制器 Base 耗时：0秒14毫秒
+2018-04-25 16:18:37,535 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:18:37.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 16:18:39,068 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:18:38.000|查询打印任务订单状态:订单号180421184606267
+2018-04-25 16:18:39,221 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:18:39.000|查询订单状态失败：订单号不能为空。
+2018-04-25 16:53:55,752 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:53:55.000|数据库已成功连接,正在启动服务
+2018-04-25 16:53:57,134 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:53:56.000|
+
+路由选择控制器 Base 耗时：0秒150毫秒
+2018-04-25 16:54:50,172 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:54:49.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 16:54:52,820 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:54:51.000|修改域名mcp.yinmei.me...
+2018-04-25 16:57:42,209 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:57:42.000|数据库已成功连接,正在启动服务
+2018-04-25 16:57:43,092 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:57:42.000|
+
+路由选择控制器 Base 耗时：0秒24毫秒
+2018-04-25 16:57:45,201 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:57:44.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-25 16:57:47,728 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:57:47.000|修改域名mcp.yinmei.me...
+2018-04-25 16:58:11,306 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:58:10.000|第1次尝试发送TCP消息至设备：16020010TM。
+2018-04-25 16:58:12,331 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:58:11.000|第1次尝试发送TCP消息至设备：16480045WP。
+2018-04-25 16:58:13,356 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:58:13.000|第1次尝试发送TCP消息至设备：18130001SQ。
+2018-04-25 16:58:14,383 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 16:58:14.000|第1次尝试发送TCP消息至设备：96540005QC。

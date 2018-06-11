@@ -1,0 +1,13 @@
+2018-04-25 14:42:27,263 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-25 14:42:26.000|Evt.Framework.Common.MessageException: 无效访问令牌:a3395b7f1de647d0b0963a3e3b70f36b
+   在 CWI.MCP.Services.PrinterService.GetPrintInfos(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 1054
+   在 CWI.MCP.Services.PrinterService.CheckDomain(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 1029
+   在 CWI.MCP.API.Controllers.MCP.SysController.CheckDomain(PrtintViewQueryModel queryModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 397
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"queryModel":{"app_id":"3a97adc2b23a4890b32ffd59a461872d","access_token":"a3395b7f1de647d0b0963a3e3b70f36b","merchant_code":null,"app_key":null,"bill_no":null,"order_id":null,"bill_type":0,"printer_codes":"17320152WV,17080362WV,","domain":null,"Count_type":null,"file_content":null}}  SessionID:3DDC914DB117436A92C428CBD0BAD7C0
+  URL:http://localhost:8686/mcp/sys/CheckDomain?printer_codes=17320152WV,17080362WV,&app_id=3a97adc2b23a4890b32ffd59a461872d&access_token=a3395b7f1de647d0b0963a3e3b70f36b
+
+

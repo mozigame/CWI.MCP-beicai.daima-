@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="../../Styles/bootstrap.min.css" >
+	<link rel="stylesheet" href="../../Styles/open.css">
+	<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.post("/user/DoActiveSuccess",location.search.replace("?",""),function(res){
+			if (res.status) {
+				$(".register-active").html('<p class="register-success-info">'+res.data+'</p>');
+			} else {
+				$(".register-active").html('<p class="register-error-info">'+res.data+'</p>');
+			}
+		},"json");
+	</script>
+</head>
+<body>
+<!-- 导航 -->
+<div class="navbar navbar-open">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">微云打开放平台</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+		</ul>
+	</div>
+</div>
+<!-- 主体 -->
+<div class="container">
+	<div class="register-success">
+		<div class="register-active">
+		</div>
+		<p>
+			<a href="./login.html" class="btn btn-action">跳转至登陆页面</a>
+		</p>
+	</div>
+</div>
+<!-- 公司信息 -->
+<div class="container">
+	<div class="footer footer-open">
+		<p>© 1998 - 2016 Tencent All Right Reserved.</p>
+	</div>
+</div>
+</body>
+</html>

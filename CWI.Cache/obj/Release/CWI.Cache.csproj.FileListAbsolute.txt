@@ -1,0 +1,12 @@
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\bin\Release\CWI.Cache.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\bin\Release\CWI.Cache.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.dll
+D:\WorkYh\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.pdb
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\bin\Release\CWI.Cache.dll
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\bin\Release\CWI.Cache.pdb
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.dll
+C:\Users\Lenovo\Desktop\Work\CWI.MCP（北彩代码）\CWI.Cache\obj\Release\CWI.Cache.pdb

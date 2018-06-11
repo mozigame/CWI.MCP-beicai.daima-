@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "回调说明";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>应用场景</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>集成平台若需要更新打印结果，需开发此打印回调接口供微云打平台调用，同时在应用中配置此回调地址及签名密钥。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求地址</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>应用中配置的回调地址。备注：集成平台自行开发此接口并发布到外网，请求主机可为服务器域名或外网IP。</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应格式</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>JSON</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求参数</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width:10%;">字段名</th>
+                                    <th>参数名</th>
+                                    <th>必须</th>
+                                    <th>类型</th>
+                                    <th>示例值</th>
+                                    <th>描述</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>票据单号</td>
+                                    <td>bill_no</td>
+                                    <td>是</td>
+                                    <td>String(36)</td>
+                                    <td>20160726051</td>
+                                    <td>应用平台中单号唯一，应用平台请求打印的单号</td>
+                                </tr>
+                                <tr>
+                                    <td>设备号</td>
+                                    <td>printer_code</td>
+                                    <td>是</td>
+                                    <td>String(32)</td>
+                                    <td>8c5e2d6540</td>
+                                    <td>打印此打印订单的对应的设备号</td>
+                                </tr>
+                                <tr>
+                                    <td>结果状态码</td>
+                                    <td>result_code</td>
+                                    <td>是</td>
+                                    <td>String(5)</td>
+                                    <td>10001</td>
+                                    <td>结果状态码，10001-打印成功，10002-打印机故障，10003-打印机缺纸，10004-通讯超时</td>
+                                </tr>
+                                <tr>
+                                    <td>签名类型</td>
+                                    <td>sign_type</td>
+                                    <td>是</td>
+                                    <td>String(32)</td>
+                                    <td>MD5</td>
+                                    <td>签名类型，目前仅支持MD5，后续会兼容SHA1、SHA256、HMAC等</td>
+                                </tr>
+                                 <tr>
+                                    <td>时间戳</td>
+                                    <td>time_stamp</td>
+                                    <td>是</td>
+                                    <td>String(10)</td>
+                                    <td>1469555061</td>
+                                    <td>时间戳，请见 <a  target="_blank"  href="/doc/paramrules" >接口规则-参数规定</a></td>
+                                </tr>
+                                <tr>
+                                    <td>随机字符串</td>
+                                    <td>nonce_str</td>
+                                    <td>是</td>
+                                    <td>String(32)</td>
+                                    <td>b21c940fc39040a88a61c412b4bbab6b</td>
+                                    <td>随机字符串，不长于32位。推荐 <a  target="_blank"  href="/doc/safetyspecification" >随机数生成算法</a></td>
+                                </tr>
+                                <tr>
+                                    <td>签名</td>
+                                    <td>sign</td>
+                                    <td>是</td>
+                                    <td>String(32)</td>
+                                    <td>1B03FB474982F1DC00904BB3F657CC5F</td>
+                                    <td>签名，详见 <a target="_blank"  href="/doc/safetyspecification">签名生成算法</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+POST data:
+bill_no=20160726051&printer_code=8c5e2d6540&result_code=10001&sign_type=MD5&time_stamp=1469555061&nonce_str=b21c940fc39040a88a61c412b4bbab6b&sign=1B03FB474982F1DC00904BB3F657CC5F
+							</pre>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>类型</th>
+                                    <th>示例值</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Int</td>
+                                    <td>"status": 1 | 0</td>
+                                    <td>1:成功，0:失败</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>String</td>
+                                    <td>"data": "ok" | "error info"</td>
+                                    <td>调用成功。调用失败则返回错误信息</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+{
+   "status": 1,
+   "data": "ok"
+} 
+							</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

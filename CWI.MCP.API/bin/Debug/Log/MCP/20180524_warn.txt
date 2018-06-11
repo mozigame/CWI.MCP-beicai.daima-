@@ -1,0 +1,37 @@
+2018-05-24 11:26:25,363 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-24 11:26:24.000|Evt.Framework.Common.MessageException: 无效访问令牌！
+   在 CWI.MCP.Services.PrinterService.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 189
+   在 CWI.MCP.API.Controllers.MCP.SysController.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 181
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"bindModel":{"app_id":"327c571408fb406b932d493501aab183","access_token":"4192d6e626734be38ec48c95c71e5b5f","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}}  SessionID:13299D7F97E04DECBFA45698158C2B36
+  URL:http://localhost:8686/mcp/sys/bindprinters
+
+
+2018-05-24 11:27:31,439 [11] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-24 11:27:30.000|Evt.Framework.Common.MessageException: 打印机'18160956AD'已绑定到别的账号，请联系客服！
+   在 CWI.MCP.Services.PrinterService.GetPrinterList(String printerCodes, String appId, String merchantCode) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 915
+   在 CWI.MCP.Services.PrinterService.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 194
+   在 CWI.MCP.API.Controllers.MCP.SysController.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 181
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"bindModel":{"app_id":"45d4b930501c477d9f254e3415b9889c","access_token":"f379438c7d2a4e02a05368c1480dd15c","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}}  SessionID:11B3F6F359B245E6AEAF83B9C2E8F7AE
+  URL:http://localhost:8686/mcp/sys/bindprinters
+
+
+2018-05-24 11:39:44,077 [5] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-05-24 11:39:42.000|Evt.Framework.Common.MessageException: 无效访问令牌！
+   在 CWI.MCP.Services.PrinterService.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.Services\System\PrinterService.cs:行号 189
+   在 CWI.MCP.API.Controllers.MCP.SysController.BindPrinters(PrintViewModel bindModel) 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Controllers\MCP\SysController.cs:行号 181
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+  ParamData:{"bindModel":{"app_id":"327c571408fb406b932d493501aab183","access_token":"4192d6e626734be38ec48c95c71e5b5f","merchant_code":"bgsc-001","printer_codes":"18160956AD#C073"}}  SessionID:657D2A3B3AFD48FF97848DBA008C8C89
+  URL:http://localhost:8686/mcp/sys/bindprinters
+
+

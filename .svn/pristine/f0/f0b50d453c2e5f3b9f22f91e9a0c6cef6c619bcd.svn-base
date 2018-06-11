@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <MCPDBConnectionString>
+    Server=39.108.128.132;Port=3306;Uid=root;Pwd=mcp@2016!;DataBase=mcp_test;CharSet=utf8;allow zero datetime=true;Max Pool Size=1000
+  </MCPDBConnectionString>
+</Settings>

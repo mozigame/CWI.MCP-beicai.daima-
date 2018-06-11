@@ -1,0 +1,224 @@
+﻿@{
+    ViewBag.Title = "API接口-打印快递面单";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/api/accesstoken" class="list-group-item">获取接口凭证</a>
+                        <a href="/api/bindprinters" class="list-group-item">关联打印机</a>
+                        <a href="/api/unbindprinters" class="list-group-item">解绑打印机</a>
+                        <a href="/api/printticket" class="list-group-item">打印小票</a>
+                        <a href="/api/printexpress" class="list-group-item active">打印快递面单</a>
+                        <a href="/api/chkprintersenablebind" class="list-group-item">检验打印机</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>打印快递面单</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>调用此接口，即可实现打印快递面单或模版打印功能，注意参数：bill_type为3或99，template_id为必填项，bill_content为快递单或其他指定模板参数信息JSON格式数据</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求地址</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>http://mcp.yingmei.me:8686/mcp/sys/print</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应格式</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>JSON</p>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>请求参数</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>参数名</th>
+                                    <th>必须</th>
+                                    <th>类型及范围</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>app_id</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>应用ID，开发者创建应用时，微云打开放平台会为应用自动分配此ID，开发者在“应用管理”应用详情中可查看app_id</td>
+                                </tr>
+                                <tr>
+                                    <td>access_token</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>调用接口凭证，注意有效期，过期需重新获取</td>
+                                </tr>
+                                <tr>
+                                    <td>merchant_code</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>商家编码，由第三方集成平台传入，内容为关联打印机传入的值</td>
+                                </tr>
+                                <tr>
+                                    <td>printer_codes</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>制造编号串，由制造编号标识一台打印机，多台打印间用“，”隔开</td>
+                                </tr>
+                                <tr>
+                                    <td>template_id</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>模板ID，bill_type不为3或9时为必填项,【双色球模版】T0020101,【福彩模版】T0020201,快递单：【顺丰模板一】T0010101，【顺丰模板二】T0010102，【圆通模板一】 T0010201</td>
+                                </tr>
+                                <tr>
+                                    <td>copies</td>
+                                    <td>false</td>
+                                    <td>Int</td>
+                                    <td>每台打印机打印份数，默认为1可不传</td>
+                                </tr>
+                                <tr>
+                                    <td>bill_no</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>票据单号，应用中单号唯一即可，必传项</td>
+                                </tr>
+                                <tr>
+                                    <td>bill_type</td>
+                                    <td>true</td>
+                                    <td>Int</td>
+                                    <td>1-Html格式小票;2-ESC指令小票;3-特定模版小票（例如彩票模版）;4-Json格式小票;99-快递单</td>
+                                </tr>
+                                <tr>
+                                    <td>bill_content</td>
+                                    <td>true</td>
+                                    <td>String</td>
+                                    <td>票据（快递单）内容，具体内容根据快递单所需填写信息动态组合JSON字符串，其中Pxxxx:快递单参数名称，请参考开放平台快递面单介绍，其他模版类型打印仅票据类型字段bill_type、模板ID字段template_id及票据内容字段bill_content值不同</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>快递面单请求示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+POST http://mcp.yingmei.me:8686/mcp/sys/print
+
+POST data:
+app_id=665358db4d6311e5ac9902004c4f4f50&access_token=b1678286e7674ca787383c86aebb307d&merchant_code=ligongshop1&printer_codes=8c5e2d654d
+&copies=1&bill_no=0607060001&bill_type=99&template_id=T0010101&bill_content=
+{
+  "P0102":"张三",
+  "P0101":"深圳映美卡莫网络有限公司",
+  "P0103":"深圳市南山区科技南12路九洲电器大厦B座906",
+  "P0104":"13088888888",
+  "P0202":"李四",
+  "P0201":"新会江裕信息技术有限公司",
+  "P0203":"广东",
+  "P0204":"江门",
+  "P0205":"新会",
+  "P0207":"江裕科技园8栋88号888",
+  "P0208":"18866666666",
+  "P0301":"合同文件",
+  "P0302":2,
+  "P0303":2000.00,
+  "P0304":"22 X 100 X 50",
+  "P0305":185.00,
+  "P0401":1,
+  "P0402":1,
+  "P0403":1,
+  "P0405":1,
+  "P0407":1,
+  "P0409":"立刻、马上、迅速",
+  "P0501":1,
+  "P0510":1,
+  "P0511":1,
+  "P0514":"662288995566645454",
+  "P0515":38500,
+  "P0504":1,
+  "P0507":1,
+  "P0509":1,
+  "P0516":5000.00,
+  "P0517":50,
+  "P0601":1,
+  "P0602":55,
+  "P0603":5,
+  "P0604":500.50,
+  "P0605":685.50,
+  "P0701":1,
+  "P0705":"8645465656956655",
+  "P1003":"紧急，麻烦加急处理，谢谢！"
+}
+							</pre>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果</h4>
+                        </div>
+                        <div class="item-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>类型</th>
+                                    <th>示例值</th>
+                                    <th>说明</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Int</td>
+                                    <td>"status": 1 | 0</td>
+                                    <td>1:成功，0:失败</td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>String</td>
+                                    <td>"data": "ok" | "error info"</td>
+                                    <td>打印成功。调用失败则返回错误信息</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>响应结果示例</h4>
+                        </div>
+                        <div class="item-body">
+                            <pre>
+{
+   "status": 1,
+   "data": "ok"
+} 
+							</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

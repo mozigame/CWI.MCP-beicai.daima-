@@ -1,0 +1,9 @@
+﻿@{
+    Layout = null;
+}
+<div style="padding-top: 100px; margin: 0 auto; text-align: center;">
+    抱歉，发生了错误，参考消息：<span style='color: red;'> @ViewBag.Message</span>
+    <br />
+    <br />
+    <a href="javascript:history.back();">单击此处返回</a>
+</div>

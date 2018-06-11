@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <configSections>
+    <section name="socketServer" type="Sodao.FastSocket.Server.Config.SocketServerConfig, FastSocket.Server"/>
+  </configSections>
+
+  <socketServer>
+    <servers>
+      <server name="mcp" port="8765" socketBufferSize="8192" messageBufferSize="8192" maxMessageSize="102400" maxConnections="20000" serviceType="McpTcpServer.McpTcpService, McpTcpServer" protocol="Mcp"/>
+    </servers>
+  </socketServer>
+
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

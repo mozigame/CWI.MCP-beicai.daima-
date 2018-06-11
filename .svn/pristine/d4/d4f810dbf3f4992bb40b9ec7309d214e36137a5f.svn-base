@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微云打云开放平台集成示例</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/bootstrap.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Styles/open.css")"/>
+    <link rel="icon" href="../../Images/logo.png" type="image/png">
+    <link rel="shortcut icon" href="../../Images/logo.png" type="image/png">
+    <link rel="bookmark" href="../../Images/logo.png" type="image/png">
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+</head>
+    @{
+        var action = ViewContext.RouteData.Values["Action"].ToString().ToLower();
+    }
+<body>
+    <!-- 导航 -->
+    <div class="navbar navbar-open">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="../../Images/icon-head-login.png" height="20" alt="">
+                </a>
+                <a href="/sys/index" class="navbar-brand">开放平台-集成示例</a>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="content">
+                <div class="page-sidebar">
+                    <ul class="nav sidebar-menu">
+                        <li class="@(action == "accesstoken" ? "active" : "")" >
+                            <a href="/sys/accesstoken">
+                                <i class="icon icon-menu-home"></i>获取接口凭证</a>
+                        </li>
+                        <li class="@(action == "bindprinter" ? "active" : "")">
+                            <a href="/sys/bindprinter">
+                                <i class="icon icon-menu-express"></i>关联打印机</a>
+                        </li>
+                        <li class="@(action == "unbindprinter" ? "active" : "")">
+                            <a href="/sys/unbindprinter">
+                                <i class="icon icon-menu-guide"></i>解绑打印机</a>
+                        </li>
+                        <li class="@(action == "printbill" ? "active" : "")">
+                            <a href="/sys/printbill">
+                                <i class="icon icon-menu-app"></i>打 印 票 据</a>
+                        </li>
+                        <li class="@(action == "chkprintersenablebind" ? "active" : "")">
+                            <a href="/sys/chkprintersenablebind">
+                                <i class="icon icon-menu-app"></i>检验打印机
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../Scripts/open_extends.js"></script>
+    <script type="text/javascript" src="../../Scripts/open.js"></script>
+    <script type="text/javascript">
+        $(".sidebar-menu a").treeMenu(function (open) {
+            if (open) {
+                $(this).children().last().removeClass("icon-menu-right").addClass("icon-menu-down");
+            } else {
+                $(this).children().last().removeClass("icon-menu-down").addClass("icon-menu-right");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "消息";
+    var btnText = "配置WiFi";
+    var code = ViewBag.Code as string;
+    var iconType = "weui_icon_info";
+    var configUrl = "/device/config";
+    var showBtn = false;
+    var showIocn = true;
+    var msg = string.Empty;
+}
+<style type="text/css">
+    body { font-family:Helvetica,Arial,sans-serif; background-color:#f0f0f6; }
+</style>
+    @switch (code)
+    {
+        case "0":
+            {
+                showIocn = true;
+                showBtn = true;
+                msg = "WiFi配置已取消！";
+                iconType = "weui_icon_info";
+                break;
+            }
+        case "1":
+            {
+                showIocn = true;
+                showBtn = false;
+                msg = "WiFi配置成功！";
+                iconType = "weui_icon_success";
+                break;
+            }
+        case "2":
+            {
+                showIocn = true;
+                showBtn = true;
+                btnText = "重新配置WiFi";
+                msg = "WiFi配置失败！";
+                iconType = "weui_icon_warn";
+                break;
+            }
+        default:
+            {
+                showIocn = false;
+                showBtn = true;
+                iconType = "weui_icon_info";
+                break;
+            }
+    }
+            
+    @if(showIocn)
+    {
+       <div class="weui_msg">
+          <div class="weui_icon_area"><i class="weui_icon_msg @iconType"></i></div>
+            <div class="weui_text_area">
+              <h2 class="weui_msg_title">@msg</h2>
+            </div>
+       </div>
+     }
+     @if(showBtn)
+     {
+       <div class="weui_opr_area">
+        <p class="weui_btn_area">
+          <a href="@configUrl"  class="weui_btn weui_btn_primary">@btnText</a>
+        </p>
+      </div>  
+     }

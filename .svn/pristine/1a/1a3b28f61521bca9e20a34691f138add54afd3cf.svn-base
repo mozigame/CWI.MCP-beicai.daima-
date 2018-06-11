@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alert</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<link rel="icon" href="../../Images/logo.png" type="image/png">
+	<style>
+		body{width: 100%;padding: 0;margin: 0;font-size: 14px;color: #555;}
+		*{box-sizing: border-box;}
+		.dialog{position: fixed;width: 100%;height: 100%;top: 0;left: 0;right: 0;}
+		.dialog-hide{display: none;}
+		.dialog-mask-transparent{position: absolute;width: 100%;height: 100%;background: #eee;z-index:1;opacity: 0.7}
+		.dialog-content{width: 20%;margin: 50px auto;z-index: 2;position: relative;}
+		.dialog-base .dialog-content{background: #fff;border-radius: 5px;border:1px solid #ccc;}
+
+		.dialog-heading{padding: 10px 15px;border-radius: 5px 5px 0px 0px;color: #555;text-align: center;}
+		.dialog-body{padding: 10px 15px;}
+		.dialog-footer{border-top: 1px solid #31C7A0;overflow: hidden;margin-top: 10px;}
+		.dialog-btn{height: 35px;line-height: 35px;width: 50%;float: left;text-align: center;display: block;color: #fff;float: left;color: #555;text-decoration: none;}
+		.dialog-btn:first-child{border-right: 1px solid #31C7A0;}
+		.dialog-btn:hover{text-decoration: none;color: #2bad8a;}
+ 		
+		.dialog-open .dialog-content{border:1px solid #ccc;padding: 10px;border-radius: 5px;background: #fff;}
+		.dialog-open .dialog-heading{color: #555;text-align: center;border: 0 none;border-radius: 0;}
+		.dialog-open .dialog-body{border-left: 0 none; border-right: 0 none;}
+		.dialog-open .dialog-footer{margin:20px -11px -11px;}
+		.dialog-open .dialog-btn{width: 100%;color: #555;border:0 none;border-radius: 0px 0px 5px 5px;text-decoration: none;}
+		.dialog-open .dialog-btn:hover{color: #2bad8a;} 
+
+		.dialog-mess .dialog-content{border:1px solid #31C7A0;padding: 10px;border-radius: 5px;background: #E1F4EF;}
+		.dialog-mess .dialog-body{border-left: 0 none; border-right: 0 none;}
+	</style>
+</head>
+<body>
+<!-- <div id="dialog_confirm" class="dialog dialog-base dialog-hide">
+	<div class="dialog-mask-transparent"></div>
+	<div class="dialog-content">
+		<div class="dialog-heading">提示</div>
+		<div class="dialog-body">
+			操作对话框
+		</div>
+		<div class="dialog-footer">
+			<a href="" class="dialog-btn dialog-btn-action">确定</a>
+			<a href="" class="dialog-btn dialog-btn-cancel">取消</a>
+		</div>
+	</div>
+</div> -->
+
+<div id="dialog_notice" class="dialog dialog-open dialog-hide">
+	<div class="dialog-mask-transparent"></div>
+	<div class="dialog-content">
+		<div class="dialog-heading">提示</div>
+		<div class="dialog-body">
+			确认对话框
+		</div>
+		<div class="dialog-footer">
+			<a href="" class="dialog-btn dialog-btn-action">确定</a>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="dialog_mess" class="dialog dialog-mess dialog-hide">
+	<div class="dialog-mask-transparent"></div>
+	<div class="dialog-content">
+		<div class="dialog-body">
+			消息提示框
+		</div>
+	</div>
+</div> -->
+<script type="text/javascript" src="../../Scripts/jquery.min.js"></script>
+<script type="text/javascript">
+	(function(window,$){
+		var _dialog = {
+			elem:"",
+			init:function(mess,elem){
+				var mess_elem = elem[0].querySelector(".dialog-body");
+				mess_elem.innerHTML = mess;
+				this.elem = elem[0];
+			},
+			show:function(){
+				$(this.elem).removeClass("dialog-hide");
+			},
+			hide:function(){
+				$(this.elem).addClass("dialog-hide");
+			},
+			confirm:function(func){
+				var action_elem = this.elem.querySelector(".dialog-btn-action");
+				var cancel_elem = this.elem.querySelector(".dialog-btn-cancel");
+				var obj = this;
+				obj.show();
+				action_elem.addEventListener("click", function(e){
+					e.preventDefault();
+					obj.hide();
+					func(true);
+				}, false);
+				cancel_elem.addEventListener("click", function(e){
+					e.preventDefault();
+					obj.hide();
+					func(false);
+				}, false);
+				
+			},
+			notice:function(func){
+				var func = typeof func === "undefined" ? function(){}: func;
+				var action_elem = this.elem.querySelector(".dialog-btn-action");
+				var obj = this;
+				this.show();
+				action_elem.addEventListener("click", function(e){
+					e.preventDefault();
+					func();
+					obj.hide();
+				}, false);
+			},
+			mess:function(sec){
+				var obj = this;
+				this.show();
+				var sec = sec ? sec[0] : 5000;
+				setTimeout(function(){
+					obj.hide();
+				}, sec);
+			}
+		}
+		$.fn.extend({
+			dialog:function(conf){
+				var back = typeof conf.callback === "undefined" ? false: conf.callback;
+				_dialog.init(conf.mess,this);
+				if (back) {
+					_dialog[conf.method](back);
+				} else {
+					if (typeof conf.method === "object") {
+						_dialog[conf.method.name](conf.method.param);
+					} else {
+						_dialog[conf.method]();
+					}
+				}
+			}
+		});
+	})(window,$);
+	// 调用 操作对话框
+/*	$("#dialog_confirm").dialog({
+		mess:"Hello World",
+		method:"confirm",
+		callback:function(bol){
+			alert(bol);
+		}
+	});*/
+	// 调用 通知对话框
+	$("#dialog_notice").dialog({
+		mess:"Hello World",
+		method:"notice"
+	});
+	// 调用通知
+	// $("#dialog_mess").dialog({
+	// 	mess:"Hello World",
+	// 	method:{
+	// 		name:"mess",
+	// 		param:[3000]
+	// 	}
+	// });
+	</script>
+</body>
+</html>

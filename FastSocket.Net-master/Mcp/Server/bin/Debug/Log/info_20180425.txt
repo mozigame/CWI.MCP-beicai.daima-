@@ -1,0 +1,136 @@
+2018-04-25 11:54:39,748 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:39,839 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:39,844 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:39,845 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:39,851 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:39,851 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:39,977 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:39,983 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:39.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:40,526 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:40,526 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:40,526 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:40,542 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:40,874 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:
+2018-04-25 11:54:40,892 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|数据库中取设备：的状态为1
+2018-04-25 11:54:40,892 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|查询设备号：，状态码为：1,触发下一打印任务。
+2018-04-25 11:54:40,893 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:
+2018-04-25 11:54:40,893 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|数据库中取设备：的状态为1
+2018-04-25 11:54:40,893 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|查询设备号：，状态码为：1,触发下一打印任务。
+2018-04-25 11:54:40,894 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|设备号:,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 11:54:40,894 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|设备号:,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 11:54:40,905 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:
+2018-04-25 11:54:40,905 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|数据库中取设备：的状态为1
+2018-04-25 11:54:40,905 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|查询设备号：，状态码为：1,触发下一打印任务。
+2018-04-25 11:54:40,905 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|设备号:,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 11:54:40,910 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|连接TCP服务器成功！
+2018-04-25 11:54:40,912 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|向服务器发送消息：{tp:102,did:""}
+2018-04-25 11:54:40,912 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:40,912 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:40,912 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:40,916 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|连接TCP服务器成功！
+2018-04-25 11:54:40,916 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|向服务器发送消息：{tp:102,did:""}
+2018-04-25 11:54:40,917 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|执行心跳检测...
+2018-04-25 11:54:40,931 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:40,932 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:40,932 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:40,933 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|连接TCP服务器成功！
+2018-04-25 11:54:40,933 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|向服务器发送消息：{tp:102,did:""}
+2018-04-25 11:54:40,933 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|执行心跳检测...
+2018-04-25 11:54:40,933 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 11:54:40,933 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:40,934 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:40,934 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 11:54:40,994 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:41,070 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:41,071 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中获取设备状态异常，设备号:
+2018-04-25 11:54:41,090 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|缓存中设置设备状态异常，设备号:
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|数据库中取设备：的状态为1
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|查询设备号：，状态码为：1,触发下一打印任务。
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|设备号:,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|向服务器发送消息：{tp:102,did:""}
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|{"tp":100,"time":"2018-04-25 11:49:13"}
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|【100】接收心跳包,设备号：
+2018-04-25 11:54:41,091 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 11:54:40.000|心跳回复：【100】接收心跳包,设备号：
+2018-04-25 12:23:28,736 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:23:28,807 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:23:28,830 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:23:28,892 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|缓存中获取设备状态异常，设备号:18100001SQ
+2018-04-25 12:23:29,343 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|缓存中设置设备状态异常，设备号:18100001SQ
+2018-04-25 12:23:29,344 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|数据库中取设备：18100001SQ的状态为1
+2018-04-25 12:23:29,344 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|查询设备号：18100001SQ，状态码为：1,触发下一打印任务。
+2018-04-25 12:23:29,344 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|设备号:18100001SQ,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 12:23:29,348 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|连接TCP服务器成功！
+2018-04-25 12:23:29,349 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|{tp:102,did:"18100001SQ"}
+2018-04-25 12:23:29,351 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|向服务器发送消息：{tp:102,did:"18100001SQ"}
+2018-04-25 12:23:29,368 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|【100-105-102】设备号：18100001SQ,查询打印任务。
+2018-04-25 12:23:29,398 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:28.000|设备号：18100001SQ,获取下一待打印任务号：0425712b4e74e83c445eb840bd85292103cf
+2018-04-25 12:23:29,453 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|设备号：18100001SQ, 长连接已断开，connection_id为0。
+2018-04-25 12:23:29,453 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|发送打印任务时，更新订单打印状态请求，设备号：18100001SQ,订单号：,状态: 8
+2018-04-25 12:23:30,353 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|执行心跳检测...
+2018-04-25 12:23:30,353 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 12:23:30,353 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|{tp:100,did:"Server"}
+2018-04-25 12:23:30,354 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|【100】接收心跳包,设备号：Server
+2018-04-25 12:23:30,354 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:29.000|心跳回复：【100】接收心跳包,设备号：Server
+2018-04-25 12:23:40,361 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:39.000|执行心跳检测...
+2018-04-25 12:23:40,361 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:39.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 12:23:40,361 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:39.000|{tp:100,did:"Server"}
+2018-04-25 12:23:40,361 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:39.000|【100】接收心跳包,设备号：Server
+2018-04-25 12:23:40,361 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:39.000|心跳回复：【100】接收心跳包,设备号：Server
+2018-04-25 12:23:50,362 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:49.000|执行心跳检测...
+2018-04-25 12:23:50,362 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:49.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 12:23:50,362 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:49.000|{tp:100,did:"Server"}
+2018-04-25 12:23:50,362 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:49.000|【100】接收心跳包,设备号：Server
+2018-04-25 12:23:50,362 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:49.000|心跳回复：【100】接收心跳包,设备号：Server
+2018-04-25 12:23:52,900 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:23:52,900 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:23:52,901 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:23:52,913 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|缓存中获取设备状态异常，设备号:18100001SQ
+2018-04-25 12:23:52,954 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|缓存中设置设备状态异常，设备号:18100001SQ
+2018-04-25 12:23:52,957 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|数据库中取设备：18100001SQ的状态为1
+2018-04-25 12:23:52,957 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|查询设备号：18100001SQ，状态码为：1,触发下一打印任务。
+2018-04-25 12:23:52,957 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|设备号:18100001SQ,接收设备心跳包时主动查询发送打印任务命令。
+2018-04-25 12:23:52,957 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|{tp:102,did:"18100001SQ"}
+2018-04-25 12:23:52,957 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|【100-105-102】设备号：18100001SQ,查询打印任务。
+2018-04-25 12:23:52,957 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|向服务器发送消息：{tp:102,did:"18100001SQ"}
+2018-04-25 12:23:52,982 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|设备号：18100001SQ,获取下一待打印任务号：0425712b4e74e83c445eb840bd85292103cf
+2018-04-25 12:23:53,005 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|设备号：18100001SQ, 长连接已断开，connection_id为0。
+2018-04-25 12:23:53,005 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:52.000|发送打印任务时，更新订单打印状态请求，设备号：18100001SQ,订单号：,状态: 8
+2018-04-25 12:24:00,364 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:59.000|执行心跳检测...
+2018-04-25 12:24:00,364 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:59.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 12:24:00,364 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:59.000|{tp:100,did:"Server"}
+2018-04-25 12:24:00,366 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:59.000|【100】接收心跳包,设备号：Server
+2018-04-25 12:24:00,367 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:23:59.000|心跳回复：【100】接收心跳包,设备号：Server
+2018-04-25 12:24:10,370 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:09.000|执行心跳检测...
+2018-04-25 12:24:10,370 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:09.000|向服务器发送消息：{tp:100,did:"Server"}
+2018-04-25 12:24:10,370 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:09.000|{tp:100,did:"Server"}
+2018-04-25 12:24:10,371 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:09.000|【100】接收心跳包,设备号：Server
+2018-04-25 12:24:10,371 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:09.000|心跳回复：【100】接收心跳包,设备号：Server
+2018-04-25 12:24:46,344 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:45.000|断开打印设备TCP链接信息并执行打印设备回调,设备号：16480045WP, 状态: 4
+2018-04-25 12:24:46,415 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:45.000|打印设备回调:发送设备状态通知,设备号：16480045WP,状态码: 4,故障时间：2018/4/25 12:24:46
+2018-04-25 12:24:52,321 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:51.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:24:56,548 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:55.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:24:56,795 [10] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:56.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:24:57,988 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:57.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:24:58,158 [10] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:57.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:24:58,183 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:24:57.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:02,075 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:01.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:25:02,077 [10] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:01.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:03,043 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:01.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:03,049 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:02.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:37,522 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:36.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:57,148 [22] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:56.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:25:57,149 [22] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:56.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:25:59,403 [19] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:58.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:25:59,426 [21] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:25:56.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:26:03,056 [24] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:00.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:26:05,010 [22] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:04.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:05,012 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:04.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:18,443 [25] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:17.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:26:18,448 [19] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:17.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:48,872 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:47.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:26:52,276 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:51.000|{tp:100,did:"18100001SQ"}
+2018-04-25 12:26:53,434 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:52.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:54,835 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:53.000|【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:55,720 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:54.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:26:59,156 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:26:57.000|心跳回复：【100】接收心跳包,设备号：18100001SQ
+2018-04-25 12:29:25,582 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-25 12:29:24.000|缓存中获取设备状态异常，设备号:18100001SQ

@@ -1,0 +1,58 @@
+﻿using CWI.MCP.Common.Attributes;
+
+namespace CWI.MCP.Common
+{
+    /// <summary>
+    ///  推送消息类型枚举
+    /// </summary>
+    public enum TcpOperateType
+    {
+        /// <summary>
+        /// 检测心跳
+        /// </summary>
+        [EnumDescription("检测心跳")]
+        ChkAlive = 100,
+
+        /// <summary>
+        /// 注册设备
+        /// </summary>
+        [EnumDescription("注册设备")]
+        RegDev,
+
+        /// <summary>
+        /// 打印
+        /// </summary>
+        [EnumDescription("打印")]
+        Print,
+
+        /// <summary>
+        /// 更新状态
+        /// </summary>
+        [EnumDescription("更新状态")]
+        UpStatus,
+
+        /// <summary>
+        /// 上报异常
+        /// </summary>
+        [EnumDescription("上报异常")]
+        UpException,
+
+        /// <summary>
+        /// 查询任务
+        /// </summary>
+        [EnumDescription("查询任务")]
+        QueryTask,
+
+        /// <summary>
+        /// 辅助命令
+        /// </summary>
+        [EnumDescription("辅助命令")]
+        AssCommand=201,
+
+        /// <summary>
+        /// 更新辅助命令状态
+        /// </summary>
+        [EnumDescription("更新辅助命令状态")]
+        AssUpStatus
+    }
+}

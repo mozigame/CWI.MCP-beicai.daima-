@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmlContentCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/2001/XSL/Transform" >
+  <EmlDescription>
+    <!--发送邮箱激活/绑定验证码-->
+    <EmlKey>BindEmail</EmlKey>
+    <EmlFormat>验证码：{0}，感谢您注册yingmei.me云打印账号，请在{1}分钟内完成注册。工作人员不会向您索取验证码，请勿泄露。消息来自：微云打安全中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>验证码：664494，感谢您注册yingmei.me云打印账号，请在30分钟内完成注册。工作人员不会向您索取验证码，请勿泄露。消息来自：微云打安全中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送找回密码验证码-->
+    <EmlKey>SmsValidCode</EmlKey>
+    <EmlFormat>尊敬的用户，您的验证码为{0}，本验证码{1}分钟内有效，感谢您的使用！</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的用户，您的验证码为554826，本验证码30分钟内有效，感谢您的使用！</EmlExamples>
+  </EmlDescription>
+</EmlContentCollection>

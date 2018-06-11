@@ -1,0 +1,10 @@
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.Client.xml
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.Client.dll
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.Client.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.SocketBase.dll
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.SocketBase.pdb
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\bin\Debug\FastSocket.SocketBase.xml
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\obj\Debug\FastSocket.Client.csprojResolveAssemblyReference.cache
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\obj\Debug\FastSocket.Client.csproj.CoreCompileInputs.cache
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\obj\Debug\FastSocket.Client.dll
+D:\WorkYh\CWI.MCP（北彩代码）\FastSocket.Net-master\FastSocket.Client\obj\Debug\FastSocket.Client.pdb

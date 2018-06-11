@@ -1,0 +1,88 @@
+﻿@using CWI.MCP.Common
+@using CWI.MCP.Models.Common
+@model CWI.MCP.Models.ViewModels.MCP.OPEN.DevApplyViewModel
+@{
+    ViewBag.Title = "应用信息";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+@using (Html.BeginForm("doApplyInfo", "apply", FormMethod.Post, new { id = "create_app_form", @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+<div class="panel panel-app">
+    <div class="panel-body">
+        <input type="hidden" value="@string.Format("{0}", Model == null ? "" : Model.AppId)" id="appId" name="appId"/>
+        <input type="hidden" value="@string.Format("{0}", Model == null ? "" : Model.AppKey)" id="appKey" name="appKey"/>
+        <input type="hidden" value="@string.Format("{0}", Model == null ? "" : Model.LogoPath)" id="logoPath" name="logoPath"/>
+        <input type="hidden" value="@string.Format("{0}", SessionUtil.Current == null ? "" : SessionUtil.Current.Account)" id="modifiedBy" name="modifiedBy"/>
+        <input type="hidden" value="@string.Format("{0}", SessionUtil.Current == null ? "" : SessionUtil.Current.Account)" id="developerId" name="developerId"/>
+        <div class="form-group">
+            <label for="" class="col-sm-1 control-label">应用名称</label>
+            <div class="col-sm-3">
+                <input type="text" name="appName" id="appName" value="@string.Format("{0}", Model == null ? "" : Model.AppName)" class="form-control" autocomplete="off" data-verify-len="3|16"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-1 control-label">回调地址</label>
+            <div class="col-sm-3"> 
+                <input type="text" name="updateCallbackUrl" id="updateCallbackUrl" value="@string.Format("{0}", Model == null ? "" : Model.UpdateCallbackUrl)" data-verify-url class="form-control" autocomplete="off"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-1 control-label">签名Key</label>
+            <div class="col-sm-3">
+                <input type="text" name="signKey" id="signKey" value="@string.Format("{0}", Model == null ? "" : Model.SignKey)" class="form-control" autocomplete="off"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-1 control-label">应用LOGO</label>
+            <div class="col-sm-3">
+                <input type="file" name="LogoFile" id="LogoFile" accept="image/jpeg,image/png"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-1 control-label">应用描述</label>
+            <div class="col-sm-3">
+                <textarea name="memo" id="memo" cols="30" rows="5" class="form-control" data-verify-len="1|255" autocomplete="off">@string.Format("{0}", Model == null ? "" : Model.Memo)</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-3">
+                <button type="submit" class="btn btn-action">确定</button>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#create_app_form").validateForm(
+           {
+               render: function (conf) {
+                   var r = conf.verify, mess = conf.mess, elem = conf.elem, type = conf.verify_type, error_elem = conf.error_elem;
+                   if (r) {
+                       $(error_elem).addClass("hidden");
+                   } else {
+                       switch (type) {
+                           case "code":
+                           case "phone":
+                               var nw = $(elem).parent().next().outerWidth(true);
+                               error_elem.innerHTML = mess;
+                               error_elem.className = "error-mess";
+                               elem.parentNode.appendChild(error_elem);
+                               error_elem.style.right = "-" + ($(error_elem).innerWidth() + nw) + "px";
+                               break;
+                           default:
+                               error_elem.innerHTML = mess;
+                               error_elem.className = "error-mess";
+                               elem.parentNode.appendChild(error_elem);
+                               error_elem.style.right = "-" + error_elem.offsetWidth + "px";
+                               break;
+                       }
+                   }
+               }
+           }
+            );
+    });
+</script>

@@ -1,0 +1,31 @@
+﻿//---------------------------------------------
+// 版权信息：版权所有(C) 2015，COOLWI.COM
+// 变更历史：
+//      姓名          日期              说明
+// --------------------------------------------
+//      王军锋        2012/10/24        创建
+//---------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using log4net.Layout.Pattern;
+
+namespace  CWI.MCP.Common.Extensions.Log4net
+{
+    /// <summary>
+    /// Action Controller
+    /// </summary>
+    public class ActionPatternLayoutConverter : PatternLayoutConverter
+    {
+        /// <summary>
+        /// 转换指定属性的值
+        /// </summary>
+        /// <param name="writer">writer</param>
+        /// <param name="loggingEvent">loggingEvent</param>
+        protected override void Convert(System.IO.TextWriter writer, log4net.Core.LoggingEvent loggingEvent)
+        {
+            ExtensionInternalUtils.Write(writer, loggingEvent, "Action");
+        }
+    }
+}

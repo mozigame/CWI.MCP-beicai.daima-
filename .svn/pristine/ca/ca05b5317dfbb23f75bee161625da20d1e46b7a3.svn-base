@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmlContentCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/2001/XSL/Transform" >
+  <EmlDescription>
+    <!--发送邮箱激活/绑定验证码-->
+    <EmlKey>BindEmail</EmlKey>
+    <EmlFormat>验证码：{0}，感谢您注册yingmei.me云打印账号，请在{1}分钟内完成注册。工作人员不会向您索取验证码，请勿泄露。消息来自：映美Me安全中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>验证码：664494，感谢您注册yingmei.me云打印账号，请在30分钟内完成注册。工作人员不会向您索取验证码，请勿泄露。消息来自：映美Me安全中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--获取修改密码验证码-->
+    <EmlKey>GetPwd</EmlKey>
+    <EmlFormat>验证码：{0}，感谢您使用yingmei.me云打印账号，请在{1}分钟内完成验证。工作人员不会向您索取验证码，请勿泄露。消息来自：映美Me安全中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>验证码：664494，感谢您使用yingmei.me云打印账号，请在30分钟内完成验证。工作人员不会向您索取验证码，请勿泄露。消息来自：映美Me安全中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送找回密码验证码-->
+    <EmlKey>GetPwdByMobile</EmlKey>
+    <EmlFormat>尊敬的映美Me商户，您的验证码为{0}，本验证码{1}分钟内有效，感谢您的使用！</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的映美Me商户，您的验证码为554826，本验证码30分钟内有效，感谢您的使用！</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送支付成功邮件-->
+    <EmlKey>PayedSuccess</EmlKey>
+    <EmlFormat>尊敬的{0}用户，您的订单【{1}】 {2} 已成功支付。消息来自：映美Me服务中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的66049262@qq.com用户，您的订单【150326000001】 2014-10-23 10:08:08 已成功支付。消息来自：映美Me服务中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送结算成功邮件-->
+    <EmlKey>SelttlementedSuccess</EmlKey>
+    <EmlFormat>尊敬的{0}，您的结算单【{1}】 {2} 已成功转账。消息来自：映美Me服务中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的财务人员，您的结算单【S150326000001】 2014-10-23 10:08:08 已成功转账。消息来自：映美Me服务中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--支付成功消息-->
+    <EmlKey>PayedSuccessMsg</EmlKey>
+    <EmlFormat>您的打印订单(订单号：{0})已成功支付{1}元，感谢您的使用。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>您的打印订单(订单号：12345678)已成功支付20.50元，感谢您的使用。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--退款成功消息-->
+    <EmlKey>RefundSuccessMsg</EmlKey>
+    <EmlFormat>您的打印订单(订单号：{0})已成功退款{1}元，感谢您的使用。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>您的打印订单(订单号：12345678)已成功退款20.50元，感谢您的使用。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送结算成功短信-->
+    <EmlKey>SelttlementedSuccessSms</EmlKey>
+    <EmlFormat>尊敬的映美Me商户：{0}，{1}结算款项：{2}元已转入您的指定支付宝账号，请及时查收！</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的映美Me商户：映美打印社，2015年09月结算款项：2586.89元已转入您的指定支付宝账号，请及时查收！</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送退款成功邮件-->
+    <EmlKey>RefundSuccess</EmlKey>
+    <EmlFormat>尊敬的{0}用户，您的订单【{1}】 {2} 已成功退款。消息来自：映美Me服务中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的66049262@qq.com用户，您的订单【150326000001】 2014-10-23 10:08:08 已成功退款。消息来自：映美Me服务中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--打印成功消息-->
+    <EmlKey>PrintSuccessMsg</EmlKey>
+    <EmlFormat>您的打印订单(订单号：{0})已成功打印，感谢您的使用。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>您的打印订单(订单号：12345678)已成功打印，感谢您的使用。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--打印成功-->
+    <EmlKey>PrintSuccess</EmlKey>
+    <EmlFormat>尊敬的{0}用户，您的订单【{1}】 {2} 已成功打印。消息来自：映美Me服务中心。</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的66049262@qq.com用户，您的订单【150326000001】 2014-10-23 10:08:08 已成功打印。消息来自：映美Me服务中心。</EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--打印失败-->
+    <EmlKey>PrintFailed</EmlKey>
+    <EmlFormat>
+      尊敬的{0}用户，对不起，您{1}发送到云打印账号:【{2}】主题为【{3}】的邮件，服务器端处理失败，可能导致失败的原因如下，请检查：
+      一、邮件中没有附件；
+      二、邮件中附件以超大邮件形式发送；
+      三、附件格式不支持，目前系统支持的格式有：
+      1.文本文档【.txt】；
+      2.PDF文档【.pdf】；
+      3.图片文档【.jpg/.jpeg/.bmp/.png/.gif/.tif/.tiff】；
+      4.Word文档【.doc/.docx】；
+      5.Excel文档【.xls/.xlsx】；
+      6.PowerPoint文档【.ppt/.pptx】；
+      7.Viso文档【.vsd】；
+      四、附件为加密文档；
+      五、附件名称过长，建议调整为100个字符以内；
+      六、其它未知异常；；
+      消息来自：映美Me服务中心。
+    </EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>
+      尊敬的66049262@qq.com用户，对不起，您2014-10-23 10:08:08发送到云打印账号:【kevin@yingmei.me】主题为【9月份考勤表】的邮件，服务器端处理失败，可能导致失败的原因如下，请检查：
+      一、邮件中没有附件；
+      二、邮件中附件以超大邮件形式发送；
+      三、附件格式不支持，目前系统支持的格式有：
+      1.文本文档【.txt】；
+      2.PDF文档【.pdf】；
+      3.图片文档【.jpg/.jpeg/.bmp/.png/.gif/.tif/.tiff】；
+      4.Word文档【.doc/.docx】；
+      5.Excel文档【.xls/.xlsx】；
+      6.PowerPoint文档【.ppt/.pptx】；
+      7.Viso文档【.vsd】；
+      四、附件为加密文档；
+      五、附件名称过长，建议调整为100个字符以内；
+      六、其它未知异常；
+      消息来自：映美Me服务中心。
+    </EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--用户反馈-->
+    <EmlKey>UserFeedback</EmlKey>
+    <EmlFormat>
+      尊敬的映美Me服务中心管理员，映美Me用户：【{0}】于{1}提交了用户反馈意见，
+      具体反馈及用户环境如下，请跟进：
+      反馈类型：{2}
+      APP版本：{3}
+      终端类型：{4}
+      终端标识：{5}
+      终端操作系统及版本：{6}
+      ------------------------------------------------------------------------
+      反馈内容：{7}
+      ------------------------------------------------------------------------
+      用户账号：{0}
+      联系方式：{8}
+      消息来自：映美Me服务中心。
+    </EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>
+      尊敬的映美Me服务中心管理员，映美Me用户：【kevin@yingmei.me】于2014-10-23 10:08:08提交了用户反馈意见，
+      具体反馈及用户环境如下，请跟进：
+      反馈类型：APP错误 | 改进建议
+      APP版本：1.0
+      终端类型：Android
+      终端标识：xxxxxxx
+      终端操作系统及版本：Sungsing I9300,Android 4.2.4
+      ------------------------------------------------------------------------
+      反馈内容：使用过程中APP错误，无法运行。
+      ------------------------------------------------------------------------
+      用户账号：kevin@yingmei.me
+      联系方式：kevin@coolwi.com
+      消息来自：映美Me服务中心。
+    </EmlExamples>
+  </EmlDescription>
+  <EmlDescription>
+    <!--发送手机绑定验证码-->
+    <EmlKey>BindMobile</EmlKey>
+    <EmlFormat>尊敬的{0}映美Me商户，您的验证码为{1}，本验证码{2}分钟内有效，感谢您的使用！</EmlFormat>
+    <EmlStatus>1</EmlStatus>
+    <EmlExamples>尊敬的kevin映美Me商户，您的验证码为554826，本验证码30分钟内有效，感谢您的使用！</EmlExamples>
+  </EmlDescription>
+</EmlContentCollection>

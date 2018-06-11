@@ -1,0 +1,143 @@
+2018-04-24 14:09:50,079 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:09:50.000|数据库已成功连接,正在启动服务
+2018-04-24 14:09:53,392 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:09:53.000|
+
+路由选择控制器 Base 耗时：0秒34毫秒
+2018-04-24 14:13:49,908 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:13:49.000|
+
+路由选择控制器 sys 耗时：0秒51毫秒
+2018-04-24 14:13:51,169 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:13:51.000|修改域名www.baidu.com...
+2018-04-24 14:34:14,900 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:34:14.000|数据库已成功连接,正在启动服务
+2018-04-24 14:34:15,566 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:34:14.000|
+
+路由选择控制器 Base 耗时：0秒47毫秒
+2018-04-24 14:34:27,867 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:34:27.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-24 14:34:31,796 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:34:30.000|修改域名www.baidu.com...
+2018-04-24 14:35:19,810 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:35:19.000|数据库已成功连接,正在启动服务
+2018-04-24 14:35:20,937 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:35:20.000|
+
+路由选择控制器 Base 耗时：0秒236毫秒
+2018-04-24 14:35:34,149 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:35:33.000|
+
+路由选择控制器 sys 耗时：0秒2毫秒
+2018-04-24 14:35:36,139 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:35:35.000|修改域名www.baidu.com...
+2018-04-24 14:36:16,416 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:36:16.000|数据库已成功连接,正在启动服务
+2018-04-24 14:36:18,072 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:36:17.000|
+
+路由选择控制器 Base 耗时：0秒205毫秒
+2018-04-24 14:37:14,303 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:37:13.000|
+
+路由选择控制器 sys 耗时：0秒3毫秒
+2018-04-24 14:37:16,322 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:37:15.000|修改域名www.baidu.com...
+2018-04-24 14:38:51,554 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:38:51.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 14:38:54,565 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:38:54.000|修改域名www.baidu.com...
+2018-04-24 14:41:50,116 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:41:50.000|数据库已成功连接,正在启动服务
+2018-04-24 14:41:50,723 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:41:50.000|
+
+路由选择控制器 Base 耗时：0秒19毫秒
+2018-04-24 14:42:38,954 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:42:38.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-24 14:42:55,038 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 14:42:55.000|修改域名www.baidu.com...
+2018-04-24 16:07:56,896 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:07:56.000|数据库已成功连接,正在启动服务
+2018-04-24 16:07:59,218 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:07:58.000|
+
+路由选择控制器 Base 耗时：0秒93毫秒
+2018-04-24 16:08:23,340 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:08:22.000|
+
+路由选择控制器 sys 耗时：0秒49毫秒
+2018-04-24 16:09:24,249 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:09:24.000|数据库已成功连接,正在启动服务
+2018-04-24 16:09:24,615 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:09:24.000|
+
+路由选择控制器 Base 耗时：0秒11毫秒
+2018-04-24 16:09:45,331 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:09:44.000|
+
+路由选择控制器 sys 耗时：0秒5毫秒
+2018-04-24 16:10:17,881 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:10:17.000|数据库已成功连接,正在启动服务
+2018-04-24 16:10:18,533 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:10:17.000|
+
+路由选择控制器 Base 耗时：0秒98毫秒
+2018-04-24 16:10:29,611 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:10:28.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:10:44,435 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:10:43.000|重启打印机...
+2018-04-24 16:12:53,589 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:12:53.000|数据库已成功连接,正在启动服务
+2018-04-24 16:12:54,149 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:12:53.000|
+
+路由选择控制器 Base 耗时：0秒28毫秒
+2018-04-24 16:13:00,259 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:12:59.000|
+
+路由选择控制器 sys 耗时：0秒1毫秒
+2018-04-24 16:13:02,679 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:13:02.000|修改域名www.baidu.com...
+2018-04-24 16:13:20,618 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:13:20.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:13:21,998 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:13:21.000|上传日志...
+2018-04-24 16:13:45,316 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:13:44.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:13:46,818 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:13:46.000|重启打印机...
+2018-04-24 16:48:28,789 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:48:28.000|数据库已成功连接,正在启动服务
+2018-04-24 16:48:29,432 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:48:28.000|
+
+路由选择控制器 Base 耗时：0秒25毫秒
+2018-04-24 16:50:18,060 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:17.000|
+
+路由选择控制器 sys 耗时：0秒5毫秒
+2018-04-24 16:50:18,475 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:17.000|接收到打印命令,交易号：2017-02-06-16-10-34,打印数据：http://open.yingmei.me/content/billtemplate/hanhongtest.html
+2018-04-24 16:50:18,499 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:17.000|签名验证：生成的签名：B9B04D55BE4B5CB7C9CB2412B93EB7BD,传过来的签名EB30F6A4BB63376BBCC62902DAD2A863,用于生成签名的数据：app_id=5f675406eb904dd99f47f36dbb9879cc&access_token=b7ecb85790b94c0599139ec6f68db533&merchant_code=10002&printer_codes=16020010TM&template_id=&copies=1&bill_no=2017-02-06-16-10-34&bill_type=1&bill_content=http://open.yingmei.me/content/billtemplate/hanhongtest.html
+2018-04-24 16:50:30,428 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:29.000|开始执行打印任务回调，设备号：16020010TM,订单号：,状态: 99999
+2018-04-24 16:50:44,423 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:43.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:50:44,455 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:43.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:50:45,977 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:45.000|第1次尝试发送TCP消息至设备：17320152WV。
+2018-04-24 16:50:56,815 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:56.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:50:56,835 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:56.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:50:56,891 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:50:56.000|开始执行打印任务回调，设备号：17320152WV,订单号：,状态: 99999
+2018-04-24 16:51:40,057 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:39.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:51:40,080 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:39.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:51:41,469 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:40.000|第1次尝试发送TCP消息至设备：17320152WV。
+2018-04-24 16:51:47,491 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:46.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:51:47,731 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:47.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:51:47,779 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:51:47.000|开始执行打印任务回调，设备号：17320152WV,订单号：,状态: 99999
+2018-04-24 16:52:45,810 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:52:45.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:52:45,815 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:52:45.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:52:46,109 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:52:45.000|开始执行打印任务回调，设备号：17320152WV,订单号：,状态: 99999
+2018-04-24 16:53:10,166 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:53:09.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:53:18,042 [9] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:53:17.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:53:39,707 [12] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:53:39.000|开始执行打印任务回调，设备号：17320152WV,订单号：,状态: 99999
+2018-04-24 16:53:44,579 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:53:43.000|
+
+路由选择控制器 sys 耗时：0秒0毫秒
+2018-04-24 16:53:58,295 [13] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:53:57.000|接收到打印命令,交易号：2017-01-31-21-32-09,打印数据：{  	"type": 2,  	"maxcount": 0, 	 "p1_1": "单式",  	"p1_2": "1",  	"p1_num": [  		{ 			"rednum": "02 08 12 14 16 28",  			"redmode": "单选",  			"bluenum": "07",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "04 11 15 21 27 30",  			"redmode": "机选",  			"bluenum": "01",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "07 08 10 14 20 27",  			"redmode": "机选",  			"bluenum": "08",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "01 08 18 19 25 29",  			"redmode": "机选",  			"bluenum": "14",  			"bluemode": "机选",  			"n": 1  		},  		{  			"rednum": "02 04 07 13 20 30",  			"redmode": "机选",  			"bluenum": "10",  			"bluemode": "机选",  			"n": 1  		}  	],  	"p2_1": "121515123",  	"p2_2": "20171116",  	"p2_3": "2017\/11\/16",  	"p2_4": "16502100",  	"p2_5": "015775",  	"p2_6": "2017\/12\/29",  	"p2_7": "13:48:50",  	"p2_8": "￥10",  	"p3_1": "www.bw1c.net",  	"p3_2": "6170-046178049-120667",  	"p3_3": "HT2G9T-K24CNS-MQL1YJ-CLY5QD-GB84Q",  	"p3_4": "012345678912345678"  }
+2018-04-24 16:54:18,611 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 16:54:17.000|开始执行打印任务回调，设备号：17320152WV,订单号：,状态: 99999
+2018-04-24 21:41:19,603 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:41:19.000|数据库已成功连接,正在启动服务
+2018-04-24 21:41:20,808 [8] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:41:20.000|
+
+路由选择控制器 Base 耗时：0秒27毫秒
+2018-04-24 21:42:54,697 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:42:54.000|数据库已成功连接,正在启动服务
+2018-04-24 21:42:56,487 [5] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:42:55.000|
+
+路由选择控制器 Base 耗时：0秒23毫秒
+2018-04-24 21:44:45,149 [7] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:44:45.000|数据库已成功连接,正在启动服务
+2018-04-24 21:44:45,735 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:44:45.000|
+
+路由选择控制器 Base 耗时：0秒12毫秒
+2018-04-24 21:46:08,432 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:46:08.000|
+
+路由选择控制器 sys 耗时：0秒53毫秒
+2018-04-24 21:46:13,027 [6] INFO  CWI.MCP.Common.LogUtil [(null)] - MCP|Info|2018-04-24 21:46:13.000|修改域名www.baidu.com...

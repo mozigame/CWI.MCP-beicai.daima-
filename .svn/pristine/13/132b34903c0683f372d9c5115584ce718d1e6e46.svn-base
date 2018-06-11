@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "接口规则-参数规定";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/doc/interfacerules" class="list-group-item ">协议规则</a>
+                        <a href="/doc/paramrules" class="list-group-item active">参数规定</a>
+                        <a href="/doc/safetyspecification" class="list-group-item">安全规范</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>票据类型</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>1：小票， 2：快递面单</p>
+                        </div>
+                        <div class="item-heading">
+                            <h4>模板 ID</h4>
+                        </div>
+                        <div class="item-body">
+                           <p>打印快递面单，打印接口template_Id的传值可参考 <a target="_blank"  href="/express/expressinfo">快递面单模板</a></p>
+                         </div>
+                        <div class="item-heading">
+                            <h4>时   间</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>标准北京时间，时区为东八区；如果商户的系统时间为非标准北京时间。参数值必须根据商户系统所在时区先换算成标准北京时间，&nbsp;<i>例如商户所在地为0时区的伦敦，当地时间为2014年11月11日0时0分0秒，换算成北京时间为2014年11月11日8时0分0秒。</i> </p>
+                        </div>
+                        <div class="item-heading">
+                            <h4>时 间 戳</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>标准北京时间，时区为东八区，自1970年1月1日&nbsp;0点0分0秒以来的秒数。注意：部分系统取到的值为毫秒级，需要转换成秒(10位数字)。 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     </div>
+</div>
+</div>

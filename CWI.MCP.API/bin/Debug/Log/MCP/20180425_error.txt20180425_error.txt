@@ -1,0 +1,24 @@
+2018-04-25 10:00:06,525 [9] ERROR CWI.MCP.Common.LogUtil [(null)] - MCP|Error|2018-04-25 10:00:06.000|服务启动失败：System.AggregateException: 发生一个或多个错误。 ---> System.ServiceModel.AddressAlreadyInUseException: HTTP 无法注册 URL http://+:8686/。另一应用程序已使用 HTTP.SYS 注册了该 URL。 ---> System.Net.HttpListenerException: 在前缀“http://+:8686/”上侦听失败，因为它与计算机上的现有注册冲突。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   在 System.ServiceModel.Channels.CommunicationObject.EndOpen(IAsyncResult result)
+   在 System.Web.Http.SelfHost.HttpSelfHostServer.OpenListenerComplete(IAsyncResult result)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   在 System.Threading.Tasks.Task.Wait()
+   在 CWI.MCP.API.Handels.HttpServerHost.StartHttpServer() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Handels\HttpServerHost.cs:行号 96
+   在 CWI.MCP.API.Handels.HttpServerHost.Start() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\Handels\HttpServerHost.cs:行号 38
+   在 CWI.MCP.API.StartForm.StartHttpServer() 位置 D:\WorkYh\CWI.MCP（北彩代码）\CWI.MCP.API\StartForm.cs:行号 89
+---> (内部异常 #0) System.ServiceModel.AddressAlreadyInUseException: HTTP 无法注册 URL http://+:8686/。另一应用程序已使用 HTTP.SYS 注册了该 URL。 ---> System.Net.HttpListenerException: 在前缀“http://+:8686/”上侦听失败，因为它与计算机上的现有注册冲突。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   在 System.ServiceModel.Channels.CommunicationObject.EndOpen(IAsyncResult result)
+   在 System.Web.Http.SelfHost.HttpSelfHostServer.OpenListenerComplete(IAsyncResult result)<---
+

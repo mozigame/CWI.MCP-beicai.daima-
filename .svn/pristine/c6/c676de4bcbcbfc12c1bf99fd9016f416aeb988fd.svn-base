@@ -1,0 +1,373 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Sodao.FastSocket.Server.Command;
+using Sodao.FastSocket.SocketBase;
+using Evt.Framework.Common;
+using System.Runtime.Caching;
+using CWI.MCP.Common;
+using CWI.MCP.Models;
+using CWI.MCP.Services;
+using McpTcpServer;
+using Newtonsoft.Json;
+using System.Threading;
+
+namespace TcpServer
+{
+    public sealed class TcpDataHandelCommand : ICommand<McpCommandInfo>
+    {
+        private ObjectCache cache = MemoryCache.Default;
+        private PrinterService prtServ = SingleInstance<PrinterService>.Instance;
+        private PrintOrderService orderServ = SingleInstance<PrintOrderService>.Instance;
+
+        /// <summary>
+        /// 返回服务名称
+        /// </summary>
+        public string Name
+        {
+            get { return "TcpDataHandel"; }
+        }
+
+        /// <summary>
+        /// 执行命令并返回结果
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="cmdInfo"></param>
+        public void ExecuteCommand(IConnection connection, McpCommandInfo cmdInfo)
+        {
+#if DEBUG
+            LogUtil.Info(cmdInfo.Data);
+#endif
+            string strInfo = cmdInfo.Data;
+            TcpQueryModel query = null;
+            //替换掉内容中的括号，客户端将内部的{}替换为(),故做还原处理
+            try
+            {
+                if (strInfo.LastIndexOf('{') > 0)
+                {
+                    strInfo = cmdInfo.Data.Substring(strInfo.LastIndexOf('{'));
+                }
+                query = JsonUtil.Deserialize<TcpQueryModel>(strInfo.Replace('(', '{').Replace(')', '}'));
+            }
+            catch
+            {
+                LogUtil.Warn("无效的命令：" + strInfo);
+                cmdInfo.Reply(connection, GetReplayInfo(0, TcpConsts.InvalidCmd, string.Empty));
+                return;
+            }
+            if (query == null)
+            {
+                cmdInfo.Reply(connection, GetReplayInfo(0, TcpConsts.InvalidCmd, string.Empty));
+                return;
+            }
+
+            object resObj = null;
+            try
+            {
+                switch (query.Tp)
+                {
+                    //心跳检测【100】
+                    case (int)TcpOperateType.ChkAlive:
+                        {
+                            LogUtil.Info(string.Format("【100】接收心跳包,设备号：{0}", query.Did));                            
+                            cmdInfo.Reply(connection, JsonUtil.Serialize(new { tp = query.Tp, time = DateTime.Now.ToString(RegexConsts.DATETIME_FORMAT) }));
+
+                            if (query.Did != "Server")
+                            {
+                                //获取打印设备状态
+                                var ds = SingleInstance<PrinterService>.Instance.GetDeviceStatCache(query.Did);
+                                LogUtil.Info(string.Format("查询设备号：{0}，状态码为：{1}{2}", query.Did, ds, (ds == 1 ? ",触发下一打印任务。" : string.Empty)));
+                                if (ds == 1)
+                                {
+                                    SingleInstance<PrintOrderService>.Instance.SendUnPrintOrder(query.Did, "接收设备心跳包时");
+                                }
+                            }
+                            break;
+                        }
+
+                    //设备注册【101】
+                    case (int)TcpOperateType.RegDev:
+                        {
+                            var isDisconnect = false;
+                            query.ConnId = connection.ConnectionID;
+                            query.IpPort = string.Format("{0}:{1}", connection.RemoteEndPoint.Address.ToString(), connection.RemoteEndPoint.Port);
+
+                            resObj = prtServ.RegisterPrinter(query);
+                            if (resObj is int)
+                            {
+                                var result = ConvertUtil.ToInt(resObj, 0);
+                                cmdInfo.Reply(connection, JsonUtil.Serialize(new { tp = query.Tp, err = ConvertUtil.ToInt(resObj, 0), time = DateTime.Now.ToString(RegexConsts.DATETIME_FORMAT) }));
+                                isDisconnect = result == TcpConsts.PrinterNotFind;
+                            }
+                            else
+                            {
+                                cmdInfo.Reply(connection, JsonUtil.Serialize(resObj));
+                                var result = resObj as TcpViewModel;
+                                isDisconnect = result != null && result.err > 0;
+                            }
+
+                            //休眠1秒后断开TCP连接
+                            if (isDisconnect)
+                            {
+                                Thread.Sleep(1000);
+                                var conn = McpServer.Instance.GetConnetionList().ToList().Find(d => d.ConnectionID.Equals(connection.ConnectionID));
+                                if (conn != null)
+                                {
+                                    conn.BeginDisconnect();
+                                }
+                            }
+
+                            break;
+                        }
+
+                    //打印小票【102】
+                    case (int)TcpOperateType.Print:
+                        {
+                            var deviceConn = new McpPrinterInfo();
+                            resObj = orderServ.TcpPrint(query, cache, out deviceConn);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), string.Empty));
+                            }
+                            else
+                            {
+                                if (deviceConn != null)
+                                {
+                                    if ((string.IsNullOrWhiteSpace(deviceConn.CacheKey) || !cache.Contains(deviceConn.CacheKey)) || string.IsNullOrWhiteSpace(query.Id))
+                                    {
+                                        ExectPrint(connection, cmdInfo, query, resObj, deviceConn, cache);
+
+                                        //记录主动推送任务避免多次发送
+                                        var ep = SingleInstance<PrinterService>.Instance.GetPrinterEquipment(query.Did);
+                                        var wirePrinterTypeIds = ConfigUtil.GetConfig("WirePrinterTypeIds").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                                        if (!string.IsNullOrWhiteSpace(query.Id))
+                                        {
+                                            if (ep != null && wirePrinterTypeIds.Contains(ep.EquipmentType.ToString()))
+                                            {
+                                                //针式
+                                                cache.Add(deviceConn.CacheKey, resObj, DateTimeOffset.Now.AddMinutes(30));
+                                                LogUtil.Info(string.Format("针式打印设备缓存:{0}", deviceConn.CacheKey));
+                                            }
+                                            else
+                                            {
+                                                //热敏
+                                                cache.Add(deviceConn.CacheKey, resObj, DateTimeOffset.Now.AddMinutes(5));
+                                                LogUtil.Info(string.Format("热敏打印设备缓存:{0}", deviceConn.CacheKey));
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        LogUtil.Info(string.Format("成功过滤重复打印命令：{0}", deviceConn.CacheKey));
+                                    }
+                                }
+                                else
+                                {
+                                    LogUtil.Info("打印设备连接为空。");
+                                }
+                            }
+                            break;
+                        }
+
+                    //更新打印任务状态【103】
+                    case (int)TcpOperateType.UpStatus:
+                        {
+                            LogUtil.Info(string.Format("【103】更新订单打印状态请求，设备号：{0},订单号：{1},状态: {2}", query.Did, query.Id, query.Code));
+                            resObj = orderServ.UpdateStatus(query);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), query.Id));
+                            }
+                            else
+                            {
+                                cmdInfo.Reply(connection, JsonUtil.Serialize(resObj));
+                            }
+                            break;
+                        }
+
+                    //上报打印设备状态【104】
+                    case (int)TcpOperateType.UpException:
+                        {
+                            resObj = prtServ.UploadPrinterSatatus(query);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), string.Empty, query.Code));
+                            }
+                            else
+                            {
+                                cmdInfo.Reply(connection, JsonUtil.Serialize(resObj));
+                            }
+                            break;
+                        }
+
+                    //查询打印任务【105】
+                    case (int)TcpOperateType.QueryTask:
+                        {
+                            var deviceConn = new McpPrinterInfo();
+                            resObj = orderServ.QueryPrintTask(query, cache, out deviceConn);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), string.Empty));
+                            }
+                            else
+                            {
+                                if (deviceConn != null)
+                                {
+                                    //if (string.IsNullOrWhiteSpace(deviceConn.CacheKey) || !cache.Contains(deviceConn.CacheKey))
+                                    //{
+                                        ExectPrint(connection, cmdInfo, query, resObj, deviceConn, cache);
+                                    //}
+                                    //else
+                                    //{
+                                    //    LogUtil.Info(string.Format("成功过滤重复打印：{0}", deviceConn.CacheKey));
+                                    //}
+                                }
+                                else
+                                {
+                                    LogUtil.Info("打印设备连接为空。");
+                                }
+                            }
+                            break;
+                        }
+
+                    //打印机辅助命令【201】
+                    case (int)TcpOperateType.AssCommand:
+                        {
+                            var deviceConn = new McpPrinterInfo();
+                            resObj = orderServ.TcpPrint(query, cache, out deviceConn);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), string.Empty));
+                            }
+                            else
+                            {
+                                if (deviceConn != null)
+                                {
+                                    if ((string.IsNullOrWhiteSpace(deviceConn.CacheKey) || !cache.Contains(deviceConn.CacheKey)) || string.IsNullOrWhiteSpace(query.Id))
+                                    {
+                                        ExectPrint(connection, cmdInfo, query, resObj, deviceConn, cache);
+                                    }
+                                    else
+                                    {
+                                        LogUtil.Info(string.Format("成功过滤重复打印命令：{0}", deviceConn.CacheKey));
+                                    }
+                                }
+                                else
+                                {
+                                    LogUtil.Info("打印设备连接为空。");
+                                }
+                            }
+                        }
+                        break;
+
+                    //更新辅助命令任务状态【202】
+                    case (int)TcpOperateType.AssUpStatus:
+                        {
+                            LogUtil.Info(string.Format("【202】更新辅助命令状态请求，设备号：{0},订单号：{1},状态: {2}", query.Did, query.Id, query.Code));
+                            resObj = orderServ.UpdateStatus(query);
+                            if (resObj is int)
+                            {
+                                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), query.Id));
+                            }
+                            else
+                            {
+                                cmdInfo.Reply(connection, JsonUtil.Serialize(resObj));
+                            }
+                            break;
+                        }
+
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtil.Error(ex.ToString());
+                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, 1, query.Id));
+            }
+        }
+
+        private string GetReplayInfo(int type, int errno, string id, int status = -1)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                return JsonUtil.Serialize(new { tp = type, err = errno, id = id });
+            }
+            else
+            {
+                if (status >= 0)
+                {
+                    return JsonUtil.Serialize(new { tp = type, err = errno, code = status });
+                }
+                else
+                {
+                    return JsonUtil.Serialize(new { tp = type, err = errno });
+                }
+            }
+        }
+
+        private void ExectPrint(IConnection connection, McpCommandInfo cmdInfo, TcpQueryModel query, object resObj, McpPrinterInfo dc, ObjectCache cache)
+        {
+            LogUtil.Info(string.Format("准备发送长连接connid：{0}", dc != null ? dc.ConnectionId : 0));
+
+            int result = 0;
+            string msg = string.Empty;
+            IConnection conn = null;
+            var connId = dc != null ? dc.ConnectionId : 0;
+            var deciceId = dc != null ? dc.PrinterCode : string.Empty;
+            conn = connId != 0 ? McpServer.Instance.GetConnetionList().ToList().Find(d => d.ConnectionID.Equals(connId)) : null;
+            if (conn != null)
+            {
+                if (resObj is int)
+                {
+                    msg = GetReplayInfo(query.Tp, ConvertUtil.ToInt(resObj, 0), query.Id);
+                }
+                else
+                {
+                    msg = JsonUtil.Serialize(resObj);
+                }
+
+                LogUtil.Info(string.Format("准备发送tcp命令：{0}", msg));
+
+                try
+                {
+                    //异步发送TCP打印指令
+                    if (!string.IsNullOrWhiteSpace(dc.CacheKey))
+                    {
+                        conn.BeginSend(new Packet(Encoding.GetEncoding("gb2312").GetBytes(msg)));
+
+                        //发送打印指令成功后回复HTTP请求
+                        LogUtil.Info(string.Format("成功发送打印命令: {0}", dc.CacheKey));
+
+                        //成功发送打印命令后，将对应任务数据库的状态更改为已推送状态
+                        SingleInstance<PrintOrderService>.Instance.UpdatePushStatus(query.Id, query.Did);
+                    }
+                    else
+                    {
+                        LogUtil.Info("打印命令Key为空");
+                        cmdInfo.Reply(conn, GetReplayInfo(query.Tp, ConvertUtil.ToInt(result, 0), dc.OrderId));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //发送打印指令失败后回复HTTP请求
+                    result = TcpConsts.SendPrintCmdFailed;
+                    LogUtil.Error(string.Format("发送打印命令失败，参考消息：{0}", ex.Message));
+
+                    cmdInfo.Reply(conn, GetReplayInfo(query.Tp, ConvertUtil.ToInt(result, 0), dc.OrderId));
+                }
+            }
+            else
+            {
+                LogUtil.Info(string.Format("打印设备：{0}-{1}长连接已断开", query.Did, connId));
+                LogUtil.Info(string.Format("【102】推送任务时，更新订单打印状态请求，设备号：{0},订单号：{1},状态: {2}", query.Did, query.Id, PrintOrderStatusType.OutConnection.GetHashCode()));
+                TcpQueryModel newQue = new TcpQueryModel { Id=query.Id,Did=query.Did,Code= PrintOrderStatusType.OutConnection.GetHashCode()};               
+                orderServ.UpdateStatus(newQue);
+
+                result = TcpConsts.PrinterDisconneted;//设备长连接已断开
+                cmdInfo.Reply(connection, GetReplayInfo(query.Tp, ConvertUtil.ToInt(result, 0), dc.OrderId));
+            }
+        }
+    }
+}

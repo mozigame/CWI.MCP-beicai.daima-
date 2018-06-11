@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "接口规则-安全规范";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="panel panel-app">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="list-group list-group-api">
+                        <a href="/doc/interfacerules" class="list-group-item ">协议规则</a>
+                        <a href="/doc/paramrules" class="list-group-item">参数规定</a>
+                        <a href="/doc/safetyspecification" class="list-group-item active">安全规范</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div id="apiinfo" class="apiinfo">
+                    <div class="apiinfo-item">
+                        <div class="item-heading">
+                            <h4>签名算法</h4>
+                        </div>
+                        <div class="item-body">
+                            <p>签名生成的通用步骤如下：</p>
+                            <p>第一步，设所有发送或者接收到的数据为集合M，将集合M内非空参数值的参数按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2&#8230;）拼接成字符串stringA。 </p>
+                            <p>特别注意以下重要规则：</p>
+                            <ol>
+                              <li>◆ 参数名ASCII码从小到大排序（字典序）；</li>
+                              <li>◆ 如果参数的值为空不参与签名；</li>
+                              <li>◆ 参数名区分大小写；</li>
+                              <li>◆ 验证调用返回或微信主动通知签名时，传送的sign参数不参与签名，将生成的签名与该sign值作校验。</li>
+                              <li>◆ 微信接口可能增加字段，验证签名时必须支持增加的扩展字段</li>
+                            </ol>
+                           <p>第二步，在stringA最后拼接上key得到stringSignTemp字符串，并对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。</p> 
+                           <p>key设置路径：微云打开放平台(open.yingmei.me)-->应用管理-->应用设置-->AppKey</p>
+                           <p>举例，假设传送的参数如下：</p>
+                           <pre>
+bill_no：&#9;&#9;20160726051
+printer_code：&#9;&#9;8C18D9FF2999
+result_code：&#9;&#9;10001
+sign_type：&#9;&#9;MD5
+time_stamp：&#9;&#9;1469555061
+nonce_str：&#9;&#9;b21c940fc39040a88a61c412b4bbab6b</pre>
+                           <div class="item-body">
+                           <p>1. ◆ 对参数按照key=value的格式，并按照参数名ASCII字典序排序如下：</p>
+                           <div>
+                           <p>stringA="bill_no=20160726051&nonce_str=b21c940fc39040a88a61c412b4bbab6b&printer_code=8C18D9FF2999&result_code=10001&sign_type=MD5
+                               &time_stamp=1469555061"; </p>
+                           </div>
+                           <p>2. ◆ 拼接API密钥：</p>
+                           <p>stringSignTemp="stringA&key=wyd@2016" </p>
+                           <p>sign=MD5(stringSignTemp).toUpperCase()="1B03FB474982F1DC00904BB3F657CC5F" </p>
+                           </div>
+                           <p>最终得到最终发送的数据：</p>
+                           <div>
+                           <p>params="bill_no=20160726051&nonce_str=b21c940fc39040a88a61c412b4bbab6b&printer_code=8C18D9FF2999&result_code=10001&sign_type=MD5
+                               &time_stamp=1469555061&sign=9A0A8659F005D6984697E2CA0A9CF3B7"; </p>
+                           </div>
+                           </div>
+                        <div>
+                        <div class="item-heading">
+                            <h4>生成随机数算法</h4>
+                        </div>
+                        <div class="item-body">
+                           <p>API接口协议中包含字段nonce_str，主要保证签名不可预测。我们推荐生成随机数算法如下：调用随机数函数生成，将得到的值转换为字符串。 </p>
+                         </div>
+                      </div>
+                  </div>
+             </div>
+        </div>
+     </div>
+</div>
+</div>

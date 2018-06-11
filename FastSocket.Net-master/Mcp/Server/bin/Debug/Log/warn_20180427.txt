@@ -1,0 +1,2 @@
+2018-04-27 17:15:07,421 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-27 17:15:06.000|无效的命令：{"tp":202,"did":"17080906UI","id":1316c2c2-24d4-4af9-8d63-053055635fec,"type":3,"code":1,"OrderContent":1)}
+2018-04-27 17:17:51,417 [6] WARN  CWI.MCP.Common.LogUtil [(null)] - MCP|Warn|2018-04-27 17:17:50.000|无效的命令：{"tp":202,"did":"17080906UI","id":"1316c2c2-24d4-4af9-8d63-053055635fec","type":3,"code":1,"OrderContent":(null)}

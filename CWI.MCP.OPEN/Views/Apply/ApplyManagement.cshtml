@@ -1,0 +1,72 @@
+﻿@using CWI.MCP.Models.ViewModels.MCP.OPEN
+@model System.Collections.Generic.IList<DevApplyViewModel>
+@{
+    ViewBag.Title = "应用列表";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="panel panel-app">
+    <div class="panel-heading">
+        <div class="pull-right">
+             <a style="margin-right:20px;" href="/apply/addapplyinfo" class="btn btn-action btn-sm " >创建应用</a>
+             <a href="/doc/viewcallback" target="_blank" class="btn btn-action btn-sm" >查看回调说明</a>
+        </div>
+    </div>
+    <br/>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>应用名称</th>
+            <th>应用描述</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (Model != null)
+        {
+            if (Model.Count > 0)
+            {
+                foreach (DevApplyViewModel viewModel in Model)
+                {
+                    var statusStr = viewModel.StatusCode == 0 ? "新建" : viewModel.StatusCode == 1 ? "运营" : viewModel.StatusCode == 2 ? "停用" : viewModel.StatusCode == 3 ? "删除" : "";
+                    <tr>
+                        <td>@viewModel.AppName</td>
+                        <td>@viewModel.Memo</td>
+                        <td>@statusStr </td>
+                        <td>[<a href="/apply/settingapply?appId=@viewModel.AppId">设置</a>] [<a href="javascript:;" onclick="DropApply('@viewModel.AppId');">删除</a>]</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <th colspan="4">暂无数据</th>
+                </tr>
+            }
+        }
+
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    function DropApply(obj) {
+        if (confirm("确定要删除该应用吗？")) {
+            $.ajax({
+                url: "/apply/dropapply",
+                type: "post",
+                dataType: "json",
+                data: "appId="+ obj,
+                success: function (result) {
+                    if (result.status == "1") {
+                        alert('删除成功！');
+                        window.location.href = '/apply/applymanagement';
+                    }
+                    else {
+                        alert(result.data);
+                    }
+                }
+            });
+        }
+    }
+
+</script>
